@@ -3,12 +3,11 @@ layout: post
 title: "CH4 多執行緒(Multithreaded programming"
 date: 2017-11-11 00:00:00 +0800
 categories: OperatingSystem
-tags: OS
-excerpt: 
+tags: OS OperatingSystem
+excerpt: .
 mathjax: true
 ---
 
-# CH4 多執行緒(Multithreaded programming)
 ### thread
 thread是cpu使用時的基本單位，是一個由thread id、program counter、一組register、一個stack組成
 

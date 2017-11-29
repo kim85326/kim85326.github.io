@@ -11,9 +11,9 @@ type: page
 
 ## 關於我
 
-<iframe src="https://www.animen.com.tw/FilesUpload/CK-Images/150804_39_3.png" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+<img src="https://www.animen.com.tw/FilesUpload/CK-Images/150804_39_3.png" style="height: 100px;width: 100px;" />
 
-目前是臺灣科技大學四年級的大學生...
+目前是臺灣科技大學資訊工程系四年級的大學生...
 
 ## 聯繫我
 

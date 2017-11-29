@@ -3,12 +3,10 @@ layout: post
 title: "CH5 行程排班 (Process Scheduling)"
 date: 2017-11-11 00:00:00 +0800
 categories: OperatingSystem
-tags: OS
-excerpt: 
+tags: OS OperatingSystem
+excerpt: .
 mathjax: true
 ---
-
-# CH5 行程排班 (Process Scheduling)
 
 ### 基本觀念
 * 在單一處理器(Single-Processor)系統裡，不可以同時有多個程式在執行，如果有多個行程，其它的都必須在旁邊等待CPU有空，才能接者重新排班。

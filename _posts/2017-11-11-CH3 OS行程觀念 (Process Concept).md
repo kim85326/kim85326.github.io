@@ -3,12 +3,11 @@ layout: post
 title: "CH3 OS行程觀念 (Process Concept)"
 date: 2017-11-11 00:00:00 +0800
 categories: OperatingSystem
-tags: OS
-excerpt: 
+tags: OS OperatingSystem
+excerpt: .
 mathjax: true
 ---
 
-# CH3 OS行程觀念 (Process Concept)
 ### 該如何稱呼CPU所有的運作項目
 1. 整批式(Batch)系統執行工作-jobs
 2. 分時系統有使用者程式-user programs或task
