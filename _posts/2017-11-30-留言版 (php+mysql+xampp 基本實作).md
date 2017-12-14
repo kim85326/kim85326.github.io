@@ -9,6 +9,7 @@ mathjax: true
 ---
 
 一個簡單有登入機制的留言版
+(缺點就是把 php 和 html 寫在一起 XD)
 
 ### 資料表
 為了方便(ㄊㄡㄌㄢˇ)我直接用 mysql的介面建立了資料表
@@ -27,8 +28,9 @@ mathjax: true
 
 * 在載入頁面的時候要去資料庫裡面撈 mes 資料出來
 
-```php=
-<?php include_once "database.php";
+```php
+<?php 
+    include_once "database.php";
     session_start();
     $sql = "SELECT * FROM `mes`";
 	$result = mysqli_query($con , $sql) or die('MySQL query error');
@@ -37,7 +39,7 @@ mathjax: true
 
 * 塞進去留言版裡面
 
-```html=
+```php
 <?php 
     while($row = mysqli_fetch_array($result)){ 
 ?>
@@ -64,7 +66,7 @@ mathjax: true
     * 刪除連結利用 get 的方式，傳到 mes.php，而且帶兩個參數 method=del 和 id=該留言的id
     * 編輯連結利用 get 的方式，傳到 update.php，而且帶一個參數 id=該留言的id
 
-```html=
+```php
 <?php if(@$_SESSION["id"]===$row["uid"]){?>
     <a href="mes.php?method=del&id=<?php echo $row["id"]?>" class="btn btn-danger mybtn">刪除</a>
     <a href="update_mes.php?id=<?php echo $row["id"]?>" class="btn btn-primary mybtn">編輯</a>
@@ -75,7 +77,7 @@ mathjax: true
     * 有登入就顯示 => 登出、新增留言
     * 沒登入就顯示 => 登入、註冊
 
-```php=
+```php
 <?php if(isset($_SESSION["id"])){?>
     <a href="config.php?method=logout">登出</a>
     <a href="add_mes.php">新增留言</a>
@@ -91,7 +93,7 @@ mathjax: true
 
 * 當網頁載入後，如果有登入的話，就不能再登入啦! 所以把用戶導到首頁
 
-```php=
+```php
 <?php include_once "database.php";
 	session_start();
 	if(isset($_SESSION["id"])){
@@ -102,7 +104,7 @@ mathjax: true
 
 * 表單利用 post 的方式，傳到config.php，而且帶一個 get 參數 method=login
 
-```html=
+```html
 <form role="form" action="config.php?method=login" method="post">
     <div class="form-group">
         <label for="username">帳號</label>
@@ -123,8 +125,9 @@ mathjax: true
 
 * 當網頁載入後，如果有登入的話，就不能再註冊啦! 所以把用戶導到首頁
 
-```php=
-<?php include_once "database.php";
+```php
+<?php 
+    include_once "database.php";
     session_start();
     if(isset($_SESSION["id"])){
         header("Location: index.php");
@@ -134,7 +137,7 @@ mathjax: true
 
 * 表單利用 post 的方式，傳到config.php，而且帶一個 get 參數 method=signup
 
-```html=
+```html
 <form role="form" action="config.php?method=signup" method="post">
     <div class="form-group">
         <label for="username">帳號</label>
@@ -159,8 +162,9 @@ mathjax: true
 
 * 當網頁載入後，如果沒登入的話，就不能新增留言了! 所以把用戶導到登入頁面
 
-```php=
-<?php include_once "database.php";
+```php
+<?php 
+    include_once "database.php";
     session_start();
     if(!isset($_SESSION["id"])){
     	header("Location: login.php");
@@ -170,7 +174,7 @@ mathjax: true
 
 * 表單利用 post 的方式，傳到 mes.php，而且帶一個 get 參數 method=add
 
-```html=
+```html
 <form role="form" action="mes.php?method=add" method="post">
     <div class="form-group">
         <label for="title">標題</label>
@@ -192,7 +196,7 @@ mathjax: true
 
 * 當網頁載入後，如果不是登入的用戶和該留言的主人不一樣的話，就不能更新留言了! 所以把用戶導到登入頁面
 
-```php=
+```php
 <?php
 	include_once "database.php";
 	session_start();
@@ -208,7 +212,7 @@ mathjax: true
 
 * 表單利用 post 的方式，傳到 mes.php，而且帶兩個 get 參數 method=add 和 id=該留言的id
 
-```html=
+```html
 <form role="form" action="mes.php?method=update&id=<?php echo $row["id"]?>" method="post">
     <div class="form-group">
         <label for="title">標題</label>
@@ -227,7 +231,7 @@ mathjax: true
 
 #### 資料庫連結 database.php、會員機制 config.php、訊息機制 mes.php
 
-```php=
+```php
 <?php
 	$server='localhost';
 	$id='root';
@@ -247,8 +251,9 @@ mathjax: true
 
 * 判斷我傳過來的 method參數，代表我要執行的動作
 
-```php=
-<?php include_once "database.php";
+```php
+<?php 
+    include_once "database.php";
 	switch ($_GET["method"]) {
 		case "login":
 			login();
@@ -266,7 +271,7 @@ mathjax: true
 
 * 如果是登入的話，要先找資料庫 member表裡面是否帳號、密碼和使用者輸入的帳號、密碼一樣，如果一樣才能登入，登入要給用戶一個session，$_SESSION["id"] 設成使用者的id
 
-```php=
+```php
 function login(){
     $sql="SELECT * FROM `member`
             WHERE username = '$_POST[username]' && password = '$_POST[password]'";
@@ -292,7 +297,7 @@ function login(){
 * 如果是註冊的話，要先找資料庫 member表裡面是否帳號和使用者輸入的帳號一樣，如果一樣的話就代表已經註冊過帳號了。如果沒有一樣的話，就把他填的資料存進資料庫 member表裡
 * 註冊成功後要給用戶一個session，$_SESSION["id"] 設成使用者的id
 
-```php=
+```php
 function signup(){
     $sql="SELECT * FROM `member`
             WHERE username = '$_POST[username]'";
@@ -327,7 +332,7 @@ function signup(){
 ```
 
 * 如果是登出的話，就把用戶的 SESSION 清除掉
-```php=
+```php
 function logout(){
     session_start();
     if(isset($_SESSION["id"])){
@@ -344,7 +349,7 @@ function logout(){
 
 * 判斷我傳過來的 method參數，代表我要執行的動作
 
-```php=
+```php
 <?php 
 	include_once "database.php";
     session_start();
@@ -365,7 +370,7 @@ function logout(){
 
 * 如果是新增訊息的話，把表單的東西新增到資料庫 mes表裡面
 
-```php=
+```php
 function add(){
     $uid = $_SESSION["id"];
     $title = $_POST["title"];
@@ -383,7 +388,7 @@ function add(){
 
 * 如果是更新訊息的話，把表單的東西更新到資料庫 mes表裡面
 
-```php=
+```php
 function update(){
     $id = $_GET["id"];
     $title = $_POST["title"];
@@ -400,7 +405,7 @@ function update(){
 
 * 如果是刪除訊息的話，把表單的東西從資料庫 mes表裡面刪除
 
-```php=
+```php
 function del(){
     $id = $_GET["id"];
     $sql = "DELETE FROM `mes` WHERE id = $id";
@@ -418,18 +423,18 @@ function del(){
 * 主要是伺服器的架設，因為我之前裝了一堆 appserv 和 wamp 導致我的 port 還有 mysql 死掉，不要問我為什麼..我也不知道我怎麼搞得XD，後來就把他們全部移除，重裝 xampp 就好了...
 
 * 再是連接資料庫，因為新版的 php 連結 mysql 語法不同
-```php=
+```php
 $con = mysql_connect($server , $id , $pwd);
 ```
 改成
-```php=
+```php
 $con = mysqli_connect($server , $id , $pwd);
 ```
 
 * 還有 global變數的抓不到...
 要加一個 global $con; 才抓得到我 include 的變數
 
-```php=
+```php
 global $con;
 $result = mysqli_query($con , $sql) or die('MySQL query error');
 ```

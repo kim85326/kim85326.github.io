@@ -31,7 +31,7 @@ mathjax: true
 6. 下面就是介紹要怎麼使用Facebook JavaScript SDK
 
 ### 設定 Facebook JavaScript SDK
-```javascript=
+```js
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -65,14 +65,14 @@ mathjax: true
  
  
 ### 檢查登入狀態
- ```javascript=
+```js
  FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
 });
- ```
+```
 這段的作用是每當載入網頁的時候，都要去判斷用戶是否已經使用「Facebook 登入」來登入你的應用程式。
 * 這裡的response是一個物件，裡面長這樣
-```javascript=
+```js
 {
     status: 'connected',
     authResponse: {
@@ -95,7 +95,7 @@ mathjax: true
 * 我們要拿取用戶的資料必須要有accessToken
 
 ### 新增「Facebook 登入」按鈕
-```html=
+```html
 <fb:login-button 
   scope="public_profile,email"
   onlogin="checkLoginState();">
@@ -106,7 +106,7 @@ mathjax: true
 可以利用外掛程式配置器 [傳送門](https://developers.facebook.com/docs/facebook-login/web/login-button)
 * onlogin的屬性是用於設定檢察登入狀態的js，了解用戶是否登入，會呼叫 checkLoginState
 
-```javascript=
+```js
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -142,7 +142,7 @@ function checkLoginState() {
 #### 程式碼
 
 ##### index.html
-```html=
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -168,7 +168,7 @@ function checkLoginState() {
 ```
 
 ##### login.html
-```html=
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -202,7 +202,7 @@ function checkLoginState() {
 ```
 
 ##### fb_auth.js
-```javascript=
+```js
 //連接 Facebook JavaScript SDK
 window.fbAsyncInit = function() {
   FB.init({
@@ -229,7 +229,7 @@ window.fbAsyncInit = function() {
 ```
 
 ##### index.js
-```javascript=
+```js
 //檢查登入狀態
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
@@ -255,7 +255,7 @@ function logout(){
 }
 ```
 ##### login.js
-```javascript=
+```js
 //按下登入按鈕時，檢查登入狀態
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
