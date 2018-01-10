@@ -578,4 +578,13 @@ struct process *list; //waiting queue
 * 雖然沒有 deadlock，但還是有可能 starvation
 
 
+### 比較 semaphore monitor
+使用monitor可以輕易地模仿出semaphore的效果，
+可是使用semaphore來模擬monitor卻會十分複雜
+
+![](https://i.imgur.com/CtYWLbM.png)
+
+雖然助教的答案長這樣...
+
+![](https://i.imgur.com/IE1PoXV.png)
 
