@@ -2,15 +2,15 @@
 layout: post
 title: "Javascript 型態轉換、相等性"
 date: 2017-11-11 00:00:00 +0800
-categories: Javascript
-tags: JS Javascript
+categories: JavaScript
+tags: JS JavaScript
 excerpt: .
 mathjax: true
 ---
 
 ## 查看資料型態
 ### typeof() 可以查看資料型態
-```js=
+```js
 typeof (101); //回傳number
 typeof (1.01); //回傳number
 typeof NaN; //回傳number
@@ -50,7 +50,7 @@ x.toString(); //將變數x轉為字串"123"
 
 ### 字串轉數字
 #### Number() 可以將物件轉化成數字 
-```js=
+```js
 Number(true); //傳回1
 Number(false); //傳回0
 Number(new Date()); //傳回1970/1/1到現在的毫秒數
@@ -59,7 +59,7 @@ Number("123 456"); //傳回NaN
 ```
 
 #### parseInt() 可以傳回由字串轉換而成的整數
-```js=
+```js
 parseInt("abc") // 傳回NaN`
 parseInt("123abc") // 傳回 123`
 parseInt("abc123") // 傳回 NaN`
@@ -67,7 +67,7 @@ parseInt("   123abc") // 傳回 123`
 ```
 
 #### parseFloat() 可以傳回由字串轉換而成的浮點數
-```js=
+```js
 parseFloat("20"); //傳回20`
 parseFloat("30.00"); //傳回30`
 parseFloat("10.68"); //傳回10.68
@@ -79,7 +79,7 @@ parseFloat("abc378"); //傳回NaN
 
 #### getTime()方法將日期轉為數字型態
 將日期轉為數字，除了可以用Number()，還可以用getTime()
-```js=
+```js
 var D = new Date();
 D.getTime();	//傳回1970/1/1到現在的毫秒數
 ```
@@ -108,9 +108,9 @@ alert (x);      // 字串5加數字2 輸出 52
 
 ### 存在
 ```js
-Boolean(undefine)		// false
-Boolean(null)			// false
-Boolean("")				// false
+Boolean(undefine);	// false
+Boolean(null);	// false
+Boolean("");	// false
 ```
 
 所以
@@ -125,7 +125,7 @@ if(a){
 ```
 
 
-參考資料
+參考資料<br>
 [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-http://www.victsao.com/blog/81-javascript/86-javascript-parse-number
-https://dotblogs.com.tw/berrynote/2016/12/07/221015
+[parseInt()、parseFloat() 與 Number()](http://www.victsao.com/blog/81-javascript/86-javascript-parse-number)
+[[JavaScript] 型態轉換](https://dotblogs.com.tw/berrynote/2016/12/07/221015)

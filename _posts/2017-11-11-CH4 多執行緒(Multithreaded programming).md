@@ -2,8 +2,8 @@
 layout: post
 title: "CH4 多執行緒(Multithreaded programming"
 date: 2017-11-11 00:00:00 +0800
-categories: OperatingSystem
-tags: OS OperatingSystem
+categories: 作業系統
+tags: OS 作業系統
 excerpt: .
 mathjax: true
 ---

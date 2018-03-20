@@ -2,8 +2,8 @@
 layout: post
 title: "CH3 OS行程觀念 (Process Concept)"
 date: 2017-11-11 00:00:00 +0800
-categories: OperatingSystem
-tags: OS OperatingSystem
+categories: 作業系統
+tags: OS 作業系統
 excerpt: .
 mathjax: true
 ---

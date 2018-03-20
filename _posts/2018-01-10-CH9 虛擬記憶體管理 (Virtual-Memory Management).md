@@ -2,8 +2,8 @@
 layout: post
 title: "CH9 虛擬記憶體管理 (Virtual-Memory Management)"
 date: 2018-01-10 00:00:00 +0800
-categories: OperatingSystem
-tags: OS OperatingSystem
+categories: 作業系統
+tags: OS 作業系統
 excerpt: .
 mathjax: true
 ---
