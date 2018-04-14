@@ -3,7 +3,7 @@ layout: post
 title: "Javascript 型態轉換、相等性"
 date: 2017-11-11 00:00:00 +0800
 categories: JavaScript
-tags: JS JavaScript
+tags: JavaScript
 excerpt: .
 mathjax: true
 ---
