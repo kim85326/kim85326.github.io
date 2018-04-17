@@ -8,6 +8,7 @@ excerpt: .
 mathjax: true
 ---	
 ### jQuery.fn
+* 利用 jQuery.fn 宣告你的 jQuery plugin
 * jQuery.fn 包含了所有 jQuery 內建的方法
 * jQuery.fn. 後面接 plugin名稱 => jQuery.fn.plugin_name 
 #### 雛形
