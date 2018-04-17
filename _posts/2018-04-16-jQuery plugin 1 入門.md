@@ -38,6 +38,7 @@ $( "a" ).setColor(); // Makes all the links green.
 
 ### this
 * 匿名函式裡的 this 關鍵字，它會指向一個 jQuery 物件；而這個 jQuery 物件則是我們要指定的
+
 #### 雛形
 
 ```js
@@ -63,7 +64,7 @@ jQuery.fn.myplugin = function(){
 <div id="myid1" class="myclass">123</div>
 <div id="myid2" class="myclass">456</div>
 <script>
-    $(".myclass").myplugin(); // alert("myid1")和alert("myid2")
+    $(".myclass").myplugin(); // alert("myid1") 和 alert("myid2")
 </script>
 ```
 
@@ -76,7 +77,7 @@ jQuery.fn.myplugin = function(){
 ```js
 ;(function( $ ){
     $.fn.plugin_name = function (){
-        //plugin內容
+        //plugin 內容
         return this.each(function() {
             
         });
