@@ -11,6 +11,7 @@ mathjax: true
 * 利用 jQuery.fn 宣告你的 jQuery plugin
 * jQuery.fn 包含了所有 jQuery 內建的方法
 * jQuery.fn. 後面接 plugin名稱 => jQuery.fn.plugin_name 
+
 #### 雛形
 
 ```js
@@ -57,6 +58,7 @@ jQuery.fn.myplugin = function(){
     });
 };
 ```
+
 ```html
 <div id="myid1" class="myclass">123</div>
 <div id="myid2" class="myclass">456</div>
