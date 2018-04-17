@@ -70,6 +70,7 @@ jQuery.fn.myplugin = function(){
 ### 立即函數
 * 一直寫 "jQuery" 這幾個字實在是很累人的一件事；而且 jQuery 不是可以簡寫成 $ 號嗎？不能直接用嗎？當然可以，只是這樣可能會和其他 JavaScript Library 發生衝突
 * 為了避免 $ 受到影響（全域變數污染），我們建立了立即函數（Immediately Invoked Function Expression）的作用域（scope），並將 jQuery 當作參數傳進去：
+
 #### 雛形
 
 ```js
