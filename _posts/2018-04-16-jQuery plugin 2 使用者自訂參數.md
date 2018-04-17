@@ -31,7 +31,7 @@ mathjax: true
 
 * 使用者可以自訂帶參數或函數
 
-```
+```js
 $('element').plugin_name({
     obj1: myobj1_value,
     obj2: myobj2_function()
