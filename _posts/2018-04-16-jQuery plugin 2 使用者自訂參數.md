@@ -19,7 +19,7 @@ mathjax: true
 ```js
 ;(function( $ ){
     $.fn.plugin_name = function(settings) {
-        var _defaultSettings = {
+        var _defaultSettings = {        //option
             obj1: obj1_default_value,
             obj2: function(){...}
         };
@@ -29,7 +29,7 @@ mathjax: true
 })(jQuery);
 ```
 
-* 使用者可以自訂帶參數或函數
+* 使用者可以自訂帶參數或函數，又稱 option
 
 ```js
 $('element').plugin_name({
