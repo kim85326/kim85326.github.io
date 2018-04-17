@@ -99,4 +99,4 @@ test("a","b","c","d");
 
 ### 參考資料
 
-[Array.prototype.slice()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)<br>
+[Array.prototype.slice.call()方法详解](https://blog.csdn.net/i10630226/article/details/49702375)<br>
