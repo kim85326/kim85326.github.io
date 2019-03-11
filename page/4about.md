@@ -11,9 +11,9 @@ type: page
 
 ## 關於我
 
-<img src="https://www.animen.com.tw/FilesUpload/CK-Images/150804_39_3.png" style="height: 100px;width: 100px;" />
+<img src="./image/elaine.jpg" style="height: 100px;width: 100px;" />
 
-目前是臺灣科技大學資訊工程系四年級的大學生...
+剛從臺灣科技大學資訊工程系畢業的菜鳥工程師...
 
 ## 聯繫我
 
