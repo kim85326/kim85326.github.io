@@ -11,7 +11,7 @@ type: page
 
 ## 關於我
 
-<img src="./image/elaine.jpg" style="height: 100px;width: 100px;" />
+<img src="../image/elaine.jpg" style="height: 100px;width: 100px;" />
 
 剛從臺灣科技大學資訊工程系畢業的菜鳥工程師...
 
