@@ -19,6 +19,7 @@ mathjax: true
 
 * Consumer 
     * in = out 代表buffer是空的
+    
       | [ x ] | [ x ] | [ x ] | [ x ] |
       | ----- | ----- | ----- | ----- |
       |  in   |   -   |   -   |   -   |
@@ -26,6 +27,7 @@ mathjax: true
       
 * Producer
     * (in + 1) % BUFFER_SIZE = out 代表 buffer 是滿的
+    
       | [ o ] | [ o ] | [ o ] | [ x ] |
       | ----- | ----- | ----- | ----- |
       |   -   |   -   |   -   |  in   |
