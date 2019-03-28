@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jQuery plugin 1 入門"
+title: "jQuery Plugin 1 入門"
 date: 2018-04-16 00:00:00 +0800
 categories: jQuery
 tags: jQuery
@@ -88,7 +88,8 @@ jQuery.fn.myplugin = function() {
 - 前面的 ";"，是因為怕和其他的 plugin 一起載入的時候，前面的人忘記寫 ";"，導致程式錯誤
   - 事實上多寫 ";" 並不會有問題，少寫 ";" 才會有問題
 
-參考資料<br>
-[如何打造自己的 jQuery Plugin 入門教學](https://blog.kdchang.cc/2016/04/01/how-to-create-your-own-jquery-plugin/)<br>
-[[程式][JQuery] 自己的第一個 JQuery Plugin! Hello World。(Part_01)](http://expect7.pixnet.net/blog/post/38085270)<br>
-[[jQuery] 自製 jQuery Plugin - Part 1](http://jaceju.net/2008-05-13-build-your-own-jquery-plugin-1/)
+### 參考資料
+
+- [如何打造自己的 jQuery Plugin 入門教學](https://blog.kdchang.cc/2016/04/01/how-to-create-your-own-jquery-plugin/)
+- [[程式][JQuery] 自己的第一個 JQuery Plugin! Hello World。(Part_01)](http://expect7.pixnet.net/blog/post/38085270)
+- [[jQuery] 自製 jQuery Plugin - Part 1](http://jaceju.net/2008-05-13-build-your-own-jquery-plugin-1/)

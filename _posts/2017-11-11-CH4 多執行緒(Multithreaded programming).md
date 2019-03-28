@@ -3,7 +3,7 @@ layout: post
 title: "CH4 多執行緒(Multithreaded programming"
 date: 2017-11-11 00:00:00 +0800
 categories: 作業系統
-tags: OS 作業系統
+tags: 作業系統
 mathjax: true
 ---
 
@@ -13,7 +13,7 @@ thread 是 cpu 使用時的基本單位，是一個由 thread id、program count
 
 ![](https://i.imgur.com/lXY8Y5r.png)
 
-### 動 機(Motivation)
+### 動機(Motivation)
 
 - 許多在桌上型 PC 執行的套裝軟體都是多執行緒。
 - 應用程式通常都製作成有許多執行緒控制的個別行程。

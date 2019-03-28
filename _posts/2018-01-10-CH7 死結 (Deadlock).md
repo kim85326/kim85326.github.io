@@ -3,7 +3,7 @@ layout: post
 title: "CH7 死結 (Deadlock)"
 date: 2018-01-10 00:00:00 +0800
 categories: 作業系統
-tags: OS 作業系統
+tags: 作業系統
 mathjax: true
 ---
 
@@ -281,6 +281,7 @@ available = available - need + max
 
 5. 具有最小優先級的進程。
 
-參考資料
-https://sls.weco.net/node/21327
-http://www.csie.ntnu.edu.tw/~swanky/os/chap5.htm
+### 參考資料
+
+- [宅學習 - 07. 死結 (Deadlock)](https://sls.weco.net/node/21327)
+- [Chapter 5 Deadlock(死結)](http://www.csie.ntnu.edu.tw/~swanky/os/chap5.htm)

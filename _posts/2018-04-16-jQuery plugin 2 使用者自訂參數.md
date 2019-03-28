@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jQuery plugin 2 使用者自訂參數"
+title: "jQuery Plugin 2 使用者自訂參數"
 date: 2018-04-16 00:00:00 +0800
 categories: jQuery
 tags: jQuery
@@ -103,5 +103,5 @@ $(".test").mytoolbox({
 
 ### 參考資料
 
-[[程式][JQuery] 自己的第一個 JQuery Plugin! Hello World。(Part_02)](http://expect7.pixnet.net/blog/post/38219670)<br>
-[[jQuery] 自製 jQuery Plugin - Part 1](http://jaceju.net/2008-05-13-build-your-own-jquery-plugin-1/)
+- [[程式][JQuery] 自己的第一個 JQuery Plugin! Hello World。(Part_02)](http://expect7.pixnet.net/blog/post/38219670)
+- [[jQuery] 自製 jQuery Plugin - Part 1](http://jaceju.net/2008-05-13-build-your-own-jquery-plugin-1/)

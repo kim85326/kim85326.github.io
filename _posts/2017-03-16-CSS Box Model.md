@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Margin、Padding"
+title: "CSS Box Model"
 date: 2017-03-16 00:00:00 +0800
 categories: CSS
 tags: CSS
 mathjax: true
 ---
 
-### Box Model
+## Box Model
 
 - border 外框
 - content 內文
@@ -32,13 +32,7 @@ mathjax: true
   - 解決方法：可以設 box-model: border-box
     - 就是把 width、height 是設為 content+padding 的寬、高，這樣就不用一直計算了
 
-### 為什麼要有 padding、margin？用 top、left 不就可以解決了？
-
-- 個人想法：如果只用 top/bottom/left/right 的話，計算起來太麻煩了，用 padding、margin 比較直覺
-
-### padding、margin 的差別
-
-##### 不能只有 padding、沒有 margin
+#### 不能只有 padding、沒有 margin
 
 - 假如我有一個大 div 裡面有兩個小 div，現在要把兩個 div 對大的 div 要不一樣的距離，此時只用 padding 做不到
 
@@ -55,25 +49,39 @@ mathjax: true
 
 ### 語法
 
+Margin 與 Padding 語法一樣
+
 - 有 1 個值
-  - margin: 四個邊同樣値;
+
+```
+margin: 四個邊同樣値;
+```
+
 - 有 2 個值
-  - margin: 上下 左右;
+
+```
+margin: 上下 左右;
+```
+
 - 有 3 個值
-  - margin: 上 左右 下;
+
+```
+margin: 上 左右 下;
+```
+
 - 有 4 個值
 
-  - margin: 上 右 下 左;
+```
+margin: 上 右 下 左;
+```
 
-- margin: auto;
-  - 代表讓瀏覽器自己去設定
-- margin: 長度單位;
-  - 就是給數字跟單位，單位可以是 em、px、pt 等値
-- margin: %;
-  - 讓瀏覽器自己去設定，跟邊界元素有關
+- 代表讓瀏覽器自己去設定
 
-P.S.padding 也是一樣
+```
+margin: auto;
+```
 
-參考資料<br>
-[CSS∥ 排版觀念-BoxModel>Margin、Padding](http://pinkyvivi.pixnet.net/blog/post/1131260-css%E2%88%A5%E6%8E%92%E7%89%88%E8%A7%80%E5%BF%B5-boxmodel%3Emargin%E3%80%81padding)<br>
-[CSS margin 屬性與用法範例](http://www.wibibi.com/info.php?tid=110)
+### 參考資料
+
+- [CSS∥ 排版觀念-BoxModel>Margin、Padding](http://pinkyvivi.pixnet.net/blog/post/1131260-css%E2%88%A5%E6%8E%92%E7%89%88%E8%A7%80%E5%BF%B5-boxmodel%3Emargin%E3%80%81padding)
+- [CSS margin 屬性與用法範例](http://www.wibibi.com/info.php?tid=110)

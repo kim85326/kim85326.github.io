@@ -17,8 +17,8 @@ mathjax: true
 
 - 元件化
 - 結構與樣式分開
-  - 結構：position、float、margin、padding...
-  - 樣式：border、color、background-color...
+  - 結構：`position、float、margin、padding`...
+  - 樣式：`border、color、background-color`...
 
 ```css
 .mb-20 {
@@ -36,22 +36,26 @@ mathjax: true
 ## SMACSS (Scalable Modular Architecture for CSS)
 
 - 將結構分類
+
   - base - 標籤預設的樣式
     - css reset
     - css normalize
     - 在 base 裡面不使用 !important
   - layout - 網頁佈局、排版、格線
+
     - 例如
       - grid
       - header
       - sidebar
       - content
+
     ```css
     .layout-header {
     }
     .l-header {
     }
     ```
+
   - module - 模塊
     - 頁面上可以單獨存在，並且可以重複使用的元件
     - 子模組以原模組名稱加上"-"作為名稱
@@ -84,6 +88,7 @@ mathjax: true
   - theme - 主題樣式 (非必要)
     - 網站主視覺
     - 命名通常以 .theme-\* 做開頭
+
 - 命名規則
 - 減少對 html 的依賴
   - 使用 SMACSS 時，盡量不要用後代選擇器(.header ul)
@@ -146,11 +151,11 @@ mathjax: true
 
 - 命名規則
 
-  - .namespace-block-name\_\_element-name--modifier
+  - `.namespace-block-name\_\_element-name--modifier`
 
 - 使用 BEM 的 CSS 就是 material design
 
-## 參考資料
+### 參考資料
 
-[漫談 css 架構方法](https://www.slideshare.net/kurotanshi/css-oocss-smacss-bem)<br>
-[從入門到業界實戰 - UI / UX 前端網頁設計 - CSS 樣式管理](https://hahow.in/courses/58d5c70c27ea7d070060160e/discussions?curriculum=5a1e1752a2c4b000589dd850)
+- [漫談 css 架構方法](https://www.slideshare.net/kurotanshi/css-oocss-smacss-bem)
+- [從入門到業界實戰 - UI / UX 前端網頁設計 - CSS 樣式管理](https://hahow.in/courses/58d5c70c27ea7d070060160e/discussions?curriculum=5a1e1752a2c4b000589dd850)

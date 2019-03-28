@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JavaScript 同步、非同步"
-date: 2017-04-11 00:00:00 +0800
+date: 2017-06-10 00:00:00 +0800
 categories: JavaScript
 tags: JavaScript
 mathjax: true
@@ -36,8 +36,9 @@ setTimeout(function() {
 - synchronous (同步) 指的是 one at a time，也就是程式會逐列執行，一次執行一列
 - asynchronous (非同步) 多了一個 a，指的就是 more than one at a time，也就是程式在執行的時候會同時執行不只一列的程式碼
   - 例如 ajax、setTimeout
-- Sync 與 Async 的差別在於：發送需求的人是否需要等到需求完成才可以執行其他事情。
+- Sync 與 Async 的差別在於：發送需求的人是否需要等到需求完成才可以執行其他事情
 
-參考資料<br>
-[[筆記] 談談 JavaScript 中的 asynchronous 和 event queue](https://pjchender.blogspot.tw/2016/01/javascriptasynchronousevent-queue.html)<br>
-[JavaScript 同步延遲 ( Promise + setTimeout )](http://www.oxxostudio.tw/articles/201706/javascript-promise-settimeout.html)<br>
+### 參考資料
+
+- [[筆記] 談談 JavaScript 中的 asynchronous 和 event queue](https://pjchender.blogspot.tw/2016/01/javascriptasynchronousevent-queue.html)
+- [JavaScript 同步延遲 ( Promise + setTimeout )](http://www.oxxostudio.tw/articles/201706/javascript-promise-settimeout.html)

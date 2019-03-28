@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Facebook Login API (臉書登入 API 串接)"
+title: "Facebook Login API"
 date: 2017-11-24 00:00:00 +0800
 categories: api
 tags: facebook api

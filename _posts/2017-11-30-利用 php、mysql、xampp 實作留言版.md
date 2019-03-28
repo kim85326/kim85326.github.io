@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "留言版 (php+mysql+xampp 基本實作)"
+title: "利用 php、mysql、xampp 實作留言版"
 date: 2017-11-30 04:12:00 +0800
 categories: PHP
 tags: PHP MySQL
@@ -491,5 +491,3 @@ $result = mysqli_query($con , $sql) or die('MySQL query error');
 ```
 
 - 想下載完整程式碼，也可以去我的 github [傳送門](https://github.com/kim85326/mes_board)
-
-謝謝指教~~~

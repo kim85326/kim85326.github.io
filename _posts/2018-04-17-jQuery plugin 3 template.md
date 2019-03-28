@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jQuery plugin 3 template"
+title: "jQuery Plugin 3 template"
 date: 2018-04-17 00:00:00 +0800
 categories: jQuery
 tags: jQuery
@@ -100,4 +100,4 @@ test("a", "b", "c", "d");
 
 ### 參考資料
 
-[Array.prototype.slice.call()方法详解](https://blog.csdn.net/i10630226/article/details/49702375)<br>
+- [Array.prototype.slice.call()方法详解](https://blog.csdn.net/i10630226/article/details/49702375)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CSS flex 排版"
+title: "CSS Flexbox"
 date: 2017-07-14 00:00:00 +0800
 categories: CSS
 tags: CSS
@@ -47,7 +47,7 @@ mathjax: true
 ### flex-wrap
 
 - 當子層的數量太多，可以決定要不要換行
-- 預設是 flex-wrap: nowrap;
+- 預設是 `flex-wrap: nowrap`;
 
 ```css
 .parent {
@@ -64,7 +64,7 @@ mathjax: true
 
 - 只是把 flex-direction 和 flex-wrap 寫在一起
 - template
-  - flex-flow: <'flex-direction'> || <'flex-wrap'>
+  - `flex-flow: [flex-direction] || [flex-wrap]>`
 
 ```css
 .parent {
@@ -121,16 +121,16 @@ mathjax: true
 
 ### flex
 
-- 是 flex-grow、flex-shrink 和 flex-basis 的縮寫
-  - 如果只寫一個值就是 flex-grow
+- 是 `flex-grow`、`flex-shrink` 和 `flex-basis` 的縮寫
+  - 如果只寫一個值就是 `flex-grow`
 
 ### flex-grow
 
 - 代表**伸展**的比例
 - 值是數字且無單位，不可以為負值
-- 預設 flex-grow: 0，代表不會放大
-- 設定完 flex-grow 後
-  - 父層的 justify-content 和 flex-wrap 會失效
+- 預設 `flex-grow: 0`，代表不會放大
+- 設定完 `flex-grow` 後
+  - 父層的 `justify-content` 和 `flex-wrap` 會失效
 
 ```css
 .child {
@@ -147,12 +147,12 @@ mathjax: true
 
 - 代表**壓縮**的比例
 - 值是數字且無單位，不可以為負值
-- 預設 flex-shrink: 1
+- 預設 `flex-shrink: 1`
 
 ### align-self
 
 - 調整該子元件的對齊
-- 和 align-item 差不多，只是用在子元件上
+- 和 `align-item` 差不多，只是用在子元件上
 
 ### order
 
@@ -173,8 +173,8 @@ mathjax: true
 
 ![](https://i.imgur.com/gSKXhmP.png)
 
-## 參考資料
+### 參考資料
 
-[圖解：CSS Flex 屬性一點也不難](https://wcc723.github.io/css/2017/07/21/css-flex/)<br>
-[深入解析 CSS Flexbox](http://www.oxxostudio.tw/articles/201501/css-flexbox.html)<br>
-[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)<br>
+- [圖解：CSS Flex 屬性一點也不難](https://wcc723.github.io/css/2017/07/21/css-flex/)
+- [深入解析 CSS Flexbox](http://www.oxxostudio.tw/articles/201501/css-flexbox.html)
+- [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)

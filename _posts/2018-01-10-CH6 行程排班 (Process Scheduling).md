@@ -3,7 +3,7 @@ layout: post
 title: "CH6 行程排班 (Process Scheduling)"
 date: 2018-01-10 00:00:00 +0800
 categories: 作業系統
-tags: OS 作業系統
+tags: 作業系統
 mathjax: true
 ---
 
@@ -17,19 +17,23 @@ mathjax: true
 ![](https://i.imgur.com/cBX8fjY.png)
 
 - Consumer
+
   - in = out 代表 buffer 是空的
 
     | [ x ] | [ x ] | [ x ] | [ x ] |
     | ----- | ----- | ----- | ----- |
     | in    | -     | -     | -     |
     | out   | -     | -     | -     |
+
 - Producer
+
   - (in + 1) % BUFFER_SIZE = out 代表 buffer 是滿的
 
     | [ o ] | [ o ] | [ o ] | [ x ] |
     | ----- | ----- | ----- | ----- |
     | -     | -     | -     | in    |
     | out   | -     | -     | -     |
+
 - 雖然 solution is correct ，但只可以使用到 BUFFER_SIZE -1 個 elements
 
 ##### 改良後
@@ -347,7 +351,7 @@ acquire lock => critical section => release lock
 
 ##### semaphore 改良
 
-```c=
+```c
 typedef struct {
 int value;
 struct process *list; //waiting queue

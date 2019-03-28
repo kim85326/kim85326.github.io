@@ -12,17 +12,17 @@ mathjax: true
 ### typeof() 可以查看資料型態
 
 ```js
-typeof 101; //回傳number
-typeof 1.01; //回傳number
-typeof NaN; //回傳number
-typeof "101"; //回傳string
-typeof true; //回傳boolean
-typeof [1, 2, 3, 4]; //回傳object
-typeof { name: "Berry", age: 18 }; //回傳objcet
-typeof new Date(); //回傳objcet
-typeof null; //回傳objcet
-typeof function() {}; //回傳function
-typeof myCar; //沒有定義所以回傳undefined
+typeof 101; // 回傳 number
+typeof 1.01; // 回傳 number
+typeof NaN; // 回傳 number
+typeof "101"; // 回傳 string
+typeof true; // 回傳 boolean
+typeof [1, 2, 3, 4]; // 回傳 object
+typeof { name: "Berry", age: 18 }; // 回傳 objcet
+typeof new Date(); // 回傳 objcet
+typeof null; // 回傳 objcet
+typeof function() {}; // 回傳 function
+typeof myCar; // 沒有定義所以回傳 undefined
 ```
 
 ## 轉換型態
@@ -35,23 +35,23 @@ typeof myCar; //沒有定義所以回傳undefined
 
 ```js
 var x = 123;
-String(x); //將變數x轉為字串"123"
-String(123); //將數字123轉為字串"123"
-String(100 + 23); //將表達式100+23計算後轉為字串"123"
-String(false); //返回字串"false"
-String(true); //返回字串"true"
-String(Date()); //將日期型態轉為字串型態 Sat Dec 10 2016 23:08:07 GMT+0800(台北標準時間)
+String(x); // 將變數x轉為字串 "123"
+String(123); // 將數字 123 轉為字串 "123"
+String(100 + 23); // 將表達式 100+23 計算後轉為字串 "123"
+String(false); // 返回字串 "false"
+String(true); // 返回字串 "true"
+String(Date()); // 將日期型態轉為字串型態 Sat Dec 10 2016 23:08:07 GMT+0800(台北標準時間)
 ```
 
 #### toString() 也可以轉換型態為字串
 
-功能和 String()一樣
+功能和 `String()` 一樣
 
 ```js
-var x = 123; //定義變數x為字串"123"
-x.toString(); //將變數x轉為字串"123"
-(123).toString(); //將數字123轉為字串"123"
-(100 + 23).toString(); //將表達式100+23計算後轉為字串"123"
+var x = 123; // 定義變數 x 為字串 "123"
+x.toString(); // 將變數 x 轉為字串 "123"
+(123).toString(); // 將數字 123 轉為字串 "123"
+(100 + 23).toString(); //將表達式 100+23 計算後轉為字串 "123"
 ```
 
 ### 字串轉數字
@@ -59,41 +59,41 @@ x.toString(); //將變數x轉為字串"123"
 #### Number() 可以將物件轉化成數字
 
 ```js
-Number(true); //傳回1
-Number(false); //傳回0
-Number(new Date()); //傳回1970/1/1到現在的毫秒數
-Number("123"); //傳回123
-Number("123 456"); //傳回NaN
+Number(true); // 傳回 1
+Number(false); // 傳回 0
+Number(new Date()); // 傳回 1970/1/1 到現在的毫秒數
+Number("123"); // 傳回 123
+Number("123 456"); // 傳回 NaN
 ```
 
 #### parseInt() 可以傳回由字串轉換而成的整數
 
 ```js
-parseInt("abc"); // 傳回NaN`
-parseInt("123abc"); // 傳回 123`
-parseInt("abc123"); // 傳回 NaN`
-parseInt("   123abc"); // 傳回 123`
+parseInt("abc"); // 傳回 NaN
+parseInt("123abc"); // 傳回 123
+parseInt("abc123"); // 傳回 NaN
+parseInt("   123abc"); // 傳回 123
 ```
 
 #### parseFloat() 可以傳回由字串轉換而成的浮點數
 
 ```js
-parseFloat("20"); //傳回20`
-parseFloat("30.00"); //傳回30`
-parseFloat("10.68"); //傳回10.68
-parseFloat("12 22 32"); //傳回12
-parseFloat("     80  "); //傳回80`
-parseFloat("378abc"); //傳回378
-parseFloat("abc378"); //傳回NaN
+parseFloat("20"); // 傳回 20
+parseFloat("30.00"); // 傳回 30
+parseFloat("10.68"); // 傳回 10.68
+parseFloat("12 22 32"); // 傳回 12
+parseFloat("     80  "); // 傳回 80
+parseFloat("378abc"); // 傳回 378
+parseFloat("abc378"); // 傳回 NaN
 ```
 
 #### getTime()方法將日期轉為數字型態
 
-將日期轉為數字，除了可以用 Number()，還可以用 getTime()
+將日期轉為數字，除了可以用 `Number()`，還可以用 `getTime()`
 
 ```js
 var D = new Date();
-D.getTime(); //傳回1970/1/1到現在的毫秒數
+D.getTime(); // 傳回 1970/1/1 到現在的毫秒數
 ```
 
 ### 運算式變更型態
@@ -105,13 +105,13 @@ JavaScript 做運算時，會自動將變數做型態的轉換
 var x = 5 * 2;
 alert(x); // 輸出 10
 x = "5" * "2";
-alert(x); // 字串5乘字串2 輸出 10
+alert(x); // 字串 5 乘字串 2 輸出 10
 x = 5 * "2";
-alert(x); // 數字5乘字串2 輸出 10
+alert(x); // 數字 5 乘字串 2 輸出 10
 x = 5 + "2";
-alert(x); // 數字5加字串2 輸出 52
+alert(x); // 數字 5 加字串 2 輸出 52
 x = "5" + 2;
-alert(x); // 字串5加數字2 輸出 52
+alert(x); // 字串 5 加數字 2 輸出 52
 ```
 
 ### 相等性表格
@@ -135,10 +135,11 @@ if (a) {
 } else {
   console.log("not exist");
 }
-// 輸出not exist，因為undefine是false
+// 輸出 not exist，因為 undefine 是 false
 ```
 
-參考資料<br>
-[Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-[parseInt()、parseFloat() 與 Number()](http://www.victsao.com/blog/81-javascript/86-javascript-parse-number)
-[[JavaScript] 型態轉換](https://dotblogs.com.tw/berrynote/2016/12/07/221015)
+### 參考資料
+
+- [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [parseInt()、parseFloat() 與 Number()](http://www.victsao.com/blog/81-javascript/86-javascript-parse-number)
+- [[JavaScript] 型態轉換](https://dotblogs.com.tw/berrynote/2016/12/07/221015)

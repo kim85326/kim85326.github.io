@@ -10,48 +10,52 @@ mathjax: true
 ## 連接資料庫
 
 - 連接伺服器
-  mysql_connect("主機名稱","帳號","密碼"）
+  `mysql_connect("主機名稱","帳號","密碼"）`
 
 - 選擇欲讀取的資料庫名稱
-  mysql_select_db("資料庫名稱")
+  `mysql_select_db("資料庫名稱")`
 
 - SQL 語法
-  mysql_query("SQL 語法")
+  `mysql_query("SQL 語法")`
 
 - 將資料設為 utf8 格式（才能讀取中文）
-  mysql_query("set names utf8")
+  `mysql_query("set names utf8")`
 
 - 關閉連結
-  mysql_close(mysql_connect("主機名稱","帳號","密碼"）)
+  `mysql_close(mysql_connect("主機名稱","帳號","密碼"）)`
 
 ```php
 <?php
-	$server='localhost';
-	$id='root';
-	$pwd='1234';
-	$dbname='mes_board';
-	$con = mysql_connect($server , $id , $pwd);
-	if (!$con){
-  		die("Could not connect: " . mysql_error());
-  	}
-	mysql_select_db($dbname , $con);
-	mysql_query("SET NAMES utf8");
-	// mysql_close($con);
+$server='localhost';
+$id='root';
+$pwd='1234';
+$dbname='mes_board';
+$con = mysql_connect($server , $id , $pwd);
+if (!$con){
+    die("Could not connect: " . mysql_error());
+}
+mysql_select_db($dbname , $con);
+mysql_query("SET NAMES utf8");
+// mysql_close($con);
 ?>
 ```
 
 ## MySQL 語法
 
 ```php
+<?php
 $sql = "select * from 資料庫名稱";
 $result = mysql_query($sql);
+?>
 ```
 
 先用一個變數 sql 把 MYSQL 的語法存下來，再塞到 mysql_query()裡面
 
 ```php
+<?php
 $num = mysql_num_rows($result);
 $data = mysql_fecth_rows($result);
+?>
 ```
 
 mysql_num_rows()：回傳我們的資料有幾個列
@@ -59,6 +63,7 @@ mysql_fecth_rows()：讀取該資料表中列的資料，回傳的是一列資�
 一般會搭配迴圈
 
 ```php
+<?php
 $sql = "SELECT * FROM DB_TABLE";
 $result = mysql_query($sql);
 $demo = array();
@@ -67,6 +72,7 @@ while($data = mysql_fetch_array($result)){
      $demo[$k] = $data;
      $k++;
 }
+?>
 ```
 
 ### 創造 create
@@ -142,5 +148,6 @@ DELETE FROM table_name
 WHERE column_name = some_value
 ```
 
-參考資料<br>
-[PHP MySQL 简介](http://www.w3school.com.cn/php/php_mysql_intro.asp)
+### 參考資料
+
+- [PHP MySQL 简介](http://www.w3school.com.cn/php/php_mysql_intro.asp)
