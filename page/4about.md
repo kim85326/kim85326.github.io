@@ -13,7 +13,9 @@ type: page
 
 <img src="../image/elaine.jpg" style="height: 100px;width: 100px;" />
 
-剛從臺灣科技大學資訊工程系畢業的菜鳥工程師...
+- 工程師
+- 畢業於臺灣科技大學資訊工程系
+- 拜託！不要叫我學長...
 
 ## 聯繫我
 

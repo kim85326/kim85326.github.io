@@ -7,7 +7,7 @@
 
 # Site settings
 title: Elaine's Blog
-brief-intro: 普通的資工系大學生...
+brief-intro: 朝著 senior 前進的工程師
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kim85326.github.io" # the base hostname & protocol for your site
 
