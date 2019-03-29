@@ -37,14 +37,14 @@ let createdByBoolean: boolean = Boolean(1);
 let decLiteral: number = 6;
 let notANumber: number = NaN;
 let infinityNumber: number = Infinity;
-````
+```
 
-### string 
+### string
 
 單雙引號和 Backtick 都可以
 
 ```js
-let myName: string = 'Tom';
+let myName: string = "Tom";
 let myName: string = "Tom";
 let sentence: string = `Hello! I'm ${myName}.`;
 ```
@@ -52,8 +52,9 @@ let sentence: string = `Hello! I'm ${myName}.`;
 ### array
 
 TypeScript 對於陣列提供兩種寫法：
-* 傳統 JavaScript 風格寫法
-* 泛型風格寫法
+
+- 傳統 JavaScript 風格寫法
+- 泛型風格寫法
 
 ```js
 let list: number[] = [1, 2, 3];
@@ -76,7 +77,7 @@ x = [10, "hello"]; // 編譯失敗
 
 ```js
 function alertName(): void {
-    alert('My name is Tom');
+  alert("My name is Tom");
 }
 ```
 
@@ -103,7 +104,7 @@ let num: number = u;
 如果是普通類型，在賦值的時候改變型態是不行的，如
 
 ```js
-let myFavoriteNumber: string = 'seven';
+let myFavoriteNumber: string = "seven";
 myFavoriteNumber = 7;
 
 // index.ts(2,1): error TS2322: Type 'number' is not assignable to type 'string'.
@@ -112,14 +113,14 @@ myFavoriteNumber = 7;
 但是如果是 any 就可以
 
 ```js
-let myFavoriteNumber: any = 'seven';
+let myFavoriteNumber: any = "seven";
 myFavoriteNumber = 7;
 ```
 
 在任意值上讀取任何屬性都是可以的
 
 ```js
-let anyThing: any = 'hello';
+let anyThing: any = "hello";
 console.log(anyThing.myName);
 console.log(anyThing.myName.firstName);
 ```
@@ -127,33 +128,33 @@ console.log(anyThing.myName.firstName);
 也可以調用任何方法
 
 ```js
-let anyThing: any = 'Tom';
-anyThing.setName('Jerry');
-anyThing.setName('Jerry').sayHello();
-anyThing.myName.setFirstName('Cat');
+let anyThing: any = "Tom";
+anyThing.setName("Jerry");
+anyThing.setName("Jerry").sayHello();
+anyThing.myName.setFirstName("Cat");
 ```
 
 如果是未聲明類型的變數，那將會被視為 any 型態
 
 ```js
 let something;
-something = 'seven';
+something = "seven";
 something = 7;
 
-something.setName('Tom');
+something.setName("Tom");
 ```
 
 等價於
 
 ```js
 let something: any;
-something = 'seven';
+something = "seven";
 something = 7;
 
-something.setName('Tom');
+something.setName("Tom");
 ```
 
-* 但是實務上不建議使用 any 型別，因為這將喪失 TypeScript 的型別檢查機制，除非有充分的理由
+- 但是實務上不建議使用 any 型別，因為這將喪失 TypeScript 的型別檢查機制，除非有充分的理由
 
 ## 聯合類型
 
@@ -161,7 +162,7 @@ something.setName('Tom');
 
 ```js
 let myFavoriteNumber: string | number;
-myFavoriteNumber = 'seven';
+myFavoriteNumber = "seven";
 myFavoriteNumber = 7;
 ```
 
@@ -177,7 +178,7 @@ myFavoriteNumber = true;
 
 ```js
 function getLength(something: string | number): number {
-    return something.length;
+  return something.length;
 }
 
 // index.ts(2,22): error TS2339: Property 'length' does not exist on type 'string | number'.
@@ -190,21 +191,22 @@ function getLength(something: string | number): number {
 
 實務上有時宣告了 any，但為了 intellisense 或其他變數，需要做明確的轉型，此時可使用 type assertion 明確轉型，也就是告訴編譯器：「我自己知道此變數的明確型別，請相信我的轉型」
 
-* 類型斷言有兩種形式
-    * <>
+- 類型斷言有兩種形式
 
-    ```js
-    let someValue: any = "this is a string";
-    let strLength: number = (<string>someValue).length;
-    ```
-    
-    * as
-        * 當你在TypeScript裡使用JSX時，只有 as 語法斷言是被允許的
-        
-    ```js
-    let someValue: any = "this is a string";
-    let strLength: number = (someValue as string).length;
-    ```
+  - <>
+
+  ```js
+  let someValue: any = "this is a string";
+  let strLength: number = (<string>someValue).length;
+  ```
+
+  - as
+    - 當你在 TypeScript 裡使用 JSX 時，只有 as 語法斷言是被允許的
+
+  ```js
+  let someValue: any = "this is a string";
+  let strLength: number = (someValue as string).length;
+  ```
 
 ### 初始化物件
 
@@ -212,8 +214,8 @@ TypeScript 有 3 種寫法，可以寫出類似 C# Object Initializer 風格的�
 
 ```js
 const hero: Hero = {
-  name: 'Sam',
-  state: 'active'
+  name: "Sam",
+  state: "active"
 };
 ```
 
@@ -235,14 +237,14 @@ const hero = {
 
 ```js
 function addMe(num1: number, num2: number): number {
-    return num1 + num2;
+  return num1 + num2;
 }
 ```
 
 ```js
-var addMe = function (num1: number, num2: number): number { 
-    return num1 + num2;
-}
+var addMe = function(num1: number, num2: number): number {
+  return num1 + num2;
+};
 ```
 
 ### 參考資料
@@ -251,5 +253,3 @@ var addMe = function (num1: number, num2: number): number {
 - [TypeScript 入门教程 - 原始数据类型](https://ts.xcatliu.com/basics/primitive-data-types.html)
 - [深入探討 TypeScript 之基本型別](https://oomusou.io/typescript/basic-type/)
 - [深入探討 TypeScript 之 Type Assertion](https://oomusou.io/typescript/type-assertion/)
-
-

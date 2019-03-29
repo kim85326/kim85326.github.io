@@ -11,20 +11,20 @@ mathjax: true
 
 ```js
 class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
+  greeting: string;
+  constructor(message: string) {
+    this.greeting = message;
+  }
+  greet() {
+    return "Hello, " + this.greeting;
+  }
 }
 
 let greeter = new Greeter("world");
 ```
 
 我們聲明一個 Greeter 類別
-這個類別有3個成員：一個叫做 greeting 的屬性，一個構造函數 constructor 和一個 greet 方法
+這個類別有 3 個成員：一個叫做 greeting 的屬性，一個構造函數 constructor 和一個 greet 方法
 我們在引用任何一個類成員的時候都用了 this，它表示我們訪問的是類的成員
 最後一行，我們使用 new 構造了 Greeter 類別的一個實例
 它會調用之前定義的 constructor，創建一個 Greeter 類型的新對象，並執行 constructor 初始化它
@@ -33,15 +33,15 @@ let greeter = new Greeter("world");
 
 ```js
 class Animal {
-    move(distanceInMeters: number = 0) {
-        console.log(`Animal moved ${distanceInMeters}m.`);
-    }
+  move(distanceInMeters: number = 0) {
+    console.log(`Animal moved ${distanceInMeters}m.`);
+  }
 }
 
 class Dog extends Animal {
-    bark() {
-        console.log('Woof! Woof!');
-    }
+  bark() {
+    console.log("Woof! Woof!");
+  }
 }
 
 const dog = new Dog();
@@ -85,4 +85,3 @@ dad.name = "Man with the 3-piece suit"; // error! name 是唯讀的.
 
 - [TypeScript 類](https://www.tslang.cn/docs/handbook/classes.html)
 - [TypeScript 初學之路系列 第 7 篇 Classes](https://ithelp.ithome.com.tw/articles/10191249)
-

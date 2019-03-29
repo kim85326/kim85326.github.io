@@ -3,7 +3,7 @@ layout: post
 title: "Quick Sort"
 date: 2018-03-09 15:53:00 +0800
 categories: 程式語言
-tags: 
+tags:
 mathjax: true
 ---
 
@@ -13,9 +13,9 @@ mathjax: true
 
 ![](https://i.imgur.com/1mKg2Mi.png)
 
-* R1 ~ R10 代表在 array 的位置
-* left、right 代表現在要 sort 的範圍
-* 一開始把 R1 的資料做為基準，把所有資料 scan 一次，比 R1 還小的放左邊，比 R1 大的放右邊
+- R1 ~ R10 代表在 array 的位置
+- left、right 代表現在要 sort 的範圍
+- 一開始把 R1 的資料做為基準，把所有資料 scan 一次，比 R1 還小的放左邊，比 R1 大的放右邊
 
 1. 把 R1 的資料 26 做為基準
 2. → 從左邊看過來 R2 < R1，OK
@@ -36,13 +36,13 @@ mathjax: true
 17. 接下來將 R6 的左邊和右邊各自做 recursive，以此類推
 
 ### 性質
+
 1. 方法 : 以每組的第一個資料為基準(pivot)，把比它小的資料放在左邊，比它大的資料放在右邊，之後以 pivot 中心，將這組資料分成兩部份。然後兩部分資料各自 recursively 執行相同方法。
 2. 平均而言，Quick Sort 有很好效能
 3. 效率最差的時候就是進來的資料已經是排序好的
 4. 時間複雜度
 
 ![](https://i.imgur.com/3p34lLE.png)
-
 
 ### 演算法
 
