@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "正規化 - 判斷整數、浮點數"
+title: "JavaScript 正規化 - 判斷整數、浮點數"
 date: 2018-03-15 00:00:00 +0800
 categories: JavaScript
 tags: JavaScript
@@ -24,11 +24,11 @@ mathjax: true
 "^(-?\d+)(\.\d+)?$"; //浮點數
 ```
 
-### javascript 判斷
+### 判斷
 
 ```js
 var r = /^\[0-9\]*\[1-9\]\[0-9\]*$/; //正整數
-r.test(str); //str为你要判斷的字符 執行返回結果 true 或 false
+r.test(str); //str 為你要判斷的字符 執行返回結果 true 或 false
 ```
 
 ### 參考資料

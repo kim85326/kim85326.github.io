@@ -2,7 +2,7 @@
 layout: post
 title: "TypeScript 基本類型"
 date: 2018-10-05 00:00:00 +0800
-categories: JavaScript
+categories: TypeScript
 tags: JavaScript TypeScript
 mathjax: true
 ---

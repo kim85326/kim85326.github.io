@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "利用 php、mysql、xampp 實作留言版"
+title: "利用 PHP、MySQL、XAMPP 實作留言版"
 date: 2017-11-30 04:12:00 +0800
 categories: PHP
 tags: PHP MySQL

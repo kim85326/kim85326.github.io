@@ -2,7 +2,7 @@
 layout: post
 title: "Clean Code"
 date: 2018-08-29 00:00:00 +0800
-categories: 程式語言
+categories: 其他
 tags:
 mathjax: true
 ---

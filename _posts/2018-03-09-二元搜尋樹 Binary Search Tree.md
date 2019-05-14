@@ -2,7 +2,7 @@
 layout: post
 title: "二元搜尋樹 Binary Search Tree"
 date: 2018-03-09 00:00:00 +0800
-categories: 程式語言
+categories: 演算法
 tags:
 mathjax: true
 ---

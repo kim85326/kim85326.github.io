@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Display 與 Visible 差別"
+title: "CSS Display 與 Visible 差別"
 date: 2017-03-19 00:00:00 +0800
 categories: CSS
 tags: CSS

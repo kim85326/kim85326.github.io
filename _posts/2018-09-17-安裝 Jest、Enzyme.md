@@ -2,7 +2,7 @@
 layout: post
 title: "安裝 Jest、Enzyme"
 date: 2018-09-17 00:00:00 +0800
-categories: JavaScript
+categories: 測試
 tags: React JavaScript Test
 mathjax: true
 ---

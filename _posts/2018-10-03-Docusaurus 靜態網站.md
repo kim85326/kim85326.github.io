@@ -2,7 +2,7 @@
 layout: post
 title: "Docusaurus 靜態網站"
 date: 2018-10-03 00:00:00 +0800
-categories:
+categories: 其他
 tags: React JavaScript
 mathjax: true
 ---

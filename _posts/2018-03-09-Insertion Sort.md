@@ -2,7 +2,7 @@
 layout: post
 title: "Insertion Sort"
 date: 2018-03-09 17:00:00 +0800
-categories: 程式語言
+categories: 演算法
 tags:
 mathjax: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Quick Sort"
 date: 2018-03-09 15:53:00 +0800
-categories: 程式語言
+categories: 演算法
 tags:
 mathjax: true
 ---
