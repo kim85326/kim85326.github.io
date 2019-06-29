@@ -13,6 +13,21 @@
    */
   var demoContent = [
     {
+      demo_link: "https://kim85326.github.io/fear/",
+      img_link: "/image/demo/work16.png",
+      code_link: "https://github.com/kim85326/fear",
+      title: "怕怕緊抱",
+      core_tech: "React Redux TypeScript Lottie CSS animation transform",
+      description: "《怕怕緊抱》是協助大家面對恐懼的故事作品"
+    },
+    {
+      demo_link: "https://www.ruby-vpn.com/",
+      img_link: "/image/demo/work15.png",
+      title: "Ruby VPN",
+      core_tech: "React Redux TypeScript Lottie CSS animation transform",
+      description: "Ruby VPN APP 官方網站"
+    },
+    {
       demo_link: "https://kim85326.github.io/ttha/",
       img_link: "/image/demo/work1.png",
       code_link: "https://github.com/kim85326/ttha",
@@ -45,7 +60,7 @@
       demo_link: "https://kim85326.github.io/slot-machine/",
       img_link: "/image/demo/work12.png",
       title: "角子老虎機",
-      core_tech: "Transform react",
+      core_tech: "CSS animation transform react",
       description: "在公司聖誕晚會看到的抽獎工具，自己就想也做一個"
     },
     {
