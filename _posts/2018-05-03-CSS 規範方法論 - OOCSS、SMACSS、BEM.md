@@ -7,6 +7,9 @@ tags: CSS、OOCSS、SMACSS、BEM
 mathjax: true
 ---
 
+<p style="font-size:12px;color:#808080;">這是我在公司技術分享會的投影片</p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjYhNDbi_2P-WdA6uyP0fTMSo1Lfq_GujyWShPJ2Qmj5_HQU2TzIp_5edUfr-svjux8ZsNw4rEdfmF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 - 良好的 css 架構
   - 預測
   - 複用 - 重複利用性、能夠用在更多頁面
@@ -58,7 +61,7 @@ mathjax: true
 
   - module - 模塊
     - 頁面上可以單獨存在，並且可以重複使用的元件
-    - 子模組以原模組名稱加上"-"作為名稱
+    - 子模組以原模組名稱加上 `-` 作為名稱
     ```css
     .card {
     }
@@ -74,7 +77,7 @@ mathjax: true
 
     - active、inactive
     - disabled、default
-    - 命名規則是 .is-\* 開頭
+    - 命名規則是 `.is-*` 開頭
 
     ```css
     .is-hidden {
@@ -87,7 +90,7 @@ mathjax: true
 
   - theme - 主題樣式 (非必要)
     - 網站主視覺
-    - 命名通常以 .theme-\* 做開頭
+    - 命名通常以 `.theme-*` 做開頭
 
 - 命名規則
 - 減少對 html 的依賴
@@ -120,7 +123,7 @@ mathjax: true
   - 為 block 的子組件
   - 無法獨立於 block 之外
   - 有 block 可能沒有 element
-  - 命名規則以 block 名稱再加上兩條底線"\_\_"
+  - 命名規則以 block 名稱再加上兩條底線 `__`
 
 ```css
 .button__icon {
@@ -151,7 +154,7 @@ mathjax: true
 
 - 命名規則
 
-  - `.namespace-block-name\_\_element-name--modifier`
+  - `.namespace-block-name__element-name--modifier`
 
 - 使用 BEM 的 CSS 就是 material design
 
