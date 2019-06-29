@@ -13,15 +13,14 @@ type: page
 
 <img src="../image/elaine.jpg" style="height: 100px;width: 100px;" />
 
-- 工程師
+- 朝著 Senior 前進的工程師
 - 畢業於臺灣科技大學資訊工程系
-- 拜託！不要叫我學長...
+- 拜託！不要叫我學長...(白眼)
 
 ## 聯繫我
 
-* GitHub：[kim85326](https://github.com/kim85326)
-* email：kim85326@gmail.com
-* [Facebook](https://www.facebook.com/kim85326)
+- GitHub：[{{site.github_username}}](https://github.com/{{site.github_username}})
+- E-mail：{{site.email}}
 
 ## 關於本站
 
