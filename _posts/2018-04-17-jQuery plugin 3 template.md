@@ -2,7 +2,7 @@
 layout: post
 title: "jQuery Plugin 3 template"
 date: 2018-04-17 00:00:00 +0800
-categories: jQuery
+categories: JavaScript
 tags: jQuery
 mathjax: true
 ---

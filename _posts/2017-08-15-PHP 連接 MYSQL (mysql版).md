@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PHP 連接 MYSQL (mysql版)"
+title: "PHP 連接 MySQL (mysql 版)"
 date: 2017-08-15 00:00:00 +0800
 categories: PHP
 tags: PHP

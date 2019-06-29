@@ -3,7 +3,7 @@ layout: post
 title: "在 LNMP 上建立 Laravel 專案"
 date: 2019-05-13 00:00:00 +0800
 categories: 架站
-tags:
+tags: Nginx PHP Laravel
 mathjax: true
 ---
 

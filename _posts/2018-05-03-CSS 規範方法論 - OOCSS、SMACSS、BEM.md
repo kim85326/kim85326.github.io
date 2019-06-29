@@ -2,7 +2,7 @@
 layout: post
 title: "CSS 規範方法論 - OOCSS、SMACSS、BEM"
 date: 2018-05-03 00:00:00 +0800
-categories: CSS
+categories: 前端
 tags: CSS、OOCSS、SMACSS、BEM
 mathjax: true
 ---

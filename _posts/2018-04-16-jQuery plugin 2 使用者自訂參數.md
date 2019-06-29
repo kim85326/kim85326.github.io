@@ -2,7 +2,7 @@
 layout: post
 title: "jQuery Plugin 2 使用者自訂參數"
 date: 2018-04-16 00:00:00 +0800
-categories: jQuery
+categories: JavaScript
 tags: jQuery
 mathjax: true
 ---

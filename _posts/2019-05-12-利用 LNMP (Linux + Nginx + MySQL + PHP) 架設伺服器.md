@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "利用 LNMP(Linux + Nginx + MySQL + PHP)架設伺服器"
+title: "利用 LNMP (Linux + Nginx + MySQL + PHP) 架設伺服器"
 date: 2019-05-12 00:00:00 +0800
 categories: 架站
-tags:
+tags: PHP MySQL Nginx Linux
 mathjax: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Facebook Login API"
 date: 2017-11-24 00:00:00 +0800
-categories: JavaScript
+categories: 前端
 tags: Facebook JavaScript
 mathjax: true
 ---

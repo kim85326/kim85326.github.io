@@ -2,7 +2,7 @@
 layout: post
 title: "TypeScript Interface 介面"
 date: 2018-10-07 00:00:00 +0800
-categories: TypeScript
+categories: JavaScript
 tags: JavaScript TypeScript
 mathjax: true
 ---
