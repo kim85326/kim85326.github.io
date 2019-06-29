@@ -3,25 +3,24 @@ layout: post
 title: "在 LNMP 上建立 Laravel 專案"
 date: 2019-05-13 00:00:00 +0800
 categories: 架站
-tags: 
+tags:
 mathjax: true
 ---
 
-前情提要：[利用 LNMP(Linux + Nginx + MySQL + PHP)架設伺服器]({{ site.baseurl }}{% link _posts/2018-11-23-利用-LNMP(Linux + Nginx + MySQL + PHP)架設伺服器.md %})
 環境：Mac/Linux
 登入身份：elaine
 
 ### 安裝 composer
 
 1. 下載 composer-setup.php 安裝程式
-    - 請確認你已經先安裝好 PHP 才能執行上述指令
+   - 請確認你已經先安裝好 PHP 才能執行上述指令
 
 ```
 $ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ```
 
 2. 檢查已下載的檔案
-    - 確保檔案沒被竄改。顯示「Installer verified」表示沒問題
+   - 確保檔案沒被竄改。顯示「Installer verified」表示沒問題
 
 ```
 $ php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -40,9 +39,9 @@ $ php -r "unlink('composer-setup.php');"
 ```
 
 5. 設置全域指令
-    - 這個 composer.phar 工具目前只能在所屬的目錄下才能執行，這樣使用上有點麻煩，可以把它移動到我們自己的指令目錄，當成全域指令。同時改名為 composer 方便輸入：
-    - 註：前提是 /usr/local/bin 已經加入 `$PATH` 中
-    ``` PATH=/usr/local/bin:$PATH ```
+   - 這個 composer.phar 工具目前只能在所屬的目錄下才能執行，這樣使用上有點麻煩，可以把它移動到我們自己的指令目錄，當成全域指令。同時改名為 composer 方便輸入：
+   - 註：前提是 /usr/local/bin 已經加入 `$PATH` 中
+     `PATH=/usr/local/bin:$PATH`
 
 ```
 $ mv composer.phar /usr/local/bin/composer
@@ -55,7 +54,6 @@ $ composer -v
 ```
 
 ![](https://i.imgur.com/ZrpQQQP.png)
-
 
 ### 安裝 laravel 專案
 
@@ -169,7 +167,6 @@ $ reboot
 - 開啟 vm-blog.com，可以成功看到 laravel 預設畫面
 
 ![](https://i.imgur.com/jU1qYT8.png)
-
 
 ### 參考資料
 
