@@ -1,14 +1,19 @@
 ---
 layout: post
-title: "CSS 規範方法論 - OOCSS、SMACSS、BEM"
+title: "CSS 架構方法 - OOCSS、SMACSS、BEM"
 date: 2018-05-03 00:00:00 +0800
 categories: 前端
 tags: CSS、OOCSS、SMACSS、BEM
 mathjax: true
 ---
 
-<p style="font-size:12px;color:#808080;">這是我在公司技術分享會的投影片</p>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjYhNDbi_2P-WdA6uyP0fTMSo1Lfq_GujyWShPJ2Qmj5_HQU2TzIp_5edUfr-svjux8ZsNw4rEdfmF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<a class="slide-link" href="https://docs.google.com/presentation/d/e/2PACX-1vSjYhNDbi_2P-WdA6uyP0fTMSo1Lfq_GujyWShPJ2Qmj5_HQU2TzIp_5edUfr-svjux8ZsNw4rEdfmF/pub?start=false&loop=false&delayms=3000" target="_blank">
+    這是我在公司技術分享會的投影片
+</a>
+
+<div class="slide">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSjYhNDbi_2P-WdA6uyP0fTMSo1Lfq_GujyWShPJ2Qmj5_HQU2TzIp_5edUfr-svjux8ZsNw4rEdfmF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
 
 - 良好的 css 架構
   - 預測
@@ -111,12 +116,12 @@ mathjax: true
     - 不能寫 id 選擇器
 
 ```css
+/* 合法 */
 .error {
 }
-/* 合法 */
+/* 不合法，如果突然要改成 orange 不就要改名字 */
 .text-red {
 }
-/* 不合法，如果突然要改成 orange 不就要改名字 */
 ```
 
 - element

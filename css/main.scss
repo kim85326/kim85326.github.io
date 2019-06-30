@@ -1,7 +1,8 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset  "utf-8"; //
+
+@charset "utf-8"; //
 //
 //
 // // Our variables
@@ -45,7 +46,8 @@
  * variables
  */
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "reset", "header", "post", "page", "syntax-highlighting", "index", "demo", "footer", "scrollbar", "backToTop";
+@import "reset", "header", "post", "page", "syntax-highlighting", "index",
+  "demo", "footer", "scrollbar", "backToTop";
 // 两个人在列车上相遇
 // 一段旅程充满了诗意
 // 你突然说你要下车
@@ -55,3 +57,14 @@
 // 就再次回到这列车上
 // 我们谈天说地
 // 把酒言欢，赠予你新路途纹银
+
+//投影片樣式
+.slide-link {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 550px) {
+  .slide {
+    display: none;
+  }
+}
