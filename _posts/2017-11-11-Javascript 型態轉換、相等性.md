@@ -204,8 +204,8 @@ if (a) {
     console.log(1 == true); //true
     ```
 
-  - `===`
-    - 型態都要相等才可以
+- `===`
+  - 連型態都要相等才可以
 
 ![](https://i.imgur.com/eDm2Y4l.png)
 
