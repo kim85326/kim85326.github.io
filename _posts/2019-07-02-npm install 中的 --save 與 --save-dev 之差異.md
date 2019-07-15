@@ -22,7 +22,7 @@ mathjax: true
   - 使用在開發中的環境下，意思是只單純會在開發時應用到的 plug-in
 
   ```
-  $ npm install jest --save
+  $ npm install jest --save-dev
   ```
 
 ### npm install
