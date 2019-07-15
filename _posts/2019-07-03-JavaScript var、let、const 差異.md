@@ -54,7 +54,7 @@ console.log(name); //elaine
 
 ### 宣告提升 Hosting
 
-- var 有宣告提升
+- `var` 有宣告提升
 
   ```js
   console.log(a); //undefined
@@ -69,7 +69,7 @@ console.log(name); //elaine
   a = 123;
   ```
 
-- let/const 沒有宣告提升
+- `let/const` 沒有宣告提升
 
   - let
 
@@ -87,7 +87,7 @@ console.log(name); //elaine
 
 ### 函式作用域
 
-- var 可用範圍以 function 為界，function 外讀不到值
+- `var` 可用範圍以 `function` 為界，`function` 外讀不到值
 
   ```js
   var a = 10;
@@ -100,7 +100,7 @@ console.log(name); //elaine
   console.log(b); //ReferenceError: b is not defined
   ```
 
-  - 如果使用區塊語句像 if、else、for、while 等等區塊語句時，宣告的區域變數仍然可在整段程式碼做存取
+  - 如果使用區塊語句像 `if、else、for、while` 等等區塊語句時，宣告的區域變數仍然可在整段程式碼做存取
 
   ```js
   var a = 10;
@@ -113,9 +113,9 @@ console.log(name); //elaine
   console.log(b); //20
   ```
 
-- let/const 可用範圍以 block 為界，block 外讀不到值
+- `let/const` 可用範圍以 `block` 為界，`block` 外讀不到值
 
-  - let
+  - `let`
 
   ```js
   var a = 10;
@@ -128,7 +128,7 @@ console.log(name); //elaine
   console.log(b); //ReferenceError: b is not defined
   ```
 
-  - const
+  - `const`
 
   ```js
   var a = 10;
@@ -143,9 +143,9 @@ console.log(name); //elaine
 
 - 最大的差別
 
-  - 使用 var
+  - 使用 `var`
 
-  setTimeout 在存取 i 的時候，存取到全域變數的 i，此時 i = 3;
+  `setTimeout` 在存取 `i` 的時候，存取到全域變數的 `i`，此時 `i = 3`;
 
   ```js
   for (var i = 0; i < 3; i++) {
@@ -156,9 +156,9 @@ console.log(name); //elaine
   }
   ```
 
-  - 使用 let
+  - 使用 `let`
 
-  setTimeout 在存取 i 的時候，存取到區域變數的 i，所以可以正常運作
+  `setTimeout` 在存取 `i` 的時候，存取到區域變數的 `i`，所以可以正常運作
 
   ```js
   for (let i = 0; i < 3; i++) {
@@ -169,7 +169,7 @@ console.log(name); //elaine
   }
   ```
 
-  - 非得要用 var 來完成的話，只好包成一個 IIFE (立即呼叫的函式)
+  - 非得要用 `var` 來完成的話，只好包成一個 `IIFE` (立即呼叫的函式)
 
   ```js
   for (var i = 0; i < 3; i++) {
@@ -184,7 +184,7 @@ console.log(name); //elaine
 
 ### 重複宣告
 
-- var 允許重複宣告
+- `var` 允許重複宣告
 
 ```js
 var a = 123;
@@ -192,7 +192,7 @@ var a = 456;
 console.log(a); //456
 ```
 
-- let/const 不允許重複宣告
+- `let/const` 不允許重複宣告
 
 ```js
 let a = 123;
@@ -208,13 +208,13 @@ console.log(a);
 
 ### const
 
-- const 在宣告的時候一定要賦予值
+- `const` 在宣告的時候一定要賦予值
 
   ```js
   const a;    // SyntaxError: Missing initializer in const declaration
   ```
 
-- const 一旦被賦予值，就不可以再更改
+- `const` 一旦被賦予值，就不可以再更改
 
   ```js
   const a = 1;
@@ -232,9 +232,17 @@ console.log(a);
 
 ### 結論
 
-1. 不要再用 var 來宣告變數，改用 let 與 const，而且優先使用 const，除非需要再指定值才用 let。(Google 5.1.1, Airbnb 2.1/2.2)
-2. 不要使用逗號(,)在同一行來定義(宣告)多個變數或常數，例如`let a = 1, b = 2`是不必要的，應該是一行一個定義(宣告)(Google 5.1.2, Airbnb 13.2)
-3. 並不是在區塊中或函式中區域的最上面來宣告變數/常數，而是在合理的位置，在變數/常數首次被使用時的上面一行來宣告變數(Google 5.1.3, Airbnb 13.4)
+1. 不要再用 `var` 來宣告變數，改用 `let` 與 `const`，而且優先使用 `const`，除非需要再指定值才用 `let`
+
+   - Google 5.1.1, Airbnb 2.1/2.2
+
+2. 不要使用逗號`,`在同一行來宣告多個變數或常數，例如`let a = 1, b = 2`是不必要的，應該是一行一個宣告
+
+   - Google 5.1.2, Airbnb 13.2
+
+3. 並不是在區塊中或函式中區域的最上面來宣告變數/常數，而是在合理的位置，在變數/常數首次被使用時的上面一行來宣告變數
+
+   - Google 5.1.3, Airbnb 13.4
 
 ### 參考資料
 
