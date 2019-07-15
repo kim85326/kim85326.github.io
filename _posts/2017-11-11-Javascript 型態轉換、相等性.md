@@ -7,87 +7,133 @@ tags: JavaScript
 mathjax: true
 ---
 
-## 查看資料型態
+### JavaScript 資料型態
 
-### typeof() 可以查看資料型態
+JavaScript 資料型態可分為「基本型」、「參考型」，差別在於「參考型是傳記憶體地址」
+
+- 基本型
+  - number 數值
+  - string 字串
+  - boolean 布林值
+  - symbol 符號
+  - undefined 未定義
+  - null 空
+- 參考型
+  - array 陣列
+  - object 物件
+  - function 函數
+
+### typeof() 查看資料型態
 
 ```js
-typeof 101; // 回傳 number
-typeof 1.01; // 回傳 number
-typeof NaN; // 回傳 number
-typeof "101"; // 回傳 string
-typeof true; // 回傳 boolean
-typeof [1, 2, 3, 4]; // 回傳 object
-typeof { name: "Berry", age: 18 }; // 回傳 objcet
-typeof new Date(); // 回傳 objcet
-typeof null; // 回傳 objcet
-typeof function() {}; // 回傳 function
-typeof myCar; // 沒有定義所以回傳 undefined
+console.log(typeof 101); // number
+console.log(typeof 1.01); // number
+console.log(typeof NaN); // number
+console.log(typeof "101"); // string
+console.log(typeof true); // boolean
+console.log(typeof [1, 2, 3, 4]); // object
+console.log(typeof { name: "Berry", age: 18 }); // objcet
+console.log(typeof new Date()); // objcet
+console.log(typeof function() {}); // function
+console.log(typeof myCar); // undefined
+console.log(typeof null); // objcet
 ```
 
-## 轉換型態
+### instanceOf() 查看哪一個型態的實例
 
-### 數字轉字串
+- 基本型態並不是物件
 
-#### String() 可以轉換型態為字串
+```js
+console.log(101 instanceof Number); // false
+console.log(101 instanceof Object); // false
+console.log("101" instanceof String); // false
+console.log("101" instanceof Object); // false
+console.log(true instanceof Boolean); // false
+console.log(true instanceof Object); // false
+```
+
+```js
+console.log([1, 2, 3, 4] instanceof Object); // true
+console.log([1, 2, 3, 4] instanceof Array); // true
+console.log({ name: "Berry", age: 18 } instanceof Object); // true
+console.log({ name: "Berry", age: 18 } instanceof Array); // false
+console.log(new Date() instanceof Object); // true
+console.log(function() {} instanceof Object); // true
+console.log(undefined instanceof Object); // false
+console.log(null instanceof Object); // false
+```
+
+奇葩的 null
+
+```js
+console.log(typeof null); // object
+console.log(null instanceof Object); // false
+```
+
+### 轉換型態
+
+#### 轉字串
+
+- String() 可以轉換型態為字串
 
 可用於任何型態的數字、文字、變數、表達式
 
 ```js
 var x = 123;
-String(x); // 將變數x轉為字串 "123"
-String(123); // 將數字 123 轉為字串 "123"
-String(100 + 23); // 將表達式 100+23 計算後轉為字串 "123"
-String(false); // 返回字串 "false"
-String(true); // 返回字串 "true"
-String(Date()); // 將日期型態轉為字串型態 Sat Dec 10 2016 23:08:07 GMT+0800(台北標準時間)
+console.log(String(x)); // "123"
+console.log(String(123)); // "123"
+console.log(String(100 + 23)); // "123"
+console.log(String(false)); // "false"
+console.log(String(true)); // "true"
+console.log(String(Date())); // Sat Dec 10 2016 23:08:07 GMT+0800(台北標準時間)
 ```
 
-#### toString() 也可以轉換型態為字串
+- toString() 也可以轉換型態為字串
 
 功能和 `String()` 一樣
 
 ```js
-var x = 123; // 定義變數 x 為字串 "123"
-x.toString(); // 將變數 x 轉為字串 "123"
-(123).toString(); // 將數字 123 轉為字串 "123"
-(100 + 23).toString(); //將表達式 100+23 計算後轉為字串 "123"
+var x = 123;
+console.log(x.toString()); // "123"
+console.log((123).toString()); // "123"
+console.log((100 + 23).toString()); // "123"
+console.log(true.toString()); // "true"
 ```
 
-### 字串轉數字
+#### 轉數字
 
-#### Number() 可以將物件轉化成數字
+- Number() 可以將物件轉化成數字
 
 ```js
-Number(true); // 傳回 1
-Number(false); // 傳回 0
-Number(new Date()); // 傳回 1970/1/1 到現在的毫秒數
-Number("123"); // 傳回 123
-Number("123 456"); // 傳回 NaN
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+console.log(Number(new Date())); // 1970/1/1 到現在的毫秒數
+console.log(Number("123")); // 123
+console.log(Number("123 456")); // NaN
 ```
 
-#### parseInt() 可以傳回由字串轉換而成的整數
+- parseInt() 可以傳回由字串轉換而成的整數
 
 ```js
-parseInt("abc"); // 傳回 NaN
-parseInt("123abc"); // 傳回 123
-parseInt("abc123"); // 傳回 NaN
-parseInt("   123abc"); // 傳回 123
+console.log(parseInt("abc")); // NaN
+console.log(parseInt("123abc")); // 123
+console.log(parseInt("abc123")); // NaN
+console.log(parseInt("   123abc")); // 123
 ```
 
-#### parseFloat() 可以傳回由字串轉換而成的浮點數
+- parseFloat() 可以傳回由字串轉換而成的浮點數
 
 ```js
-parseFloat("20"); // 傳回 20
-parseFloat("30.00"); // 傳回 30
-parseFloat("10.68"); // 傳回 10.68
-parseFloat("12 22 32"); // 傳回 12
-parseFloat("     80  "); // 傳回 80
-parseFloat("378abc"); // 傳回 378
-parseFloat("abc378"); // 傳回 NaN
+console.log(parseFloat("20")); // 20
+console.log(parseFloat("30.00")); // 30
+console.log(parseFloat("10.68")); // 10.68
+console.log(parseFloat("12 22 32")); // 12
+console.log(parseFloat("     80  ")); // 80
+console.log(parseFloat("378abc")); // 378
+console.log(parseFloat("abc378")); // NaN
 ```
 
-#### getTime()方法將日期轉為數字型態
+- getTime()方法將日期轉為數字型態
 
 將日期轉為數字，除了可以用 `Number()`，還可以用 `getTime()`
 
@@ -98,32 +144,28 @@ D.getTime(); // 傳回 1970/1/1 到現在的毫秒數
 
 ### 運算式變更型態
 
-JavaScript 做運算時，會自動將變數做型態的轉換
-例如：數字和字串相加時
+- JavaScript 做運算時，會自動將變數做型態的轉換
+  - 例如：數字和字串相加時，會全轉為字串串接
+  - 例如：數字和字串相乘時，會全轉為數字運算
 
 ```js
-var x = 5 * 2;
-alert(x); // 輸出 10
-x = "5" * "2";
-alert(x); // 字串 5 乘字串 2 輸出 10
-x = 5 * "2";
-alert(x); // 數字 5 乘字串 2 輸出 10
-x = 5 + "2";
-alert(x); // 數字 5 加字串 2 輸出 52
-x = "5" + 2;
-alert(x); // 字串 5 加數字 2 輸出 52
+console.log(5 * 2); // 10
+console.log("5" * "2"); // 10
+console.log(5 * "2"); // 10
+console.log(5 + "2"); // "52"
+console.log("5" + 2); // "52"
 ```
 
 ### 相等性表格
 
 ![](https://i.imgur.com/eDm2Y4l.png)
 
-### 存在
+### if 判斷
 
 ```js
-Boolean(undefine); // false
-Boolean(null); // false
-Boolean(""); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(null)); // false
+console.log(Boolean("")); // false
 ```
 
 所以
@@ -135,7 +177,7 @@ if (a) {
 } else {
   console.log("not exist");
 }
-// 輸出 not exist，因為 undefine 是 false
+// 輸出 not exist，因為 undefined 是 false
 ```
 
 ### 參考資料
