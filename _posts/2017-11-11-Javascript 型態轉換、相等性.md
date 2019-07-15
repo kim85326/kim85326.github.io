@@ -156,16 +156,14 @@ console.log(5 + "2"); // "52"
 console.log("5" + 2); // "52"
 ```
 
-### 相等性表格
-
-![](https://i.imgur.com/eDm2Y4l.png)
-
 ### if 判斷
 
 ```js
 console.log(Boolean(undefined)); // false
 console.log(Boolean(null)); // false
 console.log(Boolean("")); // false
+console.log(Boolean(0)); // false
+console.log(Boolean(NaN)); // false
 ```
 
 所以
@@ -179,6 +177,37 @@ if (a) {
 }
 // 輸出 not exist，因為 undefined 是 false
 ```
+
+### 相等性
+
+- `==`
+
+  - 兩邊型態相等時
+
+    - number、string、boolean 判斷值是否相等
+    - 物件、陣列 判斷參考的目標是否相等
+    - null 判斷兩邊是否都為 null
+    - undefined 判斷兩邊是否都為 undefined
+
+    ```js
+    var a = ["JavaScript", "Ajax", "PHP"];
+    var b = ["JavaScript", "Ajax", "PHP"];
+    console.log(a == b); //false
+    ```
+
+  - 兩邊型態不相等時
+
+    - number、string、boolean 皆轉為 number 判斷
+    - 物件轉為基本型態後判斷
+
+    ```js
+    console.log(1 == true); //true
+    ```
+
+  - `===`
+    - 型態都要相等才可以
+
+![](https://i.imgur.com/eDm2Y4l.png)
 
 ### 參考資料
 
