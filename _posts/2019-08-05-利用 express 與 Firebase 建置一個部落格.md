@@ -2,7 +2,7 @@
 layout: post
 title: "利用 express 與 Firebase 建置一個部落格"
 date: 2018-08-05 00:00:00 +0800
-categories: express
+categories: NodeJS
 tags: express NodeJS JavaScript DataBase Firebase
 mathjax: true
 ---
