@@ -6,8 +6,8 @@ icon: heart
 type: page
 ---
 
-* content
-{:toc}
+- content
+  {:toc}
 
 ## 關於我
 
@@ -15,7 +15,6 @@ type: page
 
 - 朝著 Senior 前進的工程師
 - 畢業於臺灣科技大學資訊工程系
-- 拜託！不要叫我學長...(白眼)
 
 ## 聯繫我
 
