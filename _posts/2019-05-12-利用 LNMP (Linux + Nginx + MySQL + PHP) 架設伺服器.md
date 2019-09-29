@@ -186,10 +186,14 @@ $ sudo firewall-cmd --reload
    2. 修改對應的設定
 
       - 將使用者改為 `nginx`
-      - `nginx` 將請求轉至 `php-fpm` 的方式有兩種，一種是 `TCP`，另一種是 `unix socks`
-        - 預設是使用 `TCP` 的方式 `127.0.0.1:9000`
-        - 據說使用 `unix sock` 比 `TCP` 還快，但當有大量請求時，`unix sock` 的掉包機率比較高
-      - 這邊改為使用 `unix socks` 的方式，注意這裡的設定要和 `Nginx` 設定一樣
+      - `Nginx` 將請求轉發至 `php-fpm` 可以透過 `fastcgi` 的方式，而 `fastcgi` 有兩種
+        - `TCP`
+          - 通過網絡 `TCP` 連結建立網絡通信，即使是監聽 `127.0.0.1`，也是通過網絡底層協議來通信。相對於 `unix domain socket` 方式，會消耗一些網絡資源
+        - `unix domain socket`
+          - `unix domain socket` 它不需要經過網路協定，tcp 連線、握手等步驟，而只是將應用層的資料，從一個 process 傳輸到另一個 process 上，它於其它 `IPC` 機制相比來說，算是目前最常使用的 `IPC` 機制
+          - `unix domain socket` 比 `TCP` 還快，效率較高
+          - 但當有大量請求時，`unix domain socket` 的掉包機率比較高，穩定性較差
+      - 這邊使用 `unix domain socket` 的方式，注意這裡的設定要和 `Nginx` 設定一樣
 
       ```
       user = nginx
