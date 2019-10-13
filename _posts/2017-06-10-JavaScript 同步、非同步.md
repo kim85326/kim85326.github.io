@@ -7,38 +7,49 @@ tags: JavaScript
 mathjax: true
 ---
 
-我學完 javascript 基礎語法之後，就去看[JavaScript 全攻略：克服 JS 的奇怪部分](https://www.udemy.com/javascriptjs/learn/v4/content)這堂課，講的真的很棒！我覺得很適合想深入了解 javascript 的人。
+### Callback 回呼
 
-### callback 回呼
+- 概念：當客戶打給你時，你正在跟別人通電話，所以你會請客戶稍等，等你講完這通電話再回撥給他
+- 當某事發生的時候，請利用這個 function 通知我
 
-- 概念：當客戶打給你時，你正在通話，所以你會請客戶稍等，等你通完電話再回撥給他
-- 把 function b 以參數的方式傳入 function a，那麼 a 做完才會再做 b
-- 常用的 jQuery 事件，就是利用 callback 完成
+  - 把 function b 以參數的方式傳入 function a，那麼 a 做完才會再做 b
+  - 常用點擊事件「當有人點擊這顆按鈕時，請用這個 function 通知我」
 
-```js
-$("#id").click(function() {
-  alert("這是callback");
-});
-```
+    ```js
+    $("#id").click(function() {
+      alert("這是 callback");
+    });
+    ```
 
-- setTimeout 也是利用 callback
+  - setTimeout「當過了三秒時，請用這個 function 通知我」
 
-```js
-setTimeout(function() {
-  alert("這是callback");
-}, 3000); //3秒(3000毫秒)之後，做callback
-```
+    ```js
+    setTimeout(function() {
+      alert("這是 callback");
+    }, 3000);
+    ```
+
+  - window.onload 「當網頁載入完成時，請用這個 function 通知我」
+
+    ```js
+    window.onload = function() {
+      alert("這是 callback");
+    };
+    ```
 
 ### 同步與非同步
 
 ![](https://i.imgur.com/iRTIQdG.jpg)
 
-- synchronous (同步) 指的是 one at a time，也就是程式會逐列執行，一次執行一列
-- asynchronous (非同步) 多了一個 a，指的就是 more than one at a time，也就是程式在執行的時候會同時執行不只一列的程式碼
+- Synchronous 同步
+  - 代表執行時程式會卡在那一行，直到有結果為止
+- Asynchronous 非同步
+  - 代表執行時不會卡住，但執行結果不會放在回傳值，而是需要透過 callback function (回呼函式) 來接收結果
   - 例如 ajax、setTimeout
-- Sync 與 Async 的差別在於：發送需求的人是否需要等到需求完成才可以執行其他事情
 
 ### 參考資料
 
+- [JavaScript 全攻略：克服 JS 的奇怪部分](https://www.udemy.com/javascriptjs/learn/v4/content)
 - [[筆記] 談談 JavaScript 中的 asynchronous 和 event queue](https://pjchender.blogspot.tw/2016/01/javascriptasynchronousevent-queue.html)
 - [JavaScript 同步延遲 ( Promise + setTimeout )](http://www.oxxostudio.tw/articles/201706/javascript-promise-settimeout.html)
+- [JavaScript 中的同步與非同步（上）：先成為 callback 大師吧！](https://blog.huli.tw/2019/10/04/javascript-async-sync-and-callback/index.html?fbclid=IwAR2c8Fc-AZz3uhV3Sd-dCcV67Yu_7fY-UpSane8sRFu9YQWc2kHX9x34qtc)
