@@ -2,8 +2,8 @@
 layout: post
 title: "Centos7 移除 MariaDB 並安裝 MySQL"
 date: 2019-10-15 00:00:00 +0800
-categories: CSS
-tags:
+categories: 架站
+tags: MySQL
 mathjax: true
 ---
 
