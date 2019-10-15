@@ -365,9 +365,10 @@ $container-max-widths: (
 }
 ```
 
-### 完整程式碼
+### 程式碼
 
-- [完整程式碼](https://kim85326.github.io/grid-system/)
+- [Demo](https://kim85326.github.io/grid-system/)
+- [完整程式碼](https://github.com/kim85326/grid-system)
 
 ### 參考資料
 
