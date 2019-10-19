@@ -89,13 +89,13 @@ mathjax: true
 - 開啟 bootstrap cache 目錄權限
 
   ```
-  $ chmod -R 755 bootstrap/cache/
+  $ chmod -R 777 bootstrap/cache/
   ```
 
 - 開啟 storage 目錄權限
 
   ```
-  $ chmod -R 755 storage/
+  $ chmod -R 777 storage/
   ```
 
 ### 設定 Nginx
