@@ -74,49 +74,85 @@ $ sudo firewall-cmd --reload
 
 ### MySQL
 
-1. 安裝 `MariaDB` 伺服器
+可以選擇安裝 `MariaDB` 或 `MySQL`
 
-   ```
-   $ sudo yum install mariadb-server -y
-   ```
+- 安裝 `MariaDB`
 
-2. 啟動 `MariaDB`
+  1.  安裝 `MariaDB` 伺服器
 
-   ```
-   $ sudo systemctl start mariadb
-   ```
+      ```
+      $ sudo yum install mariadb-server -y
+      ```
 
-3. 預設開機啟動 `MariaDB`
+  2.  啟動 `MariaDB`
 
-   ```
-   $ sudo systemctl enable mariadb
-   ```
+      ```
+      $ sudo systemctl start mariadb
+      ```
 
-4. 剛安裝好 `MariaDB` 時，建議執行一次 `mysql_secure_installation` 這個安全性設定工具
+  3.  預設開機啟動 `MariaDB`
 
-   - 這個設定工具可以幫助管理者設定 root 密碼、移除匿名登入帳號、禁止 root 從遠端登入、移除測試用的資料庫
+      ```
+      $ sudo systemctl enable mariadb
+      ```
 
-   ```
-   $ mysql_secure_installation
-   ```
+- 安裝 `MySQL`
 
-   | 說明                                              | 中文說明                       | 輸入        |
-   | ------------------------------------------------- | ------------------------------ | ----------- |
-   | Enter current password for root (enter for none): | 輸入當前 root 密碼             | 直接 enter  |
-   | Set root password? [Y/n]                          | 是否設定 root 密碼?            | 直接 enter  |
-   | New password:                                     | 輸入新密碼                     | root 新密碼 |
-   | Re-enter new password:                            | 再次輸入新密碼                 | root 新密碼 |
-   | Remove anonymous users? [Y/n]                     | 是否移除匿名用戶?              | 直接 enter  |
-   | Disallow root login remotely? [Y/n]               | 是否禁止 root 用戶遠程登錄？   | 直接 enter  |
-   | Remove test database and access to it? [Y/n]      | 是否刪除測試用的數據庫和權限？ | 直接 enter  |
-   | Reload privilege tables now? [Y/n]                | 是否重新加載權限表？           | 直接 enter  |
+  1.  安裝套件庫
+
+      ```
+      $ sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+      ```
+
+  2.  安裝 `MySQL` 伺服器
+
+      ```
+      $ sudo yum install mariadb-server -y
+      ```
+
+  3.  啟動 `MySQL`
+
+      ```
+      $ sudo systemctl start mysqld
+      ```
+
+  4.  預設開機啟動 `MySQL`
+
+      ```
+      $ sudo systemctl enable mysqld
+      ```
+
+  5.  查看 root 密碼
+
+      ```
+      $ sudo cat /var/log/mysqld.log | grep "temporary password"
+      ```
+
+- 安裝完資料庫時，建議執行一次 `mysql_secure_installation` 這個安全性設定工具
+
+  - 這個設定工具可以幫助管理者設定 root 密碼、移除匿名登入帳號、禁止 root 從遠端登入、移除測試用的資料庫
+
+  ```
+  $ mysql_secure_installation
+  ```
+
+  | 說明                                              | 中文說明                       | 輸入        |
+  | ------------------------------------------------- | ------------------------------ | ----------- |
+  | Enter current password for root (enter for none): | 輸入當前 root 密碼             | 直接 enter  |
+  | Set root password? [Y/n]                          | 是否設定 root 密碼?            | 直接 enter  |
+  | New password:                                     | 輸入新密碼                     | root 新密碼 |
+  | Re-enter new password:                            | 再次輸入新密碼                 | root 新密碼 |
+  | Remove anonymous users? [Y/n]                     | 是否移除匿名用戶?              | 直接 enter  |
+  | Disallow root login remotely? [Y/n]               | 是否禁止 root 用戶遠程登錄？   | 直接 enter  |
+  | Remove test database and access to it? [Y/n]      | 是否刪除測試用的數據庫和權限？ | 直接 enter  |
+  | Reload privilege tables now? [Y/n]                | 是否重新加載權限表？           | 直接 enter  |
 
 5. 測試一下
 
-   使用 root 帳號登入 `MariaDB` 伺服器，正常的話，就會進入 `MySQL/MariaDB` 互動式的操作畫面
+   使用 root 帳號登入資料庫伺服器，正常的話，就會進入 `MySQL/MariaDB` 互動式的操作畫面
 
    ```
-   mysql -u root -p
+   $ mysql -u root -p
    ```
 
    ![](https://i.imgur.com/Tq2rO3z.png)
