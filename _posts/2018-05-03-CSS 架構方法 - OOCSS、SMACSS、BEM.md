@@ -3,7 +3,7 @@ layout: post
 title: "CSS 架構方法 - OOCSS、SMACSS、BEM"
 date: 2018-05-03 00:00:00 +0800
 categories: 前端
-tags: CSS、OOCSS、SMACSS、BEM
+tags: CSS
 mathjax: true
 ---
 
