@@ -94,11 +94,11 @@ CPU Switch From Process to Process
 1. Long-term Scheduler (Job Scheduler)
    - 從 Spooled (行程池)中選出程並且將它們載入記憶體(ready queue)內以便執行。
    - 使用頻率比較低，可以慢慢選要把哪個 process 丟進去
+   - 控制 degree of multiprogramming
+     (也就是在記憶體中的 process 數量)
 2. Short-term Scheduler (or CPU Scheduler)
    - 選擇下一個要給 CPU 執行的是哪個 process(從 ready queue 裡面抓)
    - 使用頻率非常高，一定要有效率的設計之(如果沒有效率就會浪費時間!)
-   - 控制 degree of multiprogramming
-     (也就是在記憶體中的 process 數量)
 3. process 可以分為以下兩類:
 
    - I/O-bound process: 大部分時間都在做 I/O，用 CPU 計算的時間很少
