@@ -3,8 +3,10 @@ layout: post
 title: "jQuery Plugin 3 template"
 date: 2018-04-17 00:00:00 +0800
 categories: JavaScript
-tags: jQuery
+categories: jQuery
+tags: [jQuery Plugin]
 mathjax: true
+description: ""
 ---
 
 ### template
@@ -96,7 +98,7 @@ test("a", "b", "c", "d");
      - apply 的意思是：把 init 的 this 綁定為現在這個 this，並且把參數傳入，並且執行 init
    - false: 跳到 3
 3. 其他
-   - 顯示 'Method ' + method + ' does not exist on jQuery.plugin_name'
+   - 顯示 `"Method " + method + " does not exist on jQuery.plugin_name"`
 
 ### 參考資料
 

@@ -2,9 +2,10 @@
 layout: post
 title: "jQuery Plugin 2 使用者自訂參數"
 date: 2018-04-16 00:00:00 +0800
-categories: JavaScript
-tags: jQuery
+categories: jQuery
+tags: [jQuery Plugin]
 mathjax: true
+description: ""
 ---
 
 ### 使用者自訂參數或函數
@@ -16,7 +17,7 @@ mathjax: true
 ### 雛形
 
 ```js
-;(function( $ ){
+;(function($){
     $.fn.plugin_name = function(settings) {
         var _defaultSettings = {    //option
             obj1: obj1_default_value,
@@ -30,7 +31,7 @@ mathjax: true
 
 - 使用者可以自訂帶參數或函數，又稱為 option
 
-```
+```js
 $('element').plugin_name({
     obj1: myobj1_value,
     obj2: myobj2_function()

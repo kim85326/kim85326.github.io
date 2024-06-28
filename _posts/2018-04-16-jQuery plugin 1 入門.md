@@ -2,9 +2,10 @@
 layout: post
 title: "jQuery Plugin 1 入門"
 date: 2018-04-16 00:00:00 +0800
-categories: JavaScript
-tags: jQuery
+categories: jQuery
+tags: [jQuery Plugin]
 mathjax: true
+description: ""
 ---
 
 ### jQuery.fn
@@ -70,8 +71,8 @@ jQuery.fn.myplugin = function() {
 
 ### 立即函數
 
-- 一直寫 "jQuery" 這幾個字實在是很累人的一件事；而且 jQuery 不是可以簡寫成 \$ 號嗎？不能直接用嗎？當然可以，只是這樣可能會和其他 JavaScript Library 發生衝突
-- 為了避免 \$ 受到影響（全域變數污染），我們建立了立即函數（Immediately Invoked Function Expression）的作用域（scope），並將 jQuery 當作參數傳進去：
+- 一直寫 `jQuery` 這幾個字實在是很累人的一件事；而且 jQuery 不是可以簡寫成 `$` 嗎？不能直接用嗎？當然可以，只是這樣可能會和其他 JavaScript Library 發生衝突
+- 為了避免 `$` 受到影響（全域變數污染），我們建立了立即函數（Immediately Invoked Function Expression）的作用域（scope），並將 jQuery 當作參數傳進去：
 
 #### 雛形
 
@@ -85,8 +86,8 @@ jQuery.fn.myplugin = function() {
 ```
 
 - 定義完 function，閉包起來之後接 (jQuery)，就是定義且執行 function，稱為 IIFE(立即函數)
-- 前面的 ";"，是因為怕和其他的 plugin 一起載入的時候，前面的人忘記寫 ";"，導致程式錯誤
-  - 事實上多寫 ";" 並不會有問題，少寫 ";" 才會有問題
+- 前面的 `;`，是因為怕和其他的 plugin 一起載入的時候，前面的人忘記寫 `;`，導致程式錯誤
+  - 事實上多寫 `;` 並不會有問題，少寫 `;` 才會有問題
 
 ### 參考資料
 
