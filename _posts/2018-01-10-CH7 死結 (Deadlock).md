@@ -285,4 +285,3 @@ available = available - need + max
 ### 參考資料
 
 - [宅學習 - 07. 死結 (Deadlock)](https://sls.weco.net/node/21327)
-- [Chapter 5 Deadlock(死結)](http://www.csie.ntnu.edu.tw/~swanky/os/chap5.htm)
