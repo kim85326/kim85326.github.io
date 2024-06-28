@@ -102,7 +102,7 @@ const
 var a = 10;
 
 if (true) {
-	const b = 20;
+  const b = 20;
 }
 
 console.log(a); // 10
@@ -145,7 +145,7 @@ for (var i = 0; i < 3; i++) {
   (function(j) {
     setTimeout(function() {
       console.log("這執行第" + j + "次"); // 這執行第0次 這執行第1次 這執行第2次
-	}, 10);
+    }, 10);
   })(i);
 }
 ```
