@@ -53,7 +53,7 @@ showName();
 console.log(name); // elaine
 ```
 
-#### 函式作用域
+#### var、let、const 作用域
 
 `var` 可用範圍以 `function` 為界，`function` 外讀不到值
 
@@ -109,11 +109,9 @@ console.log(a); // 10
 console.log(b); // ReferenceError: b is not defined
 ```
 
-#### 最大的差別
+#### var 和 let 最大的差別
 
 ##### 使用 var
-
-`setTimeout` 在存取 `i` 的時候，都存取到相同作用域的 `i` (此時 `i = 3`)
 
 ```js
 for (var i = 0; i < 3; i++) {
@@ -124,9 +122,36 @@ for (var i = 0; i < 3; i++) {
 }
 ```
 
+var 的作用域是以 function 為主，這個例子可以把他想像是 var 被提升到全域變數
+
+```js
+var i;
+for (i = 0; i < 3; i++) {
+  // ...
+}
+```
+
+執行順序是
+1. 宣告全域變數 i
+2. for 迴圈 i = 0
+3. `console.log(i);` -> 0
+4. 設定定時器到背景
+5. for 迴圈 i = 1
+6. `console.log(i);` -> 1
+7. 設定定時器到背景
+8. for 迴圈 i = 2
+9. `console.log(i);` -> 2
+10. 設定定時器到背景
+11. for 迴圈 i = 3，達到 i < 3 條件，因此停止 for 迴圈，但 i = 3
+12. 執行第 1 個定時器，去存取 i，此時 i = 3
+13. 執行第 2 個定時器，去存取 i，此時 i = 3
+14. 執行第 3 個定時器，去存取 i，此時 i = 3
+
+每次在執行 `setTimeout` 在存取 `i` 的時候，都是存取到全域的 `i`，所以都是 `i = 3`
+
 ##### 使用 let
 
-因為 `let` 會產生新的作用域，所以 `setTimeout` 在存取 `i` 的時候，是三個不同的作用域 (第一個作用域 `i = 0`、第二個作用域 `i = 1`，第三個作用域 `i = 2`)
+因為 `let` 會產生新的作用域，`i` 會被鎖在 `for…` 後方的 `{}` 內，所以 `setTimeout` 在存取 `i` 的時候，是三個不同的作用域 (第一個作用域 `i = 0`、第二個作用域 `i = 1`，第三個作用域 `i = 2`)
 
 ```js
 for (let i = 0; i < 3; i++) {
@@ -137,7 +162,7 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
-非得要用 `var` 來完成的話，只好包成一個 `IIFE` (立即呼叫的函式)，來產生新的作用域
+非得要用 `var` 來完成的話，只好包成一個 立即呼叫的函式 (`IIFE`)，利用 `function` 來產生新的作用域
 
 ```js
 for (var i = 0; i < 3; i++) {
@@ -500,6 +525,5 @@ let x = 10; // 正確
 - [鐵人賽：ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 - [ES2015 筆記(1) var, let, const, scope](https://dotblogs.com.tw/acelee/2017/03/31/134427)
 - [Day26 var 與 ES6 let const 差異](https://ithelp.ithome.com.tw/articles/10209121)
-- [鐵人賽第 5 天: ES6 篇 - let 與 const](https://eyesofkids.gitbooks.io/react-basic-zh-tw/content/day05_es6_let_const/)
 - [我知道你懂 hoisting，可是你了解到多深？](https://blog.huli.tw/2018/11/10/javascript-hoisting-and-tdz/)
 - [所有的函式都是閉包：談 JS 中的作用域與 Closure](https://blog.huli.tw/2018/12/08/javascript-closure/)
