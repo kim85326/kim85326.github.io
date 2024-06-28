@@ -45,89 +45,15 @@ console.log(name); // ReferenceError: name is not defined
 var name = "elaine";
 
 function showName() {
-  var name = "amy";
-  console.log(name); // amy
+  var name = "cindy";
+  console.log(name); // cindy
 }
 
 showName();
 console.log(name); // elaine
 ```
 
-### 宣告提升 Hosting
-
-`var` 有宣告提升
-
-```js
-console.log(a); // undefined
-var a = 123;
-```
-
-相當於
-
-```js
-var a;
-console.log(a); // undefined
-a = 123;
-```
-
-`let` 和 `const` 其實也有宣告提升，但沒有初始化為 `undefined`，而且在賦值之前試圖取值會發生錯誤 (叫做 Temporal Dead Zone)
-
-let
-
-```js
-console.log(a); // ReferenceError: Cannot access 'a' before initialization
-let a = 123;
-```
-
-const
-
-```js
-console.log(a); // ReferenceError: Cannot access 'a' before initialization
-const a = 123;
-```
-
-#### 暫時性死區（Temporal Dead Zone, TDZ）
-
-暫時性死區（Temporal Dead Zone, TDZ）是 `JavaScript` 在使用 `let` 和 `const` 宣告變數時的一個概念。它描述了在變數被宣告和初始化之前，變數處於不可訪問狀態的區間。這個區間從變數進入作用域開始，到變數初始化為止。
-
-什麼是 TDZ？
-當 `JavaScript` 引擎解析代碼時，變數宣告會被提升到其作用域的頂部，但只有 `var` 變數會被初始化為 `undefined`。`let` 和 `const` 變數雖然也會被提升，但不會被初始化為 `undefined`，因此在初始化之前訪問這些變數會導致引用錯誤（ReferenceError）。
-
-例子
-以下範例展示了 `TDZ` 的行為：
-
-```js
-console.log(a); // ReferenceError: Cannot access 'a' before initialization
-let a = 10;
-```
-
-在這段代碼中，變數 `a` 在進入作用域時即被提升，但它直到 `let a = 10;` 這一行執行前都處於 `TDZ` 中，因此在宣告之前訪問 `a` 會引發錯誤。
-
-`TDZ` 的範例解析
-
-```js
-function example() {
-  console.log(b); // ReferenceError: Cannot access 'b' before initialization
-  let b = 20;
-}
-
-example();
-```
-
-在這個範例中：
-
-1. 當進入 `example` 函數的作用域時，變數 `b` 會被提升，但不會初始化。
-2. 在 `let b = 20;` 行之前，`b` 處於 `TDZ` 中，因此試圖訪問 `b` 會引發引用錯誤。
-3. 一旦執行到 `let b = 20;` 行，`b` 才會被初始化，此後才能正常訪問。
-
-為什麼 `TDZ` 很重要？
-1. 安全性：`TDZ` 可以防止變數在初始化之前被訪問，從而避免意外的行為和錯誤。
-2. 清晰性：`TDZ` 促使開發者在宣告變數之前不要使用它們，這樣可以提高代碼的可讀性和可維護性。
-3. 一致性：`TDZ` 保證了 `let` 和 `const` 變數的行為一致，無論它們在哪裡被宣告，都會在進入作用域時被提升，但在初始化之前不能被訪問。
-
-總結來說，暫時性死區是 `JavaScript` 在處理 `let` 和 `const` 變數時的一個重要概念，理解 `TDZ` 可以幫助開發者寫出更健壯和可預測的代碼。
-
-### 函式作用域
+#### 函式作用域
 
 `var` 可用範圍以 `function` 為界，`function` 外讀不到值
 
@@ -223,6 +149,80 @@ for (var i = 0; i < 3; i++) {
   })(i);
 }
 ```
+
+### 宣告提升 Hosting
+
+`var` 有宣告提升
+
+```js
+console.log(a); // undefined
+var a = 123;
+```
+
+相當於
+
+```js
+var a;
+console.log(a); // undefined
+a = 123;
+```
+
+`let` 和 `const` 其實也有宣告提升，但沒有初始化為 `undefined`，而且在賦值之前試圖取值會發生錯誤 (叫做 Temporal Dead Zone)
+
+let
+
+```js
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+let a = 123;
+```
+
+const
+
+```js
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+const a = 123;
+```
+
+#### 暫時性死區（Temporal Dead Zone, TDZ）
+
+暫時性死區（Temporal Dead Zone, TDZ）是 `JavaScript` 在使用 `let` 和 `const` 宣告變數時的一個概念。它描述了在變數被宣告和初始化之前，變數處於不可訪問狀態的區間。這個區間從變數進入作用域開始，到變數初始化為止。
+
+什麼是暫時性死區？
+當 `JavaScript` 引擎解析代碼時，變數宣告會被提升到其作用域的頂部，但只有 `var` 變數會被初始化為 `undefined`。`let` 和 `const` 變數雖然也會被提升，但不會被初始化為 `undefined`，因此在初始化之前訪問這些變數會導致引用錯誤（ReferenceError）。
+
+例子
+以下範例展示了暫時性死區的行為：
+
+```js
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+let a = 10;
+```
+
+在這段代碼中，變數 `a` 在進入作用域時即被提升，但它直到 `let a = 10;` 這一行執行前都處於暫時性死區中，因此在宣告之前訪問 `a` 會引發錯誤。
+
+暫時性死區的範例解析
+
+```js
+function example() {
+  console.log(b); // ReferenceError: Cannot access 'b' before initialization
+  let b = 20;
+}
+
+example();
+```
+
+在這個範例中：
+
+1. 當進入 `example` 函數的作用域時，變數 `b` 會被提升，但不會初始化。
+2. 在 `let b = 20;` 行之前，`b` 處於暫時性死區中，因此試圖訪問 `b` 會引發引用錯誤。
+3. 一旦執行到 `let b = 20;` 行，`b` 才會被初始化，此後才能正常訪問。
+
+為什麼 暫時性死區 很重要？
+1. 安全性：暫時性死區可以防止變數在初始化之前被訪問，從而避免意外的行為和錯誤。
+2. 清晰性：暫時性死區促使開發者在宣告變數之前不要使用它們，這樣可以提高代碼的可讀性和可維護性。
+3. 一致性：暫時性死區保證了 `let` 和 `const` 變數的行為一致，無論它們在哪裡被宣告，都會在進入作用域時被提升，但在初始化之前不能被訪問。
+
+總結來說，暫時性死區是 `JavaScript` 在處理 `let` 和 `const` 變數時的一個重要概念，理解暫時性死區可以幫助開發者寫出更健壯和可預測的代碼。
 
 ### 重複宣告
 
@@ -336,17 +336,17 @@ let b = 2;
 3. 避免潛在錯誤：
 	- 單行多變數宣告在某些情況下可能會引發不易察覺的錯誤，特別是在進行複雜賦值時。例如：
 
-		```js
-		let x = 1, y = x + 1, z = y + 1;
-		```
+	```js
+	let x = 1, y = x + 1, z = y + 1;
+	```
 	
-		上述代碼中，變數的賦值順序對結果有影響，這樣的寫法容易出錯並且不易察覺。分行宣告能夠清楚地表達每個變數的賦值過程：
+	上述代碼中，變數的賦值順序對結果有影響，這樣的寫法容易出錯並且不易察覺。分行宣告能夠清楚地表達每個變數的賦值過程：
 	
-		```js
-		let x = 1;
-		let y = x + 1;
-		let z = y + 1;
-		```
+	```js
+	let x = 1;
+	let y = x + 1;
+	let z = y + 1;
+	```
 
 #### 變數或常數不需要在區塊或函式的最上方宣告，而應該在第一次使用前的上一行宣告，這樣可以讓程式碼更容易閱讀和維護
 
@@ -416,14 +416,14 @@ console.log(square(5)); // 25
 1. 函數提升（Hoisting）：
 	- 使用 `function` 宣告的函數會被提升（hoisted）到其作用域的頂部，這意味著可以在函數宣告之前使用它們。這有助於組織程式碼，使主要邏輯可以放在文件的開頭，細節實現放在後面。
 
-		```js
-		// 函數提升的例子
-		console.log(square(5)); // 25
+	```js
+	// 函數提升的例子
+	console.log(square(5)); // 25
 
-		function square(n) {
-		  return n * n;
-		}
-		```
+	function square(n) {
+		return n * n;
+	}
+	```
 
 2. 可讀性：
 	- 使用 `function` 宣告函數，可以明確地區分出變數和函數。這使程式碼更加直觀，讓讀者能快速理解程式的結構和功能。
@@ -432,31 +432,31 @@ console.log(square(5)); // 25
 4. 靈活性：
 	- 使用 `function` 宣告的函數可以在程式碼中任意搬動，而不影響其可用性。由於函數提升，無論函數宣告位於程式碼的哪個位置，都可以在宣告之前或之後使用。相比之下，使用 `const` 宣告的匿名函數只能在宣告之後使用。
 
-		```js
-		// 使用 function 宣告函數，隨處可用
-		console.log(add(3, 4)); // 7
+	```js
+	// 使用 function 宣告函數，隨處可用
+	console.log(add(3, 4)); // 7
 
-		function add(a, b) {
-		  return a + b;
-		}
+	function add(a, b) {
+		return a + b;
+	}
 
-		// 函數可以任意搬動
-		function multiply(a, b) {
-		  return a * b;
-		}
-		console.log(multiply(3, 4)); // 12
-		```
+	// 函數可以任意搬動
+	function multiply(a, b) {
+		return a * b;
+	}
+	console.log(multiply(3, 4)); // 12
+	```
 
-		而使用 `const` 宣告的匿名函數，必須在宣告之後才能使用：
+	而使用 `const` 宣告的匿名函數，必須在宣告之後才能使用：
 
-		```js
-		// 使用 const 宣告匿名函數
-		const subtract = function(a, b) {
-		  return a - b;
-		};
+	```js
+	// 使用 const 宣告匿名函數
+	const subtract = function(a, b) {
+		return a - b;
+	};
 
-		console.log(subtract(7, 4)); // 3
-		```
+	console.log(subtract(7, 4)); // 3
+	```
 
 #### 避免全局變數
 
