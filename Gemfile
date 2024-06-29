@@ -6,4 +6,5 @@ gemspec
 
 group :test do
   gem "html-proofer", "~> 5.0"
+  gem 'jekyll-redirect-from', '~> 0.16.0'
 end

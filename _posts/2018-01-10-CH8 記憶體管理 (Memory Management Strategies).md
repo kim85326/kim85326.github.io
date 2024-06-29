@@ -6,6 +6,8 @@ categories: 作業系統
 tags: 作業系統
 mathjax: true
 description: ""
+redirect_from: 
+  - "/2018/01/09/CH8-記憶體管理-(Memory-Management-Strategies)"
 ---
 
 ### 背景

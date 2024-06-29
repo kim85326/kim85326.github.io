@@ -6,6 +6,8 @@ categories: JavaScript
 tags: JavaScript
 mathjax: true
 description: ""
+redirect_from: 
+  - "/2019/09/10/JavaScript-alert-confirm-prompt-console.log"
 ---
 
 ### 對話框

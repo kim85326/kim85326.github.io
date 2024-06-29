@@ -6,6 +6,8 @@ categories: 作業系統
 tags: 作業系統
 mathjax: true
 description: ""
+redirect_from: 
+  - "/2017/11/10/CH4-多執行緒(Multithreaded-programming)"
 ---
 
 ### thread

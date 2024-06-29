@@ -6,6 +6,8 @@ categories: jQuery
 tags: [jQuery Plugin]
 mathjax: true
 description: ""
+redirect_from: 
+  - "/2018/04/15/jQuery-plugin-1-入門"
 ---
 
 ### jQuery.fn

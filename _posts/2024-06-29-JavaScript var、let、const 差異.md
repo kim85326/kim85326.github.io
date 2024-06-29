@@ -6,6 +6,8 @@ categories: JavaScript
 tags: JavaScript
 mathjax: true
 description: ""
+redirect_from: 
+  - "/2019/07/02/JavaScript-var-let-const-差異"
 ---
 
 ### JavaScript 作用域

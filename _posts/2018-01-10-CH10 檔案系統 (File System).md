@@ -6,6 +6,8 @@ categories: 作業系統
 tags: 作業系統
 mathjax: true
 description: ""
+redirect_from: 
+  - "/2018/01/10/CH10-檔案系統-(File-System)"
 ---
 
 ### File Attributes 檔案特性
