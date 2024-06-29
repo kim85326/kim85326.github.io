@@ -68,7 +68,7 @@ console.log(a); // 10
 console.log(b); // ReferenceError: b is not defined
 ```
 
-如果使用區塊語句像 `if、else、for、while` 等等區塊語句時，宣告的區域變數仍然可在整段程式碼做存取
+如果使用區塊語句 (`block`) 像 `if、else、for、while` 等等區塊語句時，宣告的區域變數仍然可在整段程式碼做存取
 
 ```js
 var a = 10;
@@ -175,7 +175,7 @@ for (var i = 0; i < 3; i++) {
 }
 ```
 
-### 宣告提升 Hosting
+### 宣告提升 Hoisting
 
 `var` 有宣告提升
 
@@ -192,7 +192,7 @@ console.log(a); // undefined
 a = 123;
 ```
 
-`let` 和 `const` 其實也有宣告提升，但沒有初始化為 `undefined`，而且在賦值之前試圖取值會發生錯誤 (叫做 Temporal Dead Zone)
+`let` 和 `const` 其實也有宣告提升，但沒有初始化為 `undefined`，而且在賦值之前試圖取值會發生錯誤，這叫做 暫時性死區 (Temporal Dead Zone)
 
 let
 
@@ -239,15 +239,15 @@ example();
 在這個範例中：
 
 1. 當進入 `example` 函數的作用域時，變數 `b` 會被提升，但不會初始化。
-2. 在 `let b = 20;` 行之前，`b` 處於暫時性死區中，因此試圖訪問 `b` 會引發引用錯誤。
+2. 在 `let b = 20;` 行之前，`b` 處於**暫時性死區**中，因此試圖訪問 `b` 會引發引用錯誤。
 3. 一旦執行到 `let b = 20;` 行，`b` 才會被初始化，此後才能正常訪問。
 
-為什麼 暫時性死區 很重要？
-1. 安全性：暫時性死區可以防止變數在初始化之前被訪問，從而避免意外的行為和錯誤。
-2. 清晰性：暫時性死區促使開發者在宣告變數之前不要使用它們，這樣可以提高代碼的可讀性和可維護性。
-3. 一致性：暫時性死區保證了 `let` 和 `const` 變數的行為一致，無論它們在哪裡被宣告，都會在進入作用域時被提升，但在初始化之前不能被訪問。
+為什麼**暫時性死區**很重要？
+1. 安全性：**暫時性死區**可以防止變數在初始化之前被訪問，從而避免意外的行為和錯誤。
+2. 清晰性：**暫時性死區**促使開發者在宣告變數之前不要使用它們，這樣可以提高代碼的可讀性和可維護性。
+3. 一致性：**暫時性死區**保證了 `let` 和 `const` 變數的行為一致，無論它們在哪裡被宣告，都會在進入作用域時被提升，但在初始化之前不能被訪問。
 
-總結來說，暫時性死區是 `JavaScript` 在處理 `let` 和 `const` 變數時的一個重要概念，理解暫時性死區可以幫助開發者寫出更健壯和可預測的代碼。
+總結來說，**暫時性死區**是 `JavaScript` 在處理 `let` 和 `const` 變數時的一個重要概念，理解**暫時性死區**可以幫助開發者寫出更健壯和可預測的代碼。
 
 ### 重複宣告
 
@@ -278,7 +278,7 @@ console.log(a);
 `const` 在宣告的時候一定要賦予值
 
 ```js
-const a;    // SyntaxError: Missing initializer in const declaration
+const a;  // SyntaxError: Missing initializer in const declaration
 ```
 
 `const` 一旦被賦予值，就不可以再更改
@@ -322,8 +322,8 @@ a = 123; // TypeError: Assignment to constant variable
 
 ```js
 var name = "Elaine";
-var name = "Amy"; // 重複宣告，會覆蓋之前的變數
-console.log(name); // "Amy"
+var name = "Cindy"; // 重複宣告，會覆蓋之前的變數
+console.log(name); // "Cindy"
 ```
 
 正確示範
@@ -331,7 +331,7 @@ console.log(name); // "Amy"
 
 ```js
 const name = "Elaine";
-// name = "Amy"; // 錯誤：`const` 宣告的變數不能重新賦值
+// name = "Cindy"; // 錯誤：`const` 宣告的變數不能重新賦值
 
 let age = 30;
 age = 31; // 正確：`let` 宣告的變數可以重新賦值
@@ -373,7 +373,9 @@ let b = 2;
 	let z = y + 1;
 	```
 
-#### 變數或常數不需要在區塊或函式的最上方宣告，而應該在第一次使用前的上一行宣告，這樣可以讓程式碼更容易閱讀和維護
+#### 宣告變數和常數離使用端越近越好
+
+變數或常數不需要在區塊或函式的最上方宣告，而應該在第一次使用前的上一行宣告，這樣可以讓程式碼更容易閱讀和維護
 
 原因
 1. 可讀性：
@@ -407,6 +409,9 @@ function calculateArea(radius) {
 
 ```js
 function calculateArea(radius) {
+  // 其他程式碼
+  // ...
+
   const pi = 3.14159; // 在使用前一行宣告
   const area = pi * radius * radius; // 在使用前一行宣告
   return area;
