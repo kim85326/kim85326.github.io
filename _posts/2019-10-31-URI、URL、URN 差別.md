@@ -7,7 +7,7 @@ tags:
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2019/10/30/URI-URL-URN-差別"
+  - "/2019/10/30/URI-URL-URN-差別/"
 ---
 
 ![](https://i.imgur.com/9Lrn7Uz.png)

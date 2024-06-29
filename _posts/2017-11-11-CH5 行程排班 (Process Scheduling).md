@@ -7,7 +7,7 @@ tags: 作業系統
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2017/11/10/CH5-行程排班-(Process-Scheduling)"
+  - "/2017/11/10/CH5-行程排班-(Process-Scheduling)/"
 ---
 
 ### 基本觀念

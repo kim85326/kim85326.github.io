@@ -7,7 +7,7 @@ tags: 作業系統
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2018/01/09/CH7-死結-(Deadlock)"
+  - "/2018/01/09/CH7-死結-(Deadlock)/"
 ---
 
 ## system model

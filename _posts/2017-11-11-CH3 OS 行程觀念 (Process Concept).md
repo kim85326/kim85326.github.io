@@ -7,7 +7,7 @@ tags: 作業系統
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2017/11/10/CH3-OS-行程觀念-(Process-Concept)"
+  - "/2017/11/10/CH3-OS-行程觀念-(Process-Concept)/"
 ---
 
 ### 該如何稱呼 CPU 所有的運作項目

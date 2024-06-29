@@ -7,7 +7,7 @@ tags: [jQuery Plugin]
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2018/04/16/jQuery-plugin-3-template"
+  - "/2018/04/16/jQuery-plugin-3-template/"
 ---
 
 ### template

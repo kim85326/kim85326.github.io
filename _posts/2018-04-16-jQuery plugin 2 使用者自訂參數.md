@@ -7,7 +7,7 @@ tags: [jQuery Plugin]
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2018/04/15/jQuery-plugin-2-使用者自訂參數"
+  - "/2018/04/15/jQuery-plugin-2-使用者自訂參數/"
 ---
 
 ### 使用者自訂參數或函數

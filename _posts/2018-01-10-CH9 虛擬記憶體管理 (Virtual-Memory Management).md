@@ -7,7 +7,7 @@ tags: 作業系統
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2018/01/09/CH9-虛擬記憶體管理-(Virtual-Memory-Management)"
+  - "/2018/01/09/CH9-虛擬記憶體管理-(Virtual-Memory-Management)/"
 ---
 
 - Virtual memory – separation of user logical memory from physical memory

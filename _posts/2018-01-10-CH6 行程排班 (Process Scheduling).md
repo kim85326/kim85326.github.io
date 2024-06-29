@@ -7,7 +7,7 @@ tags: 作業系統
 mathjax: true
 description: ""
 redirect_from: 
-  - "/2018/01/09/CH6-行程排班-(Process-Scheduling)"
+  - "/2018/01/09/CH6-行程排班-(Process-Scheduling)/"
 ---
 
 ## Bounded-Buffer
