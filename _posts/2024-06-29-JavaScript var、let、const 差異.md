@@ -10,7 +10,11 @@ redirect_from:
   - "/2019/07/02/JavaScript-var-let-const-差異/"
 ---
 
+JavaScript 是一門強大且靈活的語言，但靈活性有時也會帶來困惑，特別是在變數宣告方面。`var` 是 JavaScript 中最早的變數宣告方式，但在 ES6 中，`let` 和 `const` 的引入讓我們有了更多選擇。這篇文章將比較 `var`、`let` 和 `const`，討論它們的差異及各自的優缺點，幫助你更好地理解和應用這些關鍵字，提高你的程式碼質量。
+
 ### JavaScript 作用域
+
+在深入探討 var、let 和 const 對作用域的影響之前，我們先來了解什麼是**全域變數**和**區域變數**
 
 #### 全域變數
 
@@ -29,7 +33,7 @@ console.log(name); // elaine
 
 #### 區域變數
 
-每次執行函式時，就會建立區域變數再予以摧毀，而且函式之外的所有程式碼都不能存取這個變數
+每次執行 `function` 時，就會建立區域變數再予以摧毀，而且 `function` 之外的所有程式碼都不能存取這個變數
 
 ```js
 function showName() {
@@ -41,7 +45,7 @@ showName();
 console.log(name); // ReferenceError: name is not defined
 ```
 
-`function` 找變數是由內向外找
+`function` 會優先查找其內部定義的變數，若在內部找不到，才會逐層向外查找，直到全域範圍。
 
 ```js
 var name = "elaine";
@@ -124,7 +128,7 @@ for (var i = 0; i < 3; i++) {
 }
 ```
 
-var 的作用域是以 function 為主，這個例子可以把他想像是 var 被提升到全域變數
+`var` 的作用域是以 `function` 為主，這個例子可以把他想像是 `var` 被提升到全域變數
 
 ```js
 var i;
@@ -194,7 +198,7 @@ console.log(a); // undefined
 a = 123;
 ```
 
-`let` 和 `const` 其實也有宣告提升，但沒有初始化為 `undefined`，而且在賦值之前試圖取值會發生錯誤，這叫做 暫時性死區 (Temporal Dead Zone)
+`let` 和 `const` 其實也有宣告提升，但沒有初始化為 `undefined`，而且在賦值之前試圖取值會發生錯誤，這叫做 **暫時性死區 (Temporal Dead Zone)**
 
 let
 
@@ -240,7 +244,7 @@ example();
 
 在這個範例中：
 
-1. 當進入 `example` 函數的作用域時，變數 `b` 會被提升，但不會初始化。
+1. 當進入 `example` 函式的作用域時，變數 `b` 會被提升，但不會初始化。
 2. 在 `let b = 20;` 行之前，`b` 處於**暫時性死區**中，因此試圖訪問 `b` 會引發引用錯誤。
 3. 一旦執行到 `let b = 20;` 行，`b` 才會被初始化，此後才能正常訪問。
 
@@ -307,7 +311,7 @@ a = 123; // TypeError: Assignment to constant variable
 
 原因
 1. `var` 的問題：
-	- `var` 是函數作用域，容易造成變數提升（Hoisting）問題，使得程式碼行為不可預測。
+	- `var` 是函式作用域，容易造成變數提升（Hoisting）問題，使得程式碼行為不可預測。
 	- `var` 允許重複宣告同一變數，可能導致意外的變數覆蓋和難以發現的錯誤。
 	- `var` 變數在區塊內宣告後，可以在區塊外訪問，這會引發不可預期的問題。
 2. `let` 的優勢：
@@ -420,12 +424,12 @@ function calculateArea(radius) {
 }
 ```
 
-#### 使用 `function` 宣告而非 `const` 宣告函數
+#### 使用 `function` 宣告而非 `const` 宣告函式
 
-在 `JavaScript` 中宣告函數時，建議使用 `function` 關鍵字，而不是 `const` 或 `let` 來宣告匿名函數。這樣可以提升程式碼的可讀性和一致性。
+在 `JavaScript` 中宣告函式時，建議使用 `function` 關鍵字，而不是 `const` 或 `let` 來宣告匿名函式。這樣可以提升程式碼的可讀性和一致性。
 
 錯誤示範
-使用 `const` 宣告匿名函數：
+使用 `const` 宣告匿名函式：
 
 ```js
 const square = function(n) {
@@ -435,7 +439,7 @@ console.log(square(5)); // 25
 ```
 
 正確示範
-使用 `function` 關鍵字宣告函數：
+使用 `function` 關鍵字宣告函式：
 
 ```js
 function square(n) {
@@ -445,11 +449,11 @@ console.log(square(5)); // 25
 ```
 
 原因
-1. 函數提升（Hoisting）：
-	- 使用 `function` 宣告的函數會被提升（hoisted）到其作用域的頂部，這意味著可以在函數宣告之前使用它們。這有助於組織程式碼，使主要邏輯可以放在文件的開頭，細節實現放在後面。
+1. 函式提升（Hoisting）：
+	- 使用 `function` 宣告的函式會被提升（hoisted）到其作用域的頂部，這意味著可以在函式宣告之前使用它們。這有助於組織程式碼，使主要邏輯可以放在文件的開頭，細節實現放在後面。
 
 	```js
-	// 函數提升的例子
+	// 函式提升的例子
 	console.log(square(5)); // 25
 
 	function square(n) {
@@ -458,31 +462,31 @@ console.log(square(5)); // 25
 	```
 
 2. 可讀性：
-	- 使用 `function` 宣告函數，可以明確地區分出變數和函數。這使程式碼更加直觀，讓讀者能快速理解程式的結構和功能。
+	- 使用 `function` 宣告函式，可以明確地區分出變數和函式。這使程式碼更加直觀，讓讀者能快速理解程式的結構和功能。
 3. 一致性：
-	- 使用 `function` 關鍵字來宣告函數，有助於保持程式碼風格的一致性。這對於大型專案或團隊合作尤為重要，有助於減少混淆和錯誤。
+	- 使用 `function` 關鍵字來宣告函式，有助於保持程式碼風格的一致性。這對於大型專案或團隊合作尤為重要，有助於減少混淆和錯誤。
 4. 靈活性：
-	- 使用 `function` 宣告的函數可以在程式碼中任意搬動，而不影響其可用性。由於函數提升，無論函數宣告位於程式碼的哪個位置，都可以在宣告之前或之後使用。相比之下，使用 `const` 宣告的匿名函數只能在宣告之後使用。
+	- 使用 `function` 宣告的函式可以在程式碼中任意搬動，而不影響其可用性。由於函式提升，無論函式宣告位於程式碼的哪個位置，都可以在宣告之前或之後使用。相比之下，使用 `const` 宣告的匿名函式只能在宣告之後使用。
 
 	```js
-	// 使用 function 宣告函數，隨處可用
+	// 使用 function 宣告函式，隨處可用
 	console.log(add(3, 4)); // 7
 
 	function add(a, b) {
 		return a + b;
 	}
 
-	// 函數可以任意搬動
+	// 函式可以任意搬動
 	function multiply(a, b) {
 		return a * b;
 	}
 	console.log(multiply(3, 4)); // 12
 	```
 
-	而使用 `const` 宣告的匿名函數，必須在宣告之後才能使用：
+	而使用 `const` 宣告的匿名函式，必須在宣告之後才能使用：
 
 	```js
-	// 使用 const 宣告匿名函數
+	// 使用 const 宣告匿名函式
 	const subtract = function(a, b) {
 		return a - b;
 	};
