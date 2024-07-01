@@ -107,21 +107,15 @@ console.log("hi elaine!");
 
 #### 使用情境
 
-`console.log` 是開發過程中最常用的除錯工具之一，用於檢查變數值、程式流程、錯誤訊息等。除了 `console.log` 之外，JavaScript 的 console 物件還提供了許多其他有用的方法來協助我們進行除錯和記錄。
+`console.log` 是開發過程中最常用的除錯工具之一，用於檢查變數值、程式流程、錯誤訊息等。
 
-- `console.error`：輸出錯誤訊息
-- `console.warn`：輸出警告訊息
-- `console.info`：輸出資訊訊息
-- `console.debug`：輸出除錯訊息
-- `console.table`：以表格形式輸出資料
-- `console.group` 和 `console.groupEnd`：將日誌訊息分組
-- `console.time` 和 `console.timeEnd`：計算程式碼執行時間
+除了 `console.log` 之外，JavaScript 的 console 物件還提供了許多其他有用的方法來協助我們進行除錯和記錄，可以參考我另一篇文章 [除了 console.log 之外你還知道哪些 console](/posts/除了-console.log-之外你還知道哪些-console/)
 
 ### 常見問題
 
 #### 使用 alert 時，出現 [object Object]
 
-![](https://i.imgur.com/MpQqJdL.png)
+![](https://i.imgur.com/MpQqJdL.png?w=300)
 
 `alert` 只能輸出字串，所以會自動呼叫 `toString()` 方法，遇到這種情況就是因為你使用 `alert` 印出物件
 
