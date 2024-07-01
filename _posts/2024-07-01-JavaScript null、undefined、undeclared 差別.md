@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "JavaScript null、undefined、undeclared 差異"
+title: "JavaScript null、undefined、undeclared 差別"
 date: 2024-07-01 00:00:00 +0800
 categories: JavaScript
 tags: JavaScript
 mathjax: true
 description: ""
+redirect_from: 
+  - "/posts/JavaScript-null-undefined-undeclared-差異/"
 ---
 
 在 JavaScript 中，`null`、`undefined` 和 `undeclared` 都代表不同的概念和用法。以下是它們的區別：

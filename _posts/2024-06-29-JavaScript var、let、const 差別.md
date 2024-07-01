@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript var、let、const 差異"
+title: "JavaScript var、let、const 差別"
 date: 2024-06-29 00:00:00 +0800
 categories: JavaScript
 tags: JavaScript
@@ -8,6 +8,7 @@ mathjax: true
 description: ""
 redirect_from: 
   - "/2019/07/02/JavaScript-var-let-const-差異/"
+  - "/posts/JavaScript-var-let-const-差異/"
 ---
 
 JavaScript 是一門強大且靈活的語言，但靈活性有時也會帶來困惑，特別是在變數宣告方面。`var` 是 JavaScript 中最早的變數宣告方式，但在 ES6 中，`let` 和 `const` 的引入讓我們有了更多選擇。這篇文章將比較 `var`、`let` 和 `const`，討論它們的差異及各自的優缺點，幫助你更好地理解和應用這些關鍵字，提高你的程式碼質量。
