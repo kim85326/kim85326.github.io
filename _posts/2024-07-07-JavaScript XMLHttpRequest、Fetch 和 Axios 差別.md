@@ -8,11 +8,11 @@ mathjax: true
 description: ""
 ---
 
-在進行網絡請求時，JavaScript 提供了多種方式來與伺服器進行通信。最常見的三種方式是 XMLHttpRequest、Fetch 和 Axios。在探討它們的差異、優缺點以及使用場景之前，可以先閱讀上一篇文章 [JavaScript AJAX](/posts/JavaScript-AJAX/)
+在進行網絡請求時，JavaScript 提供了多種方式來與伺服器進行通信。最常見的三種方式是 `XMLHttpRequest`、`Fetch` 和 `Axios`。在探討它們的差異、優缺點以及使用場景之前，可以先閱讀上一篇文章 [JavaScript AJAX](/posts/JavaScript-AJAX/)
 
 ### XMLHttpRequest
 
-XMLHttpRequest（XHR）是最早期用於在瀏覽器與伺服器之間傳輸資料的 API，它允許在不重新加載整個頁面的情況下進行 HTTP 請求。
+`XMLHttpRequest`（XHR）是最早期用於在瀏覽器與伺服器之間傳輸資料的 API，它允許在不重新加載整個頁面的情況下進行 HTTP 請求。
 
 #### 語法
 
@@ -136,7 +136,7 @@ xhr.send(data);
 
 ### Fetch
 
-Fetch 是一種現代化的接口，用於發送 HTTP 請求。它基於 `Promise`，提供了更簡潔的語法和更好的可讀性
+`Fetch` 是一種現代化的接口，用於發送 HTTP 請求。它基於 `Promise`，提供了更簡潔的語法和更好的可讀性
 
 #### 語法
 
@@ -235,7 +235,7 @@ Axios 是一個基於 `Promise` 的 HTTP 客戶端，適用於瀏覽器和 Node.
 
 #### 安裝 Axios
 
-可以使用 `npm install axios`，也可以使用 CDN 方式載入
+可以使用 `npm install axios`，也可以使用 `CDN` 方式載入
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
@@ -299,7 +299,7 @@ async function getUser() {
 
 #### 設定 Base URL
 
-你可以通過設定 Axios 的實例來設置一個全局的 base URL，這樣所有的請求都會自動使用這個 base URL
+你可以通過設定 `Axios` 的實例來設置一個全局的 base URL，這樣所有的請求都會自動使用這個 base URL
 
 ```js
 const apiClient = axios.create({
@@ -370,7 +370,7 @@ fetchDataWithInterceptors();
 
 #### Cancel Request
 
-從 v0.22.0 開始，Axios 支援使用 AbortController 來以 fetch API 的方式取消請求：
+從 v0.22.0 開始，`Axios` 支援使用原生的 `AbortController` 來以取消請求
 
 ```js
 const controller = new AbortController();
@@ -516,7 +516,7 @@ login();
 - 自動轉換：自動轉換 `JSON` 資料
 - 攔截器：提供請求和回應攔截器，方便處理請求和回應
 - 更好的錯誤處理：對 4xx 和 5xx 錯誤有更好的處理
-- 更容易的設定：例如 cancel request、timeout、base url
+- 更靈活的配置：例如取消請求、設置超時、配置全局的 base URL，這些配置使得 Axios 更加靈活且易於使用
 
 #### 缺點
 
@@ -524,9 +524,11 @@ login();
 
 ### 小結
 
-- XMLHttpRequest：適合需要對請求和回應進行詳細控制的場景，但語法相對複雜，可讀性差
-- Fetch：適合現代瀏覽器和簡單的網絡請求，語法簡潔，但對錯誤處理不夠完善
-- Axios：提供了更豐富的功能和更簡潔的 API，適合需要處理多種請求和回應邏輯的場景，但不是原生的，所以需要額外引入套件
+- `XMLHttpRequest`：適合需要對請求和回應進行詳細控制的場景，但語法相對複雜，可讀性差
+- `Fetch`：適合現代瀏覽器和簡單的網絡請求，語法簡潔，但對錯誤處理不夠完善
+- `Axios`：提供了更豐富的功能和更簡潔的 API，適合需要處理多種請求和回應邏輯的場景，但不是原生的，所以需要額外引入套件
+
+如果可以的話，我是比較推薦使用 `Axios` 
 
 ### 參考資料
 
