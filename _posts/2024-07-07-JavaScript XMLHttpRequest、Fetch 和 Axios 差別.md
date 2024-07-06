@@ -382,7 +382,13 @@ async function fetchData() {
     });
     console.log(response.data);
   } catch (error) {
-    console.error(error);
+    if (axios.isCancel(error)) {
+      // 處理請求取消的錯誤
+      console.log('請求已取消', error.message);
+    } else {
+      // 處理錯誤
+      console.error(error);
+    }
   }
 }
 
@@ -405,10 +411,8 @@ async function fetchData() {
     console.log(response.data);
   } catch (error) {
     if (axios.isCancel(error)) {
-      // 處理請求取消的錯誤
       console.log('請求已取消', error.message);
     } else {
-      // 處理錯誤
       console.error(error);
     }
   }
@@ -416,8 +420,8 @@ async function fetchData() {
 
 fetchData();
 
-// 取消請求（訊息參數是可選的）
-cancelTokenSource.cancel('操作已被使用者取消。');
+// 取消 Request（訊息參數是 optional 的）
+cancelTokenSource.cancel('操作已被使用者取消');
 ```
 
 ##### 完整取消 Request 範例
