@@ -247,7 +247,7 @@ processData();
 
 ##### 效能優化，同時進行異步操作
 
-在非同步操作中，使用 Promise.all 同時處理多個異步操作，進一步提高效能
+在非同步操作中，使用 `Promise.all` 同時處理多個異步操作，進一步提高效能
 
 ```js
 async function processMultipleTasks() {
