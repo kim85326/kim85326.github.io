@@ -3,7 +3,7 @@ layout: post
 title: "在 Vue 3 中使用 Composition API 優雅地接 API"
 date: 2024-07-07 04:00:00 +0800
 categories: JavaScript
-tags: JavaScript
+tags: ["JavaScript", "Vue"]
 mathjax: true
 description: ""
 ---
@@ -15,12 +15,14 @@ description: ""
 - [JavaScript AJAX](/posts/JavaScript-AJAX/)
 - [JavaScript XMLHttpRequest、Fetch 和 Axios 差別](/posts/JavaScript-XMLHttpRequest-Fetch-和-Axios-差別/)
 
-### 安裝 Axios
+### 範例
+
+安裝 Axios
 
 首先，確保你已經安裝了 Axios：
 
 ```bash
-npm install axios
+npm install --save axios
 ```
 
 創建 API Client
@@ -31,12 +33,13 @@ npm install axios
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: 'https://api.example.com',
-    timeout: 10000,
+    baseURL: 'https://api.example.com', // 設定好 base url
+    timeout: 5000, // 設定 timeout，避免無限期的等待
 });
 
 apiClient.interceptors.request.use(config => {
-    config.headers.Authorization = `Bearer ${yourToken}`;
+    // 每一個 request 都帶上 token
+    config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
     return config;
 }, error => {
     return Promise.reject(error);
@@ -45,10 +48,12 @@ apiClient.interceptors.request.use(config => {
 apiClient.interceptors.response.use(response => {
     return response;
 }, error => {
-    if (error.response) {
-        console.error('API error:', error.response.status, error.response.data);
-    } else {
-        console.error('Network error:', error.message);
+    if (error.response.status === 401) {
+        // 沒登入，跳轉到登入頁面
+        window.location.href = '/login';
+    } else if (error.response.status === 500) {
+        // 伺服器錯誤，可以顯示全域的錯誤訊息
+        alert('伺服器錯誤，請稍後再試');
     }
     return Promise.reject(error);
 });
@@ -78,6 +83,7 @@ export function useUserApi() {
         } catch (err) {
             error.value = err;
         } finally {
+            // 記得 loading 不管成功或失敗都要 set 成 false，不然明明 API 失敗了還在 loading 畫面
             loading.value = false;
         }
     };
@@ -87,11 +93,12 @@ export function useUserApi() {
 ```
 
 使用自定義 Hook
-在你的 Vue 元件中使用自定義 Hook 來進行用戶相關的 API 請求：
+在你的 Vue 元件中使用自定義 Hook 來進行 API 請求
 
 ```vue
 <template>
   <div>
+    <!-- 可以的話，提供使用者 retry 的機會 -->
     <button v-on:click="fetchUser(1)">Fetch User</button>
     <div v-if="loading">Loading...</div>
     <div v-if="error">Error: {{ error.message }}</div>
@@ -105,3 +112,168 @@ import { useUserApi } from './useUserApi';
 const { userData, loading, error, fetchUser } = useUserApi();
 </script>
 ```
+
+### 如何優雅接 API？
+
+- 選擇 `Axios` 取代 `XHR` 和 `fetch`，因為 `Axios` 提供更方便的功能，例如：Base URL、Timeout、以及自動轉換 `JSON` 格式等等
+- 通常 Backend Server 都是同一個，可以設定 Base URL，就不用重複寫了
+    
+    ```js
+    const apiClient = axios.create({
+        baseURL: 'https://api.example.com',
+    });
+
+    // 也可以之後再修改
+    apiClient.defaults.baseURL = 'https://other-domain.com/api/';
+    ```
+
+- 沒有完美的網路，設定 Timeout，避免無限期等待 Request
+
+    ```js
+    const apiClient = axios.create({
+        timeout: 3000,  // 3s
+    });
+    ```
+
+- 沒有完美的網路，建議可以提供 refresh 按鈕讓使用者重試，也可以自己設計 retry 機制
+
+- 如果後端驗證不是使用 header 帶 token 的方式，是使用 session cookie 的方式，需要多設定 `withCredentials: true`，這樣 cookie 才帶得到後端
+    
+    ```js
+    const apiClient = axios.create({
+        withCredentials: true,
+    });
+    ```
+
+- 給 UI 反饋，例如 Loading 圖示或是進度條
+
+    ![](https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif)
+
+- 使用 `async await` 取代 Promise 的 `.then` 和 `.catch`，語法更接近於同步程式碼，讓異步程式碼看起來更簡單和直觀
+
+- 記得做 error handler 使用 `try...catch` 搭配 `async await` 可以統一處理錯誤，使程式碼更易於理解和維護
+
+    ```js
+    async function fetchData() {
+        try {
+            const response = await apiClient.get('/data');
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    fetchData();
+    ```
+
+- 可以利用攔截器，統一處理錯誤，例如彈出全域的 toast
+    
+    ![image](https://hackmd.io/_uploads/By-JdVwvC.png)
+
+- 取消重複的請求：當多次觸發同一 API 時，可以取消前一個請求，避免重複數據處理和網絡資源浪費，或是後面發出去的 Request 先回來了，第一個發出去的 Request 才回來，導致髒資料
+
+    ```js
+    import axios from 'axios';
+
+    const apiClient = axios.create({
+        baseURL: 'https://api.example.com',
+        timeout: 10000,
+    });
+
+    let controller;
+
+    async function fetchData() {
+        if (controller) {
+            controller.abort(); // 取消前一個請求
+        }
+        
+        controller = new AbortController();
+        
+        try {
+            const response = await apiClient.get('/data', {
+                signal: controller.signal
+            });
+            console.log(response.data);
+        } catch (error) {
+            if (axios.isCancel(error)) {
+                console.log('Request canceled:', error.message);
+            } else {
+                console.error('API error:', error);
+            }
+        }
+    }
+
+    document.getElementById('fetchButton').addEventListener('click', fetchData);
+    ```
+
+- 對頻繁的 API 請求可以使用防抖（debounce），防止短時間內多次觸發 API 請求
+    - 何時使用：適合處理在一段時間內多次觸發的事件，但只在最後一次觸發後執行。例如，輸入框的即時搜索功能
+    - 原理：在事件停止觸發後的一段時間（如 300 毫秒）內，才執行事件處理函數。如果在這段時間內再次觸發事件，計時器重新計時
+
+    ```js
+    import { debounce } from 'lodash-es';
+
+    async function _fetchData() {
+        try {
+            const response = await apiClient.get('/data');
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    const fetchData = debounce(_fetchData, 300); // 300ms 的防抖
+
+    fetchData();
+    ```
+
+- 可以 disable submit 按鈕並顯示 Loading 來避免重複提交
+
+    ```vue
+    <template>
+    <div>
+        <button v-on:click="submitForm" :disabled="isSubmitting">
+        <span v-if="isSubmitting">Loading...</span>
+        <span v-else>Submit</span>
+        </button>
+    </div>
+    </template>
+
+    <script setup>
+    import { ref } from 'vue';
+    import axios from 'axios';
+
+    const isSubmitting = ref(false);
+
+    async function submitForm() {
+        isSubmitting.value = true;
+        try {
+            await axios.post('/api/submit', { data: 'example' });
+            alert("成功!")
+        } catch (error) {
+            alert("發生錯誤 QQ")
+        } finally {
+            isSubmitting.value = false;
+        }
+    };
+    </script>
+    ```
+
+- 同時打兩個 API，可以善用 `Promise.all()`，避免原本要等第一個 request 回來，才發出下一個 request
+
+    ```js
+    async function fetchData() {
+        try {
+            const [userResponse, postResponse] = await Promise.all([
+                apiClient.get('/users'),
+                apiClient.get('/posts')
+            ]);
+            console.log('Users:', userResponse.data);
+            console.log('Posts:', postResponse.data);
+        } catch (error) {
+            console.error('錯誤', error);
+        }
+    }
+
+    fetchData();
+    ```

@@ -235,7 +235,7 @@ Axios 是一個基於 `Promise` 的 HTTP 客戶端，適用於瀏覽器和 Node.
 
 #### 安裝 Axios
 
-可以使用 `npm install axios`，也可以使用 `CDN` 方式載入
+可以使用 `npm install --save axios`，也可以使用 `CDN` 方式載入
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
@@ -292,10 +292,9 @@ async function getUser() {
     data: { // request body，可以是 string，也可以是 object 或是 URLSearchParams
       firstName: 'Fred'
     },
-    withCredentials: true, // 決定 cookie 要不要帶過去 server，default 是 false
+    withCredentials: true, // 跨域請求時是否要帶 cookie 去 Server，預設是 false
   });
   ```
-
 
 #### 設定 Base URL
 
