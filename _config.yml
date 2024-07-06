@@ -16,10 +16,10 @@ timezone: Asia/Taipei
 
 title: Elaine's Blog # the main title
 
-tagline: 朝著年薪 300 萬前進的工程師 # it will display as the sub-title
+tagline: If you can't explain it simply, you don't understand it well enough. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  朝著年薪 300 萬前進的工程師
+  If you can't explain it simply, you don't understand it well enough.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
