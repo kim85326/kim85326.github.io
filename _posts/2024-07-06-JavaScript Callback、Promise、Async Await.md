@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JavaScript Callback、Promise、Async Await"
-date: 2024-07-06 00:22:00 +0800
+date: 2024-07-06 22:00:00 +0800
 categories: JavaScript
 tags: JavaScript
 mathjax: true
