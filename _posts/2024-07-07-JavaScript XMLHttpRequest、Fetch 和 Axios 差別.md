@@ -229,11 +229,11 @@ login();
   - XMLHttpRequest 支援進度事件，可以追蹤請求的上傳和下載進度
   - fetch API 則不支援進度事件，這在需要進度監控的場景中是一個限制
 
-#### Axios
+### Axios
 
 Axios 是一個基於 `Promise` 的 HTTP 客戶端，適用於瀏覽器和 Node.js。它提供了更豐富的功能和更簡潔的 API，但是他不是原生的，需要安裝
 
-### 安裝 Axios
+#### 安裝 Axios
 
 可以使用 `npm install axios`，也可以使用 CDN 方式載入
 
