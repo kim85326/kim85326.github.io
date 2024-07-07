@@ -8,7 +8,7 @@ mathjax: true
 description: ""
 ---
 
-在現代前端開發中，Debounce 和 Throttle 是兩個常見的技術，用於控制高頻率事件的觸發次數。這些技術能夠幫助優化性能，提升應用的響應速度和用戶體驗。本篇文章將介紹 Debounce 和 Throttle 的概念、區別以及如何在 Vue 3 中使用這些技術。
+在現代前端開發中，Debounce 和 Throttle 是兩個常見的技術，用於控制高頻率事件的觸發次數。這些技術能夠幫助優化效能，提升應用的響應速度和用戶體驗。本篇文章將介紹 Debounce 和 Throttle 的概念、區別以及如何在 Vue 3 中使用這些技術。
 
 ### 去抖 Debounce
 
@@ -143,7 +143,7 @@ const handleScroll = throttle((event) => {
 
 ### 總結
 
-Debounce 和 Throttle 是兩個強大的工具，可以幫助控制高頻事件的觸發，從而優化性能。Debounce 適用於需要在事件停止後執行的場景，而 Throttle 適用於需要在固定時間間隔內執行的場景。在實際運用中，我們可以使用 lodash 庫輕鬆實現這些功能，提升應用的用戶體驗和性能。
+Debounce 和 Throttle 是兩個強大的工具，可以幫助控制高頻事件的觸發，從而優化效能。Debounce 適用於需要在事件停止後執行的場景，而 Throttle 適用於需要在固定時間間隔內執行的場景。在實際運用中，我們可以使用 lodash 庫輕鬆實現這些功能，提升應用的用戶體驗和效能。
 
 
 ### 參考資料
