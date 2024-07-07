@@ -25,7 +25,7 @@ description: ""
 - XHR 有各種狀態碼 (readyState)，不是 HTTP Status Code 哦！
     - `xhr.readyState = 0`，代表已經產生 `XMLHttpRequest`，但還沒發
     - `xhr.readyState = 1`，代表用了 `open()`，但還沒傳送資料過去
-    - `xhr.readyState = 2`，代表用了 `send()`
+    - `xhr.readyState = 2`，代表用了 `send()`，已讀取
     - `xhr.readyState = 3`，代表還在載入資料
     - `xhr.readyState = 4`，代表載入完畢，資料已經完全
 - `xhr.status` 代表 HTTP Status Code
@@ -535,5 +535,6 @@ login();
 
 ### 參考資料
 
+- [mdn - Ajax](https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [mdn - Using Fetch](https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)
 - [github - axios](https://github.com/axios/axios?tab=readme-ov-file)

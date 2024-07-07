@@ -286,3 +286,4 @@ fetchDataWithFeedback();
 
 - [Introducing asynchronous JavaScript - Callbacks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks)
 - [Callback Hell and How to Rescue it ?](https://dev.to/jerrycode06/callback-hell-and-how-to-rescue-it-ggj)
+- [JavaScript 中的同步與非同步（上）：先成為 callback 大師吧！](https://blog.huli.tw/2019/10/04/javascript-async-sync-and-callback/index.html?fbclid=IwAR2c8Fc-AZz3uhV3Sd-dCcV67Yu_7fY-UpSane8sRFu9YQWc2kHX9x34qtc)

@@ -104,7 +104,7 @@ a = 10; // 嚴格模式，Uncaught ReferenceError: a is not defined
 
 ```js
 a = 10; // 非嚴格模式，直接賦值 a，a 會變成全域變數
-console.log(a);
+console.log(a); // 10
 ```
 
 ### Best Practice
