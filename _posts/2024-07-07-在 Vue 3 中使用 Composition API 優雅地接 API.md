@@ -135,7 +135,21 @@ const { userData, loading, error, fetchUser } = useUserApi();
     });
     ```
 
-- 沒有完美的網路，建議可以提供 refresh 按鈕讓使用者重試，也可以自己設計 retry 機制
+- 沒有完美的網路，建議可以提供 refresh 按鈕讓使用者重試，也可以自己設計 retry 機制，當然也可以用別人寫好的套件 [axios-retry](https://github.com/softonic/axios-retry)
+
+    ```js
+    import axiosRetry from 'axios-retry';
+
+    axiosRetry(apiClient, { retries: 3 });
+
+    apiClient.get('/test'); // 照常使用
+    ```
+
+    - 通常 retry 會設定指數型的，指數型延遲通過逐漸增加重試間隔，減少了伺服器的瞬時負載
+
+        ```js
+        axiosRetry(axios, { retryDelay: axiosRetry.exponentialDelay });
+        ```
 
 - 如果後端驗證不是使用 header 帶 token 的方式，是使用 session cookie 的方式，需要多設定 `withCredentials: true`，這樣 cookie 才帶得到後端
     
@@ -227,7 +241,7 @@ const { userData, loading, error, fetchUser } = useUserApi();
     fetchData();
     ```
 
-- 可以 disable submit 按鈕並顯示 Loading 來避免重複提交
+- 可以 disable submit 按鈕，並顯示 Loading 來避免重複提交
 
     ```vue
     <template>
