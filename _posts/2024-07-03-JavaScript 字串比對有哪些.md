@@ -47,8 +47,8 @@ str1.localeCompare(str2, [locales, [options]])
 
 - locales（可選）：
     - 一個 BCP 47 語言標籤字串或字串陣列，用於指定比較應使用的語言。若未提供，則使用默認語言環境
-    - 常見有 `en`, `th-TH`, `vi-VN`, `zh-Hans`, `id-ID`, `ja-JP`, `ko-KR`, `my-MM`, `pt-br`
-    - 中文可以使用 `zh-Hans`
+    - 常見有 `en`, `th-TH`, `vi-VN`, `zh-Hant`, `id-ID`, `ja-JP`, `ko-KR`, `my-MM`, `pt-BR`
+    - 繁體中文可以使用 `zh-Hant`，簡體中文是 `zh-Hans`
     - 可以參考 [ISO Language Code Table](http://www.lingoes.net/en/translator/langcode.htm)
 - options（可選）：一個對象，用於定義比較行為。常用的選項包括：
     - `sensitivity`：控制比較的敏感度，有以下值：
