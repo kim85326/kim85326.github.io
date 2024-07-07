@@ -12,18 +12,14 @@ description: ""
 
 ### 直接比較
 
-1. 使用 `==` 和 `===`
-
-    `==` 會在比較前進行類型轉換，而 `===` 不會進行類型轉換，直接比較兩個值和它們的類型，**強烈建議使用 `===` !!!**
+1. 使用 `===`
 
     ```js
     const str1 = "hello";
     const str2 = "hello";
     const str3 = "Hello";
 
-    console.log(str1 == str2);  // true
     console.log(str1 === str2); // true
-    console.log(str1 == str3);  // false
     console.log(str1 === str3); // false
     ```
 
