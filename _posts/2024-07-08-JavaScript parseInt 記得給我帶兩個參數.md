@@ -78,7 +78,7 @@ const filteredNumbers = numbers.map((num, index) => {
 ["1", "2", "3"].map(parseInt)
 ```
 
-當 `map` 方法與 `parseInt` 一起使用時，實際上發生了以下情況：
+等同於
 
 ```js
 ["1", "2", "3"].map((element, index) => parseInt(element, index));
