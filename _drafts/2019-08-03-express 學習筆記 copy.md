@@ -264,13 +264,13 @@ app.get("/user", function(request, response) {
   app.listen(port);
   ```
 
-  ![](https://i.imgur.com/MNutjWT.png)
+  ![](/assets/img/posts/MNutjWT.png)
 
-  ![](https://i.imgur.com/Dd6QRwt.png)
+  ![](/assets/img/posts/Dd6QRwt.png)
 
-  ![](https://i.imgur.com/DeIoFjN.png)
+  ![](/assets/img/posts/DeIoFjN.png)
 
-  ![](https://i.imgur.com/Sr5SiAJ.png)
+  ![](/assets/img/posts/Sr5SiAJ.png)
 
 ### cookie-parser
 
@@ -429,9 +429,9 @@ app.get("/user", function(request, response) {
 
 - 開啟 gmail 設定
 
-  ![](https://i.imgur.com/L1Si1AX.png)
+  ![](/assets/img/posts/L1Si1AX.png)
 
-  ![](https://i.imgur.com/mmdJicq.png)
+  ![](/assets/img/posts/mmdJicq.png)
 
 - 安裝 nodemailer
 
@@ -547,8 +547,8 @@ app.get("/user", function(request, response) {
   </html>
   ```
 
-![](https://i.imgur.com/LihP9pR.png)
-![](https://i.imgur.com/m16sqRv.png)
+![](/assets/img/posts/LihP9pR.png)
+![](/assets/img/posts/m16sqRv.png)
 
 ### dotenv
 

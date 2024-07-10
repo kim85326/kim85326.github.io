@@ -55,7 +55,7 @@ description: ""
    $ composer -v
    ```
 
-   ![](https://i.imgur.com/ZrpQQQP.png)
+   ![](/assets/img/posts/ZrpQQQP.png)
 
 ### 安裝 Laravel 專案
 
@@ -67,11 +67,11 @@ description: ""
 
 ### 新增一個資料庫
 
-![](https://i.imgur.com/hF8lcdb.png)
+![](/assets/img/posts/hF8lcdb.png)
 
 - 輸入資料庫名稱之後點擊 `create`
 
-![](https://i.imgur.com/wEGJFPg.png)
+![](/assets/img/posts/wEGJFPg.png)
 
 ### 設定專案連結資料庫的資訊
 
@@ -165,7 +165,7 @@ description: ""
 
 - 瀏覽器輸入 `vm-blog.com`，可以成功看到 `Laravel` 預設畫面
 
-![](https://i.imgur.com/jU1qYT8.png)
+![](/assets/img/posts/jU1qYT8.png)
 
 ### 參考資料
 

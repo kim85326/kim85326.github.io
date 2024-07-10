@@ -71,7 +71,7 @@ $ sudo firewall-cmd --reload
 
    這時候應該可以打開瀏覽器，輸入網址 `[虛擬機 的 IP]`，就可以看到 `Ngnix` 的預設畫面了
 
-   ![](https://i.imgur.com/b7azriL.png)
+   ![](/assets/img/posts/b7azriL.png)
 
 ### MySQL
 
@@ -156,7 +156,7 @@ $ sudo firewall-cmd --reload
    $ mysql -u root -p
    ```
 
-   ![](https://i.imgur.com/Tq2rO3z.png)
+   ![](/assets/img/posts/Tq2rO3z.png)
 
    [CentOS Linux 7 安裝 MySQL/MariaDB 資料庫教學](https://blog.gtwang.org/linux/centos-7-install-mariadb-mysql-server-tutorial/)
 
@@ -202,7 +202,7 @@ $ sudo firewall-cmd --reload
    $ php -v
    ```
 
-   ![](https://i.imgur.com/p8lEGkO.png)
+   ![](/assets/img/posts/p8lEGkO.png)
 
 ### PHP-FPM
 
@@ -309,7 +309,7 @@ $ sudo firewall-cmd --reload
 
    5. 在瀏覽器網址打上 `[ip]/info.php`
 
-      ![](https://i.imgur.com/jQuyyDN.png)
+      ![](/assets/img/posts/jQuyyDN.png)
 
 ### phpMyAdmin
 
@@ -398,7 +398,7 @@ $ sudo firewall-cmd --reload
 
 7. 在瀏覽器網址打上 `[ip]/phpMyAdmin`，會出現 `Nginx` 沒有寫入 `php/session` 的權限
 
-   ![](https://i.imgur.com/pvbbVcj.png)
+   ![](/assets/img/posts/pvbbVcj.png)
 
    利用指令查看 `/var/lib/php/` 權限
 
@@ -406,7 +406,7 @@ $ sudo firewall-cmd --reload
    $ ll /var/lib/php/
    ```
 
-   ![](https://i.imgur.com/XRn0EQH.png)
+   ![](/assets/img/posts/XRn0EQH.png)
 
 8. 設定 `/var/lib/php/session` 資料夾權限
 
@@ -414,11 +414,11 @@ $ sudo firewall-cmd --reload
    $ sudo chown nginx:nginx /var/lib/php/session
    ```
 
-   ![](https://i.imgur.com/ytqChVK.png)
+   ![](/assets/img/posts/ytqChVK.png)
 
    此時頁面就可以正常了
 
-   ![](https://i.imgur.com/CRGXSYI.png)
+   ![](/assets/img/posts/CRGXSYI.png)
 
    [How to Install phpMyAdmin with Nginx on CentOS 7](https://linuxize.com/post/how-to-install-phpmyadmin-with-nginx-on-centos-7/)
 

@@ -14,7 +14,7 @@ redirect_from:
 
 thread 是 cpu 使用時的基本單位，是一個由 thread id、program counter、一組 register、一個 stack 組成
 
-![](https://i.imgur.com/lXY8Y5r.png)
+![](/assets/img/posts/lXY8Y5r.png)
 
 ### 動機(Motivation)
 
@@ -22,7 +22,7 @@ thread 是 cpu 使用時的基本單位，是一個由 thread id、program count
 - 應用程式通常都製作成有許多執行緒控制的個別行程。
 - 網頁瀏覽器可能有一個執行緒顯示影像或文字，而另一執行緒則從網路擷取資料。文書處理器可能有一個執行緒在顯示圖形，另一個執行緒從使用者讀入按鍵，而第三個執行緒在背景下執行拼字和文法校正。
 
-![](https://i.imgur.com/uDdxc58.png)
+![](/assets/img/posts/uDdxc58.png)
 
 ### 利益(Benefits)
 
@@ -54,13 +54,13 @@ thread 是 cpu 使用時的基本單位，是一個由 thread id、program count
 ### concurrency 和 parallelism
 
 concurrency 執行在單核系統
-![](https://i.imgur.com/1GCx2Rs.png)
+![](/assets/img/posts/1GCx2Rs.png)
 parallelism 執行在多核系統
-![](https://i.imgur.com/CbX8USx.png)
+![](/assets/img/posts/CbX8USx.png)
 
 ### Amdahl's law
 
-![](https://i.imgur.com/8FF8B1x.png)
+![](/assets/img/posts/8FF8B1x.png)
 
 - S is serial portion
 - N processing cores

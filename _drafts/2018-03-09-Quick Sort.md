@@ -12,7 +12,7 @@ description: ""
 跳位速度比較快，先把資料調到大概的位置
 (效率最差的時候就是進來的資料已經是排序好的)
 
-![](https://i.imgur.com/1mKg2Mi.png)
+![](/assets/img/posts/1mKg2Mi.png)
 
 - R1 ~ R10 代表在 array 的位置
 - left、right 代表現在要 sort 的範圍
@@ -43,10 +43,10 @@ description: ""
 3. 效率最差的時候就是進來的資料已經是排序好的
 4. 時間複雜度
 
-![](https://i.imgur.com/3p34lLE.png)
+![](/assets/img/posts/3p34lLE.png)
 
 ### 演算法
 
-![](https://i.imgur.com/xQNPC9E.png)
+![](/assets/img/posts/xQNPC9E.png)
 
 從左邊過來叫 i，右邊過來叫 j

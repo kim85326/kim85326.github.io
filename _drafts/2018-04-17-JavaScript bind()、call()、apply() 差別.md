@@ -37,7 +37,7 @@ logPersonName("en", "zh_tw");
 
 結果
 
-![](https://i.imgur.com/k0TabmK.png)
+![](/assets/img/posts/k0TabmK.png)
 
 ## `call(想要成為this的人, 參數1, 參數2...)`
 
@@ -61,7 +61,7 @@ var logName = function(lang1, lang2) {
 logName.call(person, "en", "zh_tw");
 ```
 
-![](https://i.imgur.com/2QcN6HL.png)
+![](/assets/img/posts/2QcN6HL.png)
 
 ### `apply(想要成為this的人, 參數陣列)`
 

@@ -20,7 +20,7 @@ redirect_from:
    - 但是存取相同內容的話，存取記憶體(memory)可能要花數個 CPU 時脈週期(因為 memory 速率較 register 慢)，照成 CPU 需要等待(stall)
 3. 補救方法就是，在快與慢之間加入存取速率中等的快取記憶體(cache)
 
-![](https://i.imgur.com/nibSFN9.png)
+![](/assets/img/posts/nibSFN9.png)
 
 ##### 基底暫存器與限制暫存器(Base and Limit Registers)
 
@@ -29,14 +29,14 @@ redirect_from:
 1. Base register：該 process 的起始記憶體地址，我們稱為基底暫存器
 2. Limist register：該 process 所佔記憶體地址大小，我們稱為限制暫存器
 
-![](https://i.imgur.com/73k33f7.png)
+![](/assets/img/posts/73k33f7.png)
 
 ### address binding
 
 程式必須載入到記憶體後，變成 process 後才能執行。
 在硬碟上等待被載入到記憶體執行得的所有行程，會形成一個輸入佇列(input queue)
 
-![](https://i.imgur.com/sfJZH4U.png)
+![](/assets/img/posts/sfJZH4U.png)
 
 1. 編譯時間 (compile time)：如果編譯時，程式所在的記憶體位置已知，那麼可產生絕對碼(absolute code)
 
@@ -65,7 +65,7 @@ redirect_from:
 
 硬體將 logical address 轉成 physical address
 
-![](https://i.imgur.com/9Fw26X7.png)
+![](/assets/img/posts/9Fw26X7.png)
 
 ##### Dynamic Binding
 
@@ -85,7 +85,7 @@ redirect_from:
 
 ### swapping
 
-![](https://i.imgur.com/5QCu1hc.png)
+![](/assets/img/posts/5QCu1hc.png)
 
 1. 也可以叫 backing store
 2. memory 不夠用了，優先權（priority）較低的會先被 swap out
@@ -107,7 +107,7 @@ redirect_from:
 
 ##### 例題 1
 
-![](https://i.imgur.com/E5UsMux.png)
+![](/assets/img/posts/E5UsMux.png)
 
 sol:
 
@@ -253,7 +253,7 @@ P5 需要 50
 
 ##### 例題 2
 
-![](https://i.imgur.com/A4SJZQr.png)
+![](/assets/img/posts/A4SJZQr.png)
 
 sol: （A）
 best-fit
@@ -323,14 +323,14 @@ first-fit 比較好
 2. Internal Fragmentation 內部斷裂
    - fix-partition 會發生
 
-![](https://i.imgur.com/vXWD7d2.png)
+![](/assets/img/posts/vXWD7d2.png)
 
 ### compaction
 
 進行壓縮，定期清理 memory。
 就是移動執行中的 process 使得非連續的 free block 可以聚集在一起，形成更大的 free block
 
-![](https://i.imgur.com/H657tzS.png)
+![](/assets/img/posts/H657tzS.png)
 
 缺點：
 
@@ -368,9 +368,9 @@ first-fit 比較好
   3. 把 base+offset 才是真的起始位置
   4. 加上 limit 就是他在 physical address 結束位置
 
-![](https://i.imgur.com/kILgtXa.png)
+![](/assets/img/posts/kILgtXa.png)
 
-![](https://i.imgur.com/4fnHcSO.png)
+![](/assets/img/posts/4fnHcSO.png)
 
 ### 非連續的配置 - page
 
@@ -402,20 +402,20 @@ first-fit 比較好
 
 - 假設 logical address 是 2^m，page size 是 2^n，就可以得知下圖
 
-![](https://i.imgur.com/t2dfvOs.png)
+![](/assets/img/posts/t2dfvOs.png)
 
 - 如何轉換
   1. 得到 page number 和 page offset 之後
   2. 去 page table 查詢 page number 對應的 frame number
   3. physical address = frame number + page offset
 
-![](https://i.imgur.com/dIpepjJ.png)
+![](/assets/img/posts/dIpepjJ.png)
 
-![](https://i.imgur.com/f2eykDH.png)
+![](/assets/img/posts/f2eykDH.png)
 
 ##### 例題 3
 
-![](https://i.imgur.com/sZaLpnq.png)
+![](/assets/img/posts/sZaLpnq.png)
 
 ##### 例題 4
 
@@ -435,7 +435,7 @@ page 最大數是 2^40
 
 ### page 和 segmentation 比較
 
-![](https://i.imgur.com/s10JTss.png)
+![](/assets/img/posts/s10JTss.png)
 
 ### Page Table 實作
 
@@ -452,7 +452,7 @@ page 最大數是 2^40
 
 - 解決兩次 access => fast-lookup hardware cache => associative memory 或是 translation look-aside buffers (TLBs)
   - TLB 存 page、frame
-    ![](https://i.imgur.com/HUDozzJ.png)
+    ![](/assets/img/posts/HUDozzJ.png)
   - 曾經查過的資料
   - 可以直接查詢全部
   - 很小、很貴
@@ -464,7 +464,7 @@ page 最大數是 2^40
 
 1. 先看 TLB 如果有(hit)，就可以直接去
 2. 如果沒有 hit，就要去 page table 查詢
-   ![](https://i.imgur.com/SRjFdpN.png)
+   ![](/assets/img/posts/SRjFdpN.png)
 
 Associative Lookup = 𝜀 time unit
 Hit ratio = 𝛼
@@ -472,7 +472,7 @@ EffectiveAccessTime(EAT)= (1+𝜀)𝛼 + (2+𝜀) (1−𝛼) = 2+𝜀−𝛼
 
 ##### 例題 5
 
-![](https://i.imgur.com/qqNTb4h.png)
+![](/assets/img/posts/qqNTb4h.png)
 
 ### memory protection
 
@@ -482,7 +482,7 @@ EffectiveAccessTime(EAT)= (1+𝜀)𝛼 + (2+𝜀) (1−𝛼) = 2+𝜀−𝛼
 - PTLR
   - 存 page table 的長度
 
-![](https://i.imgur.com/vfzxOAw.png)
+![](/assets/img/posts/vfzxOAw.png)
 
 ### share pages
 
@@ -491,11 +491,11 @@ EffectiveAccessTime(EAT)= (1+𝜀)𝛼 + (2+𝜀) (1−𝛼) = 2+𝜀−𝛼
   - 例如 text editors, compilers, window systems
 - 可以不同的 logical address 但都指到相同的 physical address
 
-![](https://i.imgur.com/ekwwZQy.png)
+![](/assets/img/posts/ekwwZQy.png)
 
 ##### 例題 6
 
-![](https://i.imgur.com/H8fGUqn.png)
+![](/assets/img/posts/H8fGUqn.png)
 
 23A01180
 =>0010 0011 1010 0000 0001 0001 1000 0000
@@ -524,10 +524,10 @@ page-size 是 2^10，所以扣掉後面 10 個 bit，才是 page-number
 - 三次 memory access
 - forward-mapped page table
 
-![](https://i.imgur.com/uXgjgNx.png)
+![](/assets/img/posts/uXgjgNx.png)
 
-![](https://i.imgur.com/yda9F3H.png)
+![](/assets/img/posts/yda9F3H.png)
 
 ##### 例題 7 ????
 
-![](https://i.imgur.com/n4ar3fQ.png)
+![](/assets/img/posts/n4ar3fQ.png)

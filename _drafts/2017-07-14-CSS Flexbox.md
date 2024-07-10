@@ -43,7 +43,7 @@ description: ""
 }
 ```
 
-![](https://i.imgur.com/M3ScxWI.png)
+![](/assets/img/posts/M3ScxWI.png)
 
 ### flex-wrap
 
@@ -93,7 +93,7 @@ description: ""
 }
 ```
 
-![](https://i.imgur.com/KEKUGZt.png)
+![](/assets/img/posts/KEKUGZt.png)
 
 ### align-items
 
@@ -116,7 +116,7 @@ description: ""
 }
 ```
 
-![](https://i.imgur.com/imsupd7.png)
+![](/assets/img/posts/imsupd7.png)
 
 ## 在子層設定
 
@@ -172,7 +172,7 @@ description: ""
 /* 出現順序為.child2 .child1 .child3 */
 ```
 
-![](https://i.imgur.com/gSKXhmP.png)
+![](/assets/img/posts/gSKXhmP.png)
 
 ### 參考資料
 

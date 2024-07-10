@@ -26,7 +26,7 @@ description: ""
   - `總寬度 = 總欄位數 * 單一欄的寬度 + Gutter * (總欄位數 - 1) + Gutter on outside`
   - `單一欄的寬度 = ((總寬度 - Gutter on outside) - Gutter * (總欄位數 - 1)) / 總欄位數`
 
-![](https://i.imgur.com/xjrKvSy.png)
+![](/assets/img/posts/xjrKvSy.png)
 
 ### 結構
 

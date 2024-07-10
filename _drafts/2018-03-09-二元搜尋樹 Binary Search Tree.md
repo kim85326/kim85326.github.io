@@ -13,7 +13,7 @@ description: ""
 1. 左子節點的值 < 節點的值 (小的資料放左邊)
 2. 右子節點的值 > 節點的值 (大的資料放右邊)
 
-![](https://i.imgur.com/RlLZWJo.png)
+![](/assets/img/posts/RlLZWJo.png)
 
 ### 搜尋 想法
 
@@ -30,11 +30,11 @@ description: ""
 
 ### 搜尋 資料結構
 
-![](https://i.imgur.com/r7RUR26.png)
+![](/assets/img/posts/r7RUR26.png)
 
 ### 插入 想法
 
-![](https://i.imgur.com/5sj7HiR.png)
+![](/assets/img/posts/5sj7HiR.png)
 
 - 做搜尋之後就可以知道要在哪裡插入
 - 不可能插入在中間
@@ -42,7 +42,7 @@ description: ""
 
 ### 刪除 想法
 
-![](https://i.imgur.com/ZH2barn.png)
+![](/assets/img/posts/ZH2barn.png)
 
 有三種情形
 
@@ -54,6 +54,6 @@ description: ""
 
 ##### 什麼是前序、中序、後序?
 
-![](https://i.imgur.com/qzFLOpZ.png)
+![](/assets/img/posts/qzFLOpZ.png)
 
 - binary search tree 用 inorder 來表示是 "排好順序的"

@@ -10,7 +10,7 @@ description: ""
 
 ### 前端要怎麼和後端溝通？
 
-![](https://i.imgur.com/LPdcU36.png)
+![](/assets/img/posts/LPdcU36.png)
 
 #### 一般請求
 
@@ -19,7 +19,7 @@ description: ""
 2. 伺服器回應給瀏覽器
 3. 瀏覽器重新載入頁面，重新渲染
 
-![](https://i.imgur.com/xaVxfV0.png)
+![](/assets/img/posts/xaVxfV0.png)
 
 #### AJAX 請求
 
@@ -28,7 +28,7 @@ description: ""
 2. 伺服器回應給瀏覽器
 3. 瀏覽器接受後，調用 JavaScript Callback 函式，由 JavaScript 決定要不要更新畫面
 
-![](https://i.imgur.com/GF7HWQb.png)
+![](/assets/img/posts/GF7HWQb.png)
 
 ### 什麼是 AJAX？
 
@@ -36,7 +36,7 @@ description: ""
 
 AJAX (Asynchronous JavaScript and XML) 應用可以在不重新加載整個頁面的情況下，僅向伺服器傳送並取回必須的資料，並在客戶端採用 JavaScript 處理來自伺服器的回應。因為在伺服器和瀏覽器之間交換的資料大量減少，伺服器回應更快了，重點是使用者也不用重新加載整個頁面
 
-![](https://i.imgur.com/2Dis8P7.png)
+![](/assets/img/posts/2Dis8P7.png)
 
 ### JSON
 

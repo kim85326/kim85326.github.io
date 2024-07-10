@@ -13,20 +13,20 @@ description: ""
 
 2. 點選新增應用程式 => 填你應用程式要顯示的名稱 => 點選建立應用程式編號
 
-![](https://i.imgur.com/8blZnhx.png)
+![](/assets/img/posts/8blZnhx.png)
 
-![](https://i.imgur.com/SGW8Ioc.png)
+![](/assets/img/posts/SGW8Ioc.png)
 
 3. 點選 facebook 登入
 
-![](https://i.imgur.com/zoRf6no.png)
+![](/assets/img/posts/zoRf6no.png)
 
 4. 點選網站
 
-![](https://i.imgur.com/qoW0thw.png)
+![](/assets/img/posts/qoW0thw.png)
 
 5. 填你的網站網址 => save => 繼續
-   ![](https://i.imgur.com/1jc2ki5.png)
+   ![](/assets/img/posts/1jc2ki5.png)
 
 6. 下面就是介紹要怎麼使用 Facebook JavaScript SDK
 
@@ -63,7 +63,7 @@ description: ""
   2. 以 SDK 版本取代 {latest-api-version}
 - 可以到主控版找到這些資訊
 
-![](https://i.imgur.com/lu8hxRU.png)
+![](/assets/img/posts/lu8hxRU.png)
 
 ### 檢查登入狀態
 
@@ -107,8 +107,8 @@ FB.getLoginStatus(function(response) {
 </fb:login-button>
 ```
 
-- 上面是簡單版的登入按鈕 ![](https://i.imgur.com/gVHWuQ3.png)
-  如果你想做客製化的登入按鈕![](https://i.imgur.com/XBeIWmM.png)
+- 上面是簡單版的登入按鈕 ![](/assets/img/posts/gVHWuQ3.png)
+  如果你想做客製化的登入按鈕![](/assets/img/posts/XBeIWmM.png)
   可以利用外掛程式配置器 [傳送門](https://developers.facebook.com/docs/facebook-login/web/login-button)
 - onlogin 的屬性是用於設定檢察登入狀態的 js，了解用戶是否登入，會呼叫 checkLoginState
 
@@ -126,9 +126,9 @@ function checkLoginState() {
 
 點選左側的應用程式審查 => 是否發佈 => 是 => 選擇類別 => 確認
 
-![](https://i.imgur.com/L0ziUiN.png)
+![](/assets/img/posts/L0ziUiN.png)
 
-![](https://i.imgur.com/gsdhQaO.png)
+![](/assets/img/posts/gsdhQaO.png)
 
 現在，你的應用程式目前已對外公開上線。
 

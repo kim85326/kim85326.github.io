@@ -208,7 +208,7 @@ if (a) {
 - `===`
   - 連型態都要相等才可以
 
-![](https://i.imgur.com/eDm2Y4l.png)
+![](/assets/img/posts/eDm2Y4l.png)
 
 ### 參考資料
 

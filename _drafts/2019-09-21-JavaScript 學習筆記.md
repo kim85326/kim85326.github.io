@@ -32,7 +32,7 @@ var str = "str";
 - Number 數值
 
   - [浮點數陷阱](https://juejin.im/entry/59e40ba951882546b15b8d00)
-    ![](https://i.imgur.com/HnQlxib.png)
+    ![](/assets/img/posts/HnQlxib.png)
 
     - 這不是瀏覽器的問題，而是由於某些浮點數沒辦法用二進位準確的表示
     - 解決方法 1
@@ -313,7 +313,7 @@ try {
   console.log(person === person2);
   ```
 
-  ![](https://i.imgur.com/r9PN8s7.png)
+  ![](/assets/img/posts/r9PN8s7.png)
 
 - JavaScript 並沒有物件導向的概念，他是利用 `Prototype` 和閉包來達到物件導向的效果
 

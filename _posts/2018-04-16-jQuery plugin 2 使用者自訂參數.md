@@ -14,7 +14,7 @@ redirect_from:
 
 - 若需要參數擴展可以使用 \$.extend
 - extend(obj1 , obj2)：把 obj2 合併到 obj1
-  ![](https://i.imgur.com/xGN7dvO.png)
+  ![](/assets/img/posts/xGN7dvO.png)
 
 ### 雛形
 

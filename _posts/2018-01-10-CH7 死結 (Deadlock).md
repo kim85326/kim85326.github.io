@@ -41,16 +41,16 @@ redirect_from:
 
 System Model 可以用 Resource-Allocation Graph(RAG)的方式去用圖表描述，如果圖表中沒有 cycle，就不會發生死結，如果有 cycle，則看資源的是不是只有一個 instances，若只有一個，則會發生 deadlock，若不只一個，則有可能發生 deadlock。
 
-![](https://i.imgur.com/I00O91P.png)
+![](/assets/img/posts/I00O91P.png)
 
 - Pi -> Rj : Pi 要求 Rj 這個資源
 - Pi <- Rj : Pi 已經有 Rj 這個資源
 
-![](https://i.imgur.com/WHY5jOu.png)
+![](/assets/img/posts/WHY5jOu.png)
 
 ##### 例子 1
 
-![](https://i.imgur.com/nI5gfTJ.png)
+![](/assets/img/posts/nI5gfTJ.png)
 
 1. P1 已經有 R2 的資源，P1 要求 R1 的資源
 2. P2 已經有 R1、R2 的資源，P2 要求 R3 的資源
@@ -59,7 +59,7 @@ System Model 可以用 Resource-Allocation Graph(RAG)的方式去用圖表描述
 
 ##### 例子 2
 
-![](https://i.imgur.com/RKJICFZ.png)
+![](/assets/img/posts/RKJICFZ.png)
 
 1. 承例子 1，只多了一條線，P3 要求 R2 資源
 2. 這時候會形成 cycle
@@ -69,7 +69,7 @@ System Model 可以用 Resource-Allocation Graph(RAG)的方式去用圖表描述
 
 ##### 例子 3
 
-![](https://i.imgur.com/2T9v8dI.png)
+![](/assets/img/posts/2T9v8dI.png)
 
 1. 雖然有 cylce，P1 -> R1 -> P3 -> R2 -> P1
 2. 但是 P4 可以 release R2 的某一個 instance
@@ -160,7 +160,7 @@ System Model 可以用 Resource-Allocation Graph(RAG)的方式去用圖表描述
 
 ##### 例題 1
 
-![](https://i.imgur.com/c1ScbyI.png)
+![](/assets/img/posts/c1ScbyI.png)
 
 1. 剩下 12-(5+2+2)=3 free
 2. 剛好 B 需要 2 個就給他 => 等他做完會釋放 5 個
@@ -170,7 +170,7 @@ System Model 可以用 Resource-Allocation Graph(RAG)的方式去用圖表描述
 
 ##### 例題 2
 
-![](https://i.imgur.com/0ZzUEU6.png)
+![](/assets/img/posts/0ZzUEU6.png)
 
 1. 剩下 12-(5+2+3)=2 free
 2. 剛好 B 需要 2 個就給他 => 等他做完會釋放 4 個
@@ -237,10 +237,10 @@ System Model 可以用 Resource-Allocation Graph(RAG)的方式去用圖表描述
 
 ##### 例題 1
 
-![](https://i.imgur.com/t0W9Rpr.png)
+![](/assets/img/posts/t0W9Rpr.png)
 
 1. 寫出需求
-   ![](https://i.imgur.com/ogvCsKV.png)
+   ![](/assets/img/posts/ogvCsKV.png)
 
 2. 按照上圖，決定把資源給 P1，等到 P1 做完會釋放(2,0,0)，下次資源就有(3,3,2)+(2,0,0)=(5,3,2)
 3. (5,3,2)的資源可以給 P3，等到 P3 做完會釋放(2,1,1)，下次資源就有(5,3,2)+(2,1,1)=(7,4,3)

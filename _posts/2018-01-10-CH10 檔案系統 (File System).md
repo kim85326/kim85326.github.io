@@ -30,7 +30,7 @@ redirect_from:
   - 這項資訊可以保存產生上次修改和上次使用資料，以作為保護、安全、以及使用監督
 - 這些資訊都存在 disk 上的 directory structure
 
-![](https://i.imgur.com/cJS5dPD.png)
+![](/assets/img/posts/cJS5dPD.png)
 
 ### File Operations 檔案運作
 
@@ -85,7 +85,7 @@ redirect_from:
 
 ### 檔案型態
 
-![](https://i.imgur.com/WdW92cD.png)
+![](/assets/img/posts/WdW92cD.png)
 
 ### file structure
 
@@ -97,7 +97,7 @@ redirect_from:
 
   - 最簡單的存取方法。檔案中的資訊是依著記錄次序一筆接著一筆處理的，這也是至今最通用的檔案存取模式。
 
-    ![](https://i.imgur.com/W4i7qDU.png)
+    ![](/assets/img/posts/W4i7qDU.png)
 
 - direct access
 
@@ -105,22 +105,22 @@ redirect_from:
   - 直接存取方法是以檔案存放在磁碟上的模式為基礎，因為磁碟允許隨機存取任何檔案區段
   - 為了要直接存取，檔案被視為一串編有號碼的區段或記錄。
 
-    ![](https://i.imgur.com/ucmCBkZ.png)
+    ![](/assets/img/posts/ucmCBkZ.png)
 
     - n = relative block number
     - Relative block numbers allow OS to decide where file should be placed
 
-![](https://i.imgur.com/L5E5WSf.png)
+![](/assets/img/posts/L5E5WSf.png)
 
 - 其他 access
   - 其它的存取方法以建立在一個直接存取方法的基礎上
   - 例如 index
 
-![](https://i.imgur.com/2Iqrgeh.png)
+![](/assets/img/posts/2Iqrgeh.png)
 
 ### Directory Structure
 
-![](https://i.imgur.com/nxKzNNA.png)
+![](/assets/img/posts/nxKzNNA.png)
 
 - directory structure 和 files 都被存在 disk
 
@@ -147,7 +147,7 @@ redirect_from:
 
 最簡單的目錄結構就是單層目錄。所有的檔案都裝在同一目錄中，非常容易瞭解與使用。
 
-![](https://i.imgur.com/JnabOH1.png)
+![](/assets/img/posts/JnabOH1.png)
 
 問題：
 
@@ -158,7 +158,7 @@ redirect_from:
 
 雙層目錄結構中，每個使用者擁有自己的使用者檔案目錄（user file directory, UFD）。每個 UFD 都有一個相似的結構，但是只列出單一使用者的檔案。當一個使用者的任務開始了或是一個使用者簽到（login）之後，系統的主檔案目錄（master file directory, MFD）就被搜尋一遍。主檔案目錄是用使用者姓名或是帳號來索引，並且其中每單元都指向一個使用者的使用者檔案目錄
 
-![](https://i.imgur.com/od8EiQb.png)
+![](/assets/img/posts/od8EiQb.png)
 
 - 以 user 分資料夾
 
@@ -166,7 +166,7 @@ redirect_from:
 
 把雙層目錄視為一棵二階的樹，由目錄結構發展成一棵任何型式的樹自然產生了樹狀目錄。這將允許使用者去建立他們自己的副目錄，並且可以適當地組合他們的檔案。樹是最常見的目錄結構。樹有一個根部目錄，在此系統中的每一個檔案都有一個單獨的路徑名稱。
 
-![](https://i.imgur.com/bUANxdA.png)
+![](/assets/img/posts/bUANxdA.png)
 
 - 有效的 search
 - grouping capability
@@ -196,7 +196,7 @@ redirect_from:
     - Backpointers using a daisy chain organization
     - Entry-hold-count solution
 
-![](https://i.imgur.com/IU0eb50.png)
+![](/assets/img/posts/IU0eb50.png)
 
 ### 一般 General Graph Directory
 
@@ -212,13 +212,13 @@ redirect_from:
     - 從 root 開始 traverse 下來，看可不可以到
   - 每次加入新的 link 時候，使用 cycle detection algorithm 去決定是否 ok
 
-![](https://i.imgur.com/Lj6bPqc.png)
+![](/assets/img/posts/Lj6bPqc.png)
 
 ### File System Mounting
 
 正如同一個檔案必須先開啟才可以使用，一個檔案系統必須先安裝才可以被系統的行程取得。更特別的是，目錄系統可以由許多分割區建立起來，此種目錄必須被安裝才可以讓它們在檔案系統的命名空間中被取得。
 
-![](https://i.imgur.com/g9KJy7x.png)
+![](/assets/img/posts/g9KJy7x.png)
 
 ### file sharing
 
@@ -238,6 +238,6 @@ redirect_from:
   - write
   - execute
 
-![](https://i.imgur.com/QJ3CyOF.png)
+![](/assets/img/posts/QJ3CyOF.png)
 
-![](https://i.imgur.com/laGWTfW.png)
+![](/assets/img/posts/laGWTfW.png)

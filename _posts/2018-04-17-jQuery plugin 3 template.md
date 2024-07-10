@@ -86,7 +86,7 @@ function test(a, b, c, d) {
 test("a", "b", "c", "d");
 ```
 
-![](https://i.imgur.com/bYvQ7ch.png)
+![](/assets/img/posts/bYvQ7ch.png)
 
 #### 就可以理解邏輯了
 

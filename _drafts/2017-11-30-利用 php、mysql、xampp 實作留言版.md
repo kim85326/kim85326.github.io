@@ -17,11 +17,11 @@ description: ""
 
 #### member 表
 
-![](https://i.imgur.com/NnXUgwn.png)
+![](/assets/img/posts/NnXUgwn.png)
 
 #### mes 表
 
-![](https://i.imgur.com/k5EYk37.png)
+![](/assets/img/posts/k5EYk37.png)
 
 ### view
 
@@ -29,7 +29,7 @@ description: ""
 
 #### 首頁 index.php
 
-![](https://i.imgur.com/cZvLdIO.png)
+![](/assets/img/posts/cZvLdIO.png)
 
 - 在載入頁面的時候要去資料庫裡面撈 mes 資料出來
 
@@ -94,7 +94,7 @@ description: ""
 
 #### 登入 login.php
 
-![](https://i.imgur.com/DiUGbRN.png)
+![](/assets/img/posts/DiUGbRN.png)
 
 - 當網頁載入後，如果有登入的話，就不能再登入啦! 所以把用戶導到首頁
 
@@ -138,7 +138,7 @@ description: ""
 
 #### 註冊 signup.php
 
-![](https://i.imgur.com/wkMC7pD.png)
+![](/assets/img/posts/wkMC7pD.png)
 
 - 當網頁載入後，如果有登入的話，就不能再註冊啦! 所以把用戶導到首頁
 
@@ -193,7 +193,7 @@ description: ""
 
 #### 新增頁面 add_mes.php
 
-![](https://i.imgur.com/DyRT9Dw.png)
+![](/assets/img/posts/DyRT9Dw.png)
 
 - 當網頁載入後，如果沒登入的話，就不能新增留言了! 所以把用戶導到登入頁面
 
@@ -237,7 +237,7 @@ description: ""
 
 #### 更新頁面 update_mes.php
 
-![](https://i.imgur.com/OyJlQxc.png)
+![](/assets/img/posts/OyJlQxc.png)
 
 - 按下編輯按鈕會帶一個 get 參數
 

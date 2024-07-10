@@ -43,7 +43,7 @@ description: ""
 }
 ```
 
-![](https://i.imgur.com/l9iRDeC.png)
+![](/assets/img/posts/l9iRDeC.png)
 
 ### abosulte
 
@@ -81,7 +81,7 @@ description: ""
 }
 ```
 
-![](https://i.imgur.com/2Qf94Xj.png)
+![](/assets/img/posts/2Qf94Xj.png)
 
 ### fixed
 

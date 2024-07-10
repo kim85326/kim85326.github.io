@@ -29,7 +29,7 @@ redirect_from:
 - 堆積 (heap)
   - 動態配置的記憶體
 
-![](https://i.imgur.com/ZLFm3Rv.png)
+![](/assets/img/posts/ZLFm3Rv.png)
 
 ### 行程狀態(Process State)
 
@@ -41,8 +41,8 @@ process 在執行時會改變狀態
 4. 就緒 (ready):該行程正等待指定一個處理器
 5. 結束 (terminated):該行程完成執行
 
-![](https://i.imgur.com/69yaMwH.png)
-![](https://i.imgur.com/rSf3X8n.png)
+![](/assets/img/posts/69yaMwH.png)
+![](/assets/img/posts/rSf3X8n.png)
 
 #### running -> ready 的可能
 
@@ -53,7 +53,7 @@ process 在執行時會改變狀態
 
 每一個 process 在 os 中都對應著一個行程控制表 (Process control block (PCB)或稱任務控制表 (Task Control Block)
 
-![](https://i.imgur.com/chCclOP.png)
+![](/assets/img/posts/chCclOP.png)
 
 1. process state: running, waiting 等等
 2. program counter: 紀錄目前執行到哪了
@@ -65,7 +65,7 @@ process 在執行時會改變狀態
 7. I/O 狀態 information: 包括配置給行程的輸入/輸出裝置，包括開啟檔案的串列，等等
 
 CPU Switch From Process to Process
-![](https://i.imgur.com/iAh0d7e.png)
+![](/assets/img/posts/iAh0d7e.png)
 
 ### 行程排班(Process Scheduler)
 
@@ -77,7 +77,7 @@ CPU Switch From Process to Process
 
 #### 排班佇列(Scheduling Queues)
 
-![](https://i.imgur.com/hz8Ickx.png)
+![](/assets/img/posts/hz8Ickx.png)
 
 1. Job Queue
    行程進入系統時，是放在工作佇列(Job Queue)之中，此佇列是由系統中所有的行程所組成。
@@ -85,14 +85,14 @@ CPU Switch From Process to Process
 2. Ready Queue
    位於主記憶體中且就緒等待執行的行程是保存在一個所謂就緒佇列 (Ready Queue)的串列。這個佇列一般都是用鏈接串列的方式儲存。在就緒佇列前端保存著指向這個串列的第一個和最後一個 PCB 的指標。
 
-![](https://i.imgur.com/41b7WJD.png)
+![](/assets/img/posts/41b7WJD.png)
 
 3. Device Queue
    等 I/O device
 
 #### 排班程式(Schedulers)
 
-![](https://i.imgur.com/55Ji85h.png)
+![](/assets/img/posts/55Ji85h.png)
 
 1. Long-term Scheduler (Job Scheduler)
    - 從 Spooled (行程池)中選出程並且將它們載入記憶體(ready queue)內以便執行。
@@ -110,7 +110,7 @@ CPU Switch From Process to Process
 4. Mid-term scheduler: 將 process 從 memory 中移開(從對 CPU 的競爭中移開)，以減低 degree of multiprogramming，稍後在放回去
    - 把 process 從 memory 裡拿出來放進去的過程稱為 swap out
 
-![](https://i.imgur.com/4imCYOJ.png)
+![](/assets/img/posts/4imCYOJ.png)
 
 ### 內容轉換(Context Switch)
 
@@ -126,7 +126,7 @@ CPU Switch From Process to Process
 
 一個行程的執行期間，可以利用產生行程的系統呼叫來產生數個新的行程。原先的行程就叫做父行程 (Parent Process)，而新的行程則叫做子行程(Children Process)。每一個新產生的行程可以再產生其它的行程，這可以形成一幅行程樹 (Tree of Processes)。
 
-![](https://i.imgur.com/uWaSJu6.png)
+![](/assets/img/posts/uWaSJu6.png)
 
 1. resource 的分享? 有以下幾種情形:
 

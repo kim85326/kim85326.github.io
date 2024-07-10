@@ -15,7 +15,7 @@ description: ""
 - margin 是調整 border 外的邊界
 - padding 是調整 border 內到內文之間的距離
 
-![](https://i.imgur.com/N6j1hKM.png)
+![](/assets/img/posts/N6j1hKM.png)
 
 ### border
 
@@ -46,7 +46,7 @@ description: ""
 </div>
 ```
 
-![](https://i.imgur.com/8AuFFTO.png)
+![](/assets/img/posts/8AuFFTO.png)
 
 ### 語法
 

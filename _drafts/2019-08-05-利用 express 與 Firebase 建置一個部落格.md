@@ -26,7 +26,7 @@ description: ""
 
 3. 下載金鑰
 
-   ![](https://i.imgur.com/98HmHlJ.png)
+   ![](/assets/img/posts/98HmHlJ.png)
 
 4. 設定 `firebase admin`
 
@@ -203,11 +203,11 @@ $ npm install --save express-session
 
   - 啟用 `firebase` 登入功能
 
-    ![](https://i.imgur.com/xiPsQCM.png)
+    ![](/assets/img/posts/xiPsQCM.png)
 
   - 根據下圖內容，對應填入 `.env` 欄位
 
-    ![](https://i.imgur.com/ti3vbZC.png)
+    ![](/assets/img/posts/ti3vbZC.png)
 
     ```
     # FIREBASE_CLIENT
@@ -483,17 +483,17 @@ $ npm install --save express-session
 
 ### disqus 留言版
 
-![](https://i.imgur.com/nqojkr1.png)
+![](/assets/img/posts/nqojkr1.png)
 
-![](https://i.imgur.com/S7CLpgx.png)
+![](/assets/img/posts/S7CLpgx.png)
 
-![](https://i.imgur.com/F29iHPF.png)
+![](/assets/img/posts/F29iHPF.png)
 
 拉到最下面
 
-![](https://i.imgur.com/vXCUh4j.png)
+![](/assets/img/posts/vXCUh4j.png)
 
-![](https://i.imgur.com/0Hbtf6T.png)
+![](/assets/img/posts/0Hbtf6T.png)
 
 貼到 `views/post.ejs`
 
@@ -533,7 +533,7 @@ $ npm install --save express-session
 
 成功載入
 
-![](https://i.imgur.com/MCPVA6Q.png)
+![](/assets/img/posts/MCPVA6Q.png)
 
 ### 錯誤頁面
 

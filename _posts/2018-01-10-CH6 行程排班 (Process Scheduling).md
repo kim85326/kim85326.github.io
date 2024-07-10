@@ -12,12 +12,12 @@ redirect_from:
 
 ## Bounded-Buffer
 
-![](https://i.imgur.com/tcsaEMt.png)
+![](/assets/img/posts/tcsaEMt.png)
 
 - in 代表 buffer 中下一個可以放資料的位置
 - out 代表 buffer 中第一個可以取資料的位置
 
-![](https://i.imgur.com/cBX8fjY.png)
+![](/assets/img/posts/cBX8fjY.png)
 
 - Consumer
 
@@ -41,7 +41,7 @@ redirect_from:
 
 ##### 改良後
 
-![](https://i.imgur.com/E6wKqzu.png)
+![](/assets/img/posts/E6wKqzu.png)
 
 多一個 count 變數來計算現在用了幾個 buffer
 
@@ -79,7 +79,7 @@ Critical Section 是一段不能讓多個行程同時執行的程式碼。
 
 entry section => critical Section => exit section
 
-![](https://i.imgur.com/O15QsFf.png)
+![](/assets/img/posts/O15QsFf.png)
 
 ### Critical Section 的條件
 
@@ -94,7 +94,7 @@ entry section => critical Section => exit section
 
 ### 交替演算法 turn （問題 : 別人給我 turn 才可以做）
 
-![](https://i.imgur.com/9xxy2Hy.png)
+![](/assets/img/posts/9xxy2Hy.png)
 
 - 共用一個變數 turn，指出目前允許進入 critical section 的是哪一個 process
 - 滿足 mutual exclusion
@@ -109,7 +109,7 @@ entry section => critical Section => exit section
 
 ### 旗標演算法 flag （問題 : 一直在互讓）
 
-![](https://i.imgur.com/FYQzOo7.png)
+![](/assets/img/posts/FYQzOo7.png)
 
 - 將交替演算法中共有的變數 turn 改為共有的陣列 flag，記錄系統中個別 process 的狀態。
 - 一開始將陣列所有元素都設為 FALSE
@@ -129,7 +129,7 @@ entry section => critical Section => exit section
   - int turn : 目前系統允許哪個 process 進入 critical section
     - 初始值設為 i 或 j
 
-![](https://i.imgur.com/Z8lBadh.png)
+![](/assets/img/posts/Z8lBadh.png)
 
 **要證明就是把 那三個條件都證明過**
 
@@ -174,7 +174,7 @@ entry section => critical Section => exit section
 ### Lock
 
 acquire lock => critical section => release lock
-![](https://i.imgur.com/8tc6CNl.png)
+![](/assets/img/posts/8tc6CNl.png)
 
 ### Synchronization Hardware
 
@@ -186,7 +186,7 @@ acquire lock => critical section => release lock
 
 ### Test and set （寫入某個記憶體位置，回傳舊值）
 
-![](https://i.imgur.com/tpZMjJm.png)
+![](/assets/img/posts/tpZMjJm.png)
 
 - Definition
   - TestAndSet 指令會傳回參數 target 目前的值，並同時將 target 的值設為 TRUE
@@ -205,7 +205,7 @@ acquire lock => critical section => release lock
 
 ### Swap（把 a、b 值交換）
 
-![](https://i.imgur.com/5vCX58z.png)
+![](/assets/img/posts/5vCX58z.png)
 
 - Definition
   - Swap 指令會交換參數 a 與 b 兩個記憶體的內容。
@@ -244,7 +244,7 @@ acquire lock => critical section => release lock
   - a、c 代表 number，b、d 代表 pid
 - max(a0,a1,...an-1) return 裡面最大的值
 
-![](https://i.imgur.com/66hZuB5.png)
+![](/assets/img/posts/66hZuB5.png)
 
 ##### 麵包演算法分析
 
@@ -268,21 +268,21 @@ acquire lock => critical section => release lock
        1. 挑最大值
        2. 加 1
        3. 將結果 assign 給 number[i]
-          ![](https://i.imgur.com/yT6zhWZ.png)
+          ![](/assets/img/posts/yT6zhWZ.png)
           => Pi 和 Pj 有相同 number 值
   2. If we remove the first while loop (i.e., while(Choosing[j]); ), the mutual exclusion is still maintained?
      - 不正確，會違反 mutual exclusion
      - 假設現在 choosing[0]~choosing[n-1] 皆為 0
      - 現在有兩個 process Pi 和 Pj 想進去 cs，且 Pi pid < Pj pid
 
-![](https://i.imgur.com/0iXaged.png)
+![](/assets/img/posts/0iXaged.png)
 
 - while(Choosing[j]); 這行
   - 代表想要比較的 process 正在拿號碼牌（拿到一半、搞不好還沒有號碼），你要等人家拿完才可以做比較啊，搞不好人家的號碼牌比你小耶
 
 ### Bounded-waiting Mutual Exclusion with TestAndSet() (TestAndSet 另一種方法)
 
-![](https://i.imgur.com/nCzQ6zE.png)
+![](/assets/img/posts/nCzQ6zE.png)
 
 - process 共用變數 waiting 陣列，紀錄哪些 process 正在等待進入 cs
   - 初始值 false
@@ -317,7 +317,7 @@ acquire lock => critical section => release lock
 - 來保護 critical section
 - 若無法取得 lock，則進入 busy waiting
 
-![](https://i.imgur.com/6LCdaux.png)
+![](/assets/img/posts/6LCdaux.png)
 
 ## Semaphore
 
@@ -327,19 +327,19 @@ acquire lock => critical section => release lock
 - S 的存取只能用 wait() signal()，這兩個方法都是 atomic 不可中斷
 - 必須保證沒有兩個 process 可以同時執行 wait() 和 signal()，也就是說要把 wait()和 signal() 也放入 critical section
 
-![](https://i.imgur.com/UMHoRR5.png)
+![](/assets/img/posts/UMHoRR5.png)
 
 - binary semaphore
 
   - integer value can range only between 0 and 1; can be simpler to implement
   - Also known as mutex locks
 
-  ![](https://i.imgur.com/1HzqCVx.png)
+  ![](/assets/img/posts/1HzqCVx.png)
 
   - 現在有兩個 P1 的 statement 叫 S1，P2 的 statement 叫 S2
   - 我們想要 S2 只在 S1 完成後才執行
 
-  ![](https://i.imgur.com/IVqzhcV.png)
+  ![](/assets/img/posts/IVqzhcV.png)
 
   - 共用變數 mutux 初始值是 1
   - force suspend 初始值是 0
@@ -361,7 +361,7 @@ struct process *list; //waiting queue
 } semaphore;
 ```
 
-![](https://i.imgur.com/hjyz460.png)
+![](/assets/img/posts/hjyz460.png)
 
 - block()
   - wait() 呼叫時，執行 S->value-- 完，如果其值 <0，不讓 process busy waiting，直接讓 process 將自己 block 起來
@@ -369,7 +369,7 @@ struct process *list; //waiting queue
 - wakeup()
   - 把 process 從 waiting queue 移出
 
-![](https://i.imgur.com/sVKcB52.png)
+![](/assets/img/posts/sVKcB52.png)
 
 ##### 問題
 
@@ -391,9 +391,9 @@ struct process *list; //waiting queue
 - Notification
   - Indicate that an event has occurred
 
-![](https://i.imgur.com/vnE4Fps.png)
+![](/assets/img/posts/vnE4Fps.png)
 
-![](https://i.imgur.com/A3Ohq2H.png)
+![](/assets/img/posts/A3Ohq2H.png)
 
 - S1 = 1 ，S2 = 0
   - output => 1 2 1 2 1 2
@@ -412,7 +412,7 @@ struct process *list; //waiting queue
 
 - 例如 S、Q 初始值為 1，signal()永遠不會被執行到，所以行程 deadlock
 
-![](https://i.imgur.com/3NbnWnu.png)
+![](/assets/img/posts/3NbnWnu.png)
 
 ### starvation
 
@@ -426,13 +426,13 @@ struct process *list; //waiting queue
 
 - 假設有三個 processes Task1、Task2、Task3，其優先權順序是 H > M > L
 
-![](https://i.imgur.com/aN4EedP.png)
+![](/assets/img/posts/aN4EedP.png)
 
 ##### Priority Inheritance
 
 - 優先權繼承協定必須允許 Task3 暫時地繼承 Task1 的優先權，因此才能阻止 Task2 搶先它的執行。
 
-![](https://i.imgur.com/i2r37hY.png)
+![](/assets/img/posts/i2r37hY.png)
 
 ### synchronization 經典問題
 
@@ -454,11 +454,11 @@ struct process *list; //waiting queue
 - 如果 buffer 是 full，producer 會被 block
 - 如果 buffer 是 empty，consumer 會被 block
 
-![](https://i.imgur.com/RUd741T.png)
+![](/assets/img/posts/RUd741T.png)
 
 ##### Bounded-Buffer - 問題
 
-![](https://i.imgur.com/fnArbtX.png)
+![](/assets/img/posts/fnArbtX.png)
 
 - 如果 mutex 在 full、empty 之外，則當全空或全滿時會形成 deadlock
 
@@ -496,7 +496,7 @@ struct process *list; //waiting queue
 
 ##### 實作
 
-![](https://i.imgur.com/8YquAZY.png)
+![](/assets/img/posts/8YquAZY.png)
 
 - 第一個 reader 要讀的時候，如果有 writer 在，那 reader 就會被卡在 wait(wrt)
 - 最後一個 reader 要離開的時候，要 signal(wrt) 通知 writer
@@ -522,7 +522,7 @@ struct process *list; //waiting queue
 - 如果哲學家想吃飯時，要依序拿取位於左右兩邊的筷子，進行用餐
 - 用餐完畢，要把筷子放下
 
-![](https://i.imgur.com/D7eif2M.png)
+![](/assets/img/posts/D7eif2M.png)
 
 ##### 變數說明
 
@@ -531,7 +531,7 @@ struct process *list; //waiting queue
 
 ##### 實作
 
-![](https://i.imgur.com/MMl1t3A.png)
+![](/assets/img/posts/MMl1t3A.png)
 
 - 當哲學家要吃飯的時候，要 wait(左邊筷子)，wait(右邊筷子)，都有才可以吃飯，吃完飯要，signal(左邊筷子)，signal(右邊筷子)
 
@@ -554,7 +554,7 @@ struct process *list; //waiting queue
   - 違反 Mutual Exclusion
   - 造成 Dead Lock
 
-![](https://i.imgur.com/K3Er19v.png)
+![](/assets/img/posts/K3Er19v.png)
 
 ## Monitor （公廁的概念）
 
@@ -569,7 +569,7 @@ struct process *list; //waiting queue
 - Monitor 本身已經確保 mutual exclusion 的性質
   - 一次只有一個 process 可以進去
 
-![](https://i.imgur.com/s9webJa.png)
+![](/assets/img/posts/s9webJa.png)
 
 - 為解決同步問題，Monitor 會提供一種特殊型態的變數供 Programmer 使用：Condition 型態變數
 - 假設宣告 x 為 condition 型態變數
@@ -595,13 +595,13 @@ struct process *list; //waiting queue
 
 ##### Signal and continue
 
-![](https://i.imgur.com/tQGl4nJ.png)
+![](/assets/img/posts/tQGl4nJ.png)
 
 ### 利用 monitor 解決 哲學家問題
 
 ##### 實作
 
-![](https://i.imgur.com/g1NOtXX.png)
+![](/assets/img/posts/g1NOtXX.png)
 
 ##### 資料區（變數說明）
 
@@ -637,8 +637,8 @@ struct process *list; //waiting queue
 使用 monitor 可以輕易地模仿出 semaphore 的效果，
 可是使用 semaphore 來模擬 monitor 卻會十分複雜
 
-![](https://i.imgur.com/CtYWLbM.png)
+![](/assets/img/posts/CtYWLbM.png)
 
 雖然助教的答案長這樣...
 
-![](https://i.imgur.com/IE1PoXV.png)
+![](/assets/img/posts/IE1PoXV.png)

@@ -10,7 +10,7 @@ description: ""
 
 ### JavaScript 是如何運行的
 
-![](https://i.imgur.com/qqppxdt.png)
+![](/assets/img/posts/qqppxdt.png)
 
 - 程式語言
 
@@ -58,7 +58,7 @@ description: ""
 
 - JavaScript 為靜態作用域
 
-  ![](https://i.imgur.com/Ck9xeFg.png)
+  ![](/assets/img/posts/Ck9xeFg.png)
 
 ### 執行環境
 
@@ -87,7 +87,7 @@ description: ""
 
 - 函式在創造階段，就會優先載入
 
-  ![](https://i.imgur.com/xmzRrD7.png)
+  ![](/assets/img/posts/xmzRrD7.png)
 
   ```js
   // 執行
@@ -545,7 +545,7 @@ b = 2;
 console.log(window);
 ```
 
-![](https://i.imgur.com/UNYVT76.png)
+![](/assets/img/posts/UNYVT76.png)
 
 利用 `delete` 來刪除
 
@@ -558,7 +558,7 @@ delete b;
 console.log(window);
 ```
 
-![](https://i.imgur.com/vk9jdG7.png)
+![](/assets/img/posts/vk9jdG7.png)
 
 `delete` 無法刪除變數，可以刪除屬性
 
@@ -576,7 +576,7 @@ console.log(window);
   console.log(newString2);
   ```
 
-  ![](https://i.imgur.com/5DanL0a.png)
+  ![](/assets/img/posts/5DanL0a.png)
 
 - 陣列是物件，可以新增屬性
 
@@ -586,7 +586,7 @@ console.log(window);
   console.log(newArray);
   ```
 
-  ![](https://i.imgur.com/K4mYjTx.png)
+  ![](/assets/img/posts/K4mYjTx.png)
 
 - 函式是物件，可以新增屬性
 
@@ -599,7 +599,7 @@ console.log(window);
   console.dir(callName);
   ```
 
-  ![](https://i.imgur.com/uVTGOCo.png)
+  ![](/assets/img/posts/uVTGOCo.png)
 
 ### 物件傳參考
 
@@ -628,12 +628,12 @@ console.log(window);
   console.log(person1 === person2);
   ```
 
-  ![](https://i.imgur.com/4QnSThC.png)
+  ![](/assets/img/posts/4QnSThC.png)
 
 * 圖解記憶體位置
-  ![](https://i.imgur.com/G5q9f4j.png)
+  ![](/assets/img/posts/G5q9f4j.png)
 
-  ![](https://i.imgur.com/kFnegf1.png)
+  ![](/assets/img/posts/kFnegf1.png)
 
 * 練習題
 
@@ -645,7 +645,7 @@ console.log(window);
   console.log(b);
   ```
 
-  ![](https://i.imgur.com/EGr7nD2.png)
+  ![](/assets/img/posts/EGr7nD2.png)
 
 ### 淺層複製、深層複製
 
@@ -759,7 +759,7 @@ var obj = {
 obj.aFunction("第一個參數", 2, "第三個參數");
 ```
 
-![](https://i.imgur.com/GnuMxWs.png)
+![](/assets/img/posts/GnuMxWs.png)
 
 ### 閉包
 
@@ -1004,7 +1004,7 @@ console.log(JayMoney(10)); // 1030
   </html>
   ```
 
-  ![](https://i.imgur.com/YP2QPDN.png)
+  ![](/assets/img/posts/YP2QPDN.png)
 
   ```html
   <!DOCTYPE html>
@@ -1026,7 +1026,7 @@ console.log(JayMoney(10)); // 1030
   </html>
   ```
 
-  ![](https://i.imgur.com/K1RUCv6.png)
+  ![](/assets/img/posts/K1RUCv6.png)
 
 - 箭頭函式
 
@@ -1052,7 +1052,7 @@ Dog.prototype.bark = function() {
 console.log(bibi, pupu);
 ```
 
-![](https://i.imgur.com/5co5Odj.png)
+![](/assets/img/posts/5co5Odj.png)
 
 ### `prototype` 與 `__proto__`
 
@@ -1092,7 +1092,7 @@ bibi.move(); // 比比 移動
 
 ### 原型鍊總結
 
-![](https://i.imgur.com/fvvQzBO.png)
+![](/assets/img/posts/fvvQzBO.png)
 
 ```js
 function Animal(family) {

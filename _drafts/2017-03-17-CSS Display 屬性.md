@@ -63,7 +63,7 @@ description: ""
 <div style="background-color:blue;width:200px;height:80px;"></div>
 ```
 
-![](https://i.imgur.com/oniA8rg.png)
+![](/assets/img/posts/oniA8rg.png)
 
 ##### 將 div 改成 `display:inline-block`
 
@@ -76,7 +76,7 @@ description: ""
 ></div>
 ```
 
-![](https://i.imgur.com/PXh65Ay.png)
+![](/assets/img/posts/PXh65Ay.png)
 
 ### 參考資料
 

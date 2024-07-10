@@ -11,7 +11,7 @@ description: ""
 一筆一筆資料依序進來比較
 (最好的就是一進來就排好順序的資料)
 
-![](https://i.imgur.com/N5X8Q7p.png)
+![](/assets/img/posts/N5X8Q7p.png)
 
 1. 5 和 9 先做比較，並排序
 2. 第三筆資料 2 進來，跟剛剛排好的最後一筆資料 9 做比較
@@ -33,14 +33,14 @@ description: ""
    每個 pass 僅需一次比較, 共需 (n-1) 次比較
 4. worst case: 未 sort 前, 按相反順序排好
    比較次數為：
-   ![](https://i.imgur.com/Z8PMjJ7.png)
+   ![](/assets/img/posts/Z8PMjJ7.png)
 5. 時間複雜度 O(n^2)
 
 ### 演算法
 
-![](https://i.imgur.com/jm3uMF5.png)
+![](/assets/img/posts/jm3uMF5.png)
 
 新的資料叫做 e
 前面已經排好了 a[1] ~ a[i]，a[0] 沒放東西
 
-![](https://i.imgur.com/sZorXDK.png)
+![](/assets/img/posts/sZorXDK.png)

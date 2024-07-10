@@ -81,7 +81,7 @@ JavaScript 的單執行緒特性意味著如果我們在寫程式碼時遇到需
 
 ### 同步與非同步的應用場景
 
-![](https://i.imgur.com/iRTIQdG.jpg)
+![](/assets/img/posts/iRTIQdG.jpg)
 
 #### 同步應用場景
 

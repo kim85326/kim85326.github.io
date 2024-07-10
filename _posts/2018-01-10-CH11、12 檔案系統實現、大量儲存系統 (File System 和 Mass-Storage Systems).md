@@ -20,7 +20,7 @@ redirect_from:
 
 ### Contiguous allocation
 
-![](https://i.imgur.com/wnmaUAZ.png)
+![](/assets/img/posts/wnmaUAZ.png)
 
 - 優點：
   - 簡單，只需要 start 和 length
@@ -41,7 +41,7 @@ redirect_from:
 
 全部用 link
 
-![](https://i.imgur.com/kljU16z.png)
+![](/assets/img/posts/kljU16z.png)
 
 - 優點：
   - file 的大小不被限制
@@ -52,14 +52,14 @@ redirect_from:
   - 但是每個 block 裡面都要有 pointer，浪費空間
   - Reliability，只要一個 pointer 不見了，整個壞掉了
 
-![](https://i.imgur.com/OMlTapc.png)
+![](/assets/img/posts/OMlTapc.png)
 
 ### Indexed allocation
 
 用一個 index block 存所有 pointer（以 array 的形式）
 只要存 index block 就好
 
-![](https://i.imgur.com/qIszW2v.png)
+![](/assets/img/posts/qIszW2v.png)
 
 - 優點：
   - direct access 一次就可以找到位置，sequential 也不會有問題
@@ -73,13 +73,13 @@ redirect_from:
 
 1. Indexed + link
 
-![](https://i.imgur.com/LYRm5ms.png)
+![](/assets/img/posts/LYRm5ms.png)
 
 2. hybrid
 
 - 檔案很大就需要這種方式，但浪費空間
 
-![](https://i.imgur.com/m8YcfmT.png)
+![](/assets/img/posts/m8YcfmT.png)
 
 # ch12 Mass-Storage Systems
 
@@ -106,30 +106,30 @@ disk access time 分為
 
 - 按照 track number 先來順序進行讀取
 
-![](https://i.imgur.com/ehPesrz.png)
+![](/assets/img/posts/ehPesrz.png)
 
 ### SSTF
 
 - 移動到離最近的下一個距離
 - 會有 starvation
 
-![](https://i.imgur.com/CFoEXEv.png)
+![](/assets/img/posts/CFoEXEv.png)
 
 ### SCAN
 
 - 先往一邊走，到底在往另一邊走
 
-![](https://i.imgur.com/0t3F2Yo.png)
+![](/assets/img/posts/0t3F2Yo.png)
 
 ### C-SCAN
 
 - 為了要公平 等待時間
 - 先往一邊走，走到底之後，直接移到另外一邊的底，從另外一邊的底開始走
 
-![](https://i.imgur.com/jGn4vNd.png)
+![](/assets/img/posts/jGn4vNd.png)
 
 ### C-LOOK
 
 - look 不會走到底，會看 queue 裡最邊邊的
 
-![](https://i.imgur.com/NzYeZFh.png)
+![](/assets/img/posts/NzYeZFh.png)

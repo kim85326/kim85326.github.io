@@ -10,7 +10,7 @@ redirect_from:
   - "/2019/10/30/URI-URL-URN-差別/"
 ---
 
-![](https://i.imgur.com/9Lrn7Uz.png)
+![](/assets/img/posts/9Lrn7Uz.png)
 
 - URI
 

@@ -153,7 +153,7 @@ console.log(array1.length); // 4
 
 ### 改變原陣列元素
 
-![](https://i.imgur.com/VWxJ6cE.png)
+![](/assets/img/posts/VWxJ6cE.png)
 
 - `pop`
 

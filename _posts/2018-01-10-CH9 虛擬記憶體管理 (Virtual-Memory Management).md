@@ -22,7 +22,7 @@ redirect_from:
   - Demand paging
   - Demand segmentation
 
-![](https://i.imgur.com/FC4uvDV.png)
+![](/assets/img/posts/FC4uvDV.png)
 
 ### demand paging
 
@@ -37,13 +37,13 @@ redirect_from:
 - Lazy swapper : never swaps a page into memory unless page will be needed
   - Swapper 以 pages 為單位，不是以 process
 
-![](https://i.imgur.com/SM8IE8Q.png)
+![](/assets/img/posts/SM8IE8Q.png)
 
 - 利用 Valid-Invalid Bit 知道到底有沒有用
   - v : in-memory
   - i : not-in-memory
 
-![](https://i.imgur.com/82YC1iP.png)
+![](/assets/img/posts/82YC1iP.png)
 
 - 如果是 bit 的值是 i 就叫做 page fault
 
@@ -61,7 +61,7 @@ redirect_from:
   1. reset table，把 validation bit 改為 v
   1. restart instruction
 
-![](https://i.imgur.com/s6xq8AN.png)
+![](/assets/img/posts/s6xq8AN.png)
 
 - Hardware support needed for demand paging
   - Page table with valid / invalid bit
@@ -80,7 +80,7 @@ redirect_from:
 
 ##### 例題
 
-![](https://i.imgur.com/cpuSUP1.png)
+![](/assets/img/posts/cpuSUP1.png)
 
 ### copy-on-write
 
@@ -97,7 +97,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
   - 在 memory 時有沒有被修改過
   - 如果沒被修改過，可以直接被踢掉（因為 disk 本來就有一模一樣的）
 
-![](https://i.imgur.com/lW3NzSq.png)
+![](/assets/img/posts/lW3NzSq.png)
 
 - 處理方式：
   1. 找到造成 page fault 的 page 在 disk 的哪裡
@@ -109,7 +109,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
   4. reset table，把 validation bit 改為 v
   5. restart instruction
 
-![](https://i.imgur.com/r6dK9Ja.png)
+![](/assets/img/posts/r6dK9Ja.png)
 
 兩個問題
 
@@ -121,7 +121,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
 
 ### FIFO 演算法 （先來先被踢）
 
-![](https://i.imgur.com/h1I2mjn.png)
+![](/assets/img/posts/h1I2mjn.png)
 
 - 會發生 15 次 page faults
 - page fault ratio = 15/20 = 75%
@@ -130,11 +130,11 @@ fork 時並不複製資料分頁，直到寫入時才複製
 
 當增加 frame 數量的話，原本以為 page fault 會減少，但事實上有可能會增加
 
-![](https://i.imgur.com/oTkiee4.png)
+![](/assets/img/posts/oTkiee4.png)
 
 ### Optimal 演算法 (最晚被用到的先被踢)
 
-![](https://i.imgur.com/yx46n0L.png)
+![](/assets/img/posts/yx46n0L.png)
 
 - 會發生 9 次 page faults
 - 但是有一個問題，你不能預知未來...
@@ -142,7 +142,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
 
 ### Least Recently Used (LRU) 演算法 (最久不被用到的先被踢)
 
-![](https://i.imgur.com/9FlR1qU.png)
+![](/assets/img/posts/9FlR1qU.png)
 
 - 會發生 12 次 page faults
 - 比 FIFO 好，但比 optimal 差
@@ -159,7 +159,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
   - 比較貴
   - 不太接近 opt
 - stack implementation
-  - ![](https://i.imgur.com/3O5EVBn.png)
+  - ![](/assets/img/posts/3O5EVBn.png)
   - move it to the top
   - requires 6 pointers to be changed
   - 但是每次 update 就越貴
@@ -174,7 +174,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
 
 #### Second-chance algorithm
 
-![](https://i.imgur.com/cCyzNBH.png)
+![](/assets/img/posts/cCyzNBH.png)
 
 - 如果 reference bit = 0
   - replace 他
@@ -184,8 +184,8 @@ fork 時並不複製資料分頁，直到寫入時才複製
 
 #### Enhanced Second-Chance
 
-![](https://i.imgur.com/AkgkQ7s.png)
+![](/assets/img/posts/AkgkQ7s.png)
 
 ##### 例題 (還沒寫喔！！！)
 
-![](https://i.imgur.com/rLx3cl2.png)
+![](/assets/img/posts/rLx3cl2.png)

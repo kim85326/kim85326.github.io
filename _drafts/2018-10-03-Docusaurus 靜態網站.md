@@ -77,7 +77,7 @@ $ npm start
 
 你可以在 http://localhost:3000 看到長這樣的網站
 
-![](https://i.imgur.com/lyBkEC5.png)
+![](/assets/img/posts/lyBkEC5.png)
 
 ## 目錄說明
 
@@ -90,7 +90,7 @@ website/blog (原為 blog-examples-from-docusaurus)
 - 放置部落格文章的資料夾
 - 文檔名需符合 yyyy-mm-dd-your-file-name.md
 
-  ![](https://i.imgur.com/f2C2bFX.png)
+  ![](/assets/img/posts/f2C2bFX.png)
 
 - 文檔內容要符合
 

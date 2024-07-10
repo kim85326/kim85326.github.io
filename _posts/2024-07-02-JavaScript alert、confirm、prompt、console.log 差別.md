@@ -32,7 +32,7 @@ alert(message);
 alert("哈囉啊");
 ```
 
-![](https://i.imgur.com/KiB57Lu.png)
+![](/assets/img/posts/KiB57Lu.png)
 
 #### 使用情境
 
@@ -55,7 +55,7 @@ if (userConfirmed) {
 }
 ```
 
-![](https://i.imgur.com/4AWNvIr.png)
+![](/assets/img/posts/4AWNvIr.png)
 
 #### 使用情境
 
@@ -82,7 +82,7 @@ if (name !== "null" && name !== "") {
 }
 ```
 
-![](https://i.imgur.com/dGbtRBd.png)
+![](/assets/img/posts/dGbtRBd.png)
 
 #### 使用情境
 
@@ -103,7 +103,7 @@ console.log(anyMessage1, anyMessage2);  // 可以用 , 一直串下去
 console.log("hi elaine!");
 ```
 
-![](https://i.imgur.com/2Y8Kf6t.png)
+![](/assets/img/posts/2Y8Kf6t.png)
 
 #### 使用情境
 
@@ -115,7 +115,7 @@ console.log("hi elaine!");
 
 #### 使用 alert 時，出現 [object Object]
 
-![](https://i.imgur.com/MpQqJdL.png?w=300)
+![](/assets/img/posts/MpQqJdL.png?w=300)
 
 `alert` 只能輸出字串，所以會自動呼叫 `toString()` 方法，遇到這種情況就是因為你使用 `alert` 印出物件
 
@@ -132,7 +132,7 @@ alert(obj1);
 alert("哈囉！<br>我是 elaine");
 ```
 
-![](https://i.imgur.com/cJpZDaJ.png)
+![](/assets/img/posts/cJpZDaJ.png)
 
 - `\n` 可以成功的換行
 
@@ -140,7 +140,7 @@ alert("哈囉！<br>我是 elaine");
 alert("哈囉！\n我是 elaine");
 ```
 
-![](https://i.imgur.com/Vt5VUB2.png)
+![](/assets/img/posts/Vt5VUB2.png)
 
 ### 參考資料
 
