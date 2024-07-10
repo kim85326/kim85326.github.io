@@ -51,7 +51,7 @@ description: ""
 - Callback 地獄：當多層 Callback 嵌套時，程式碼變得難以閱讀和維護
 - 錯誤處理困難：需要手動處理每個 Callback 中的錯誤，容易出現疏漏
 
-![image](https://hackmd.io/_uploads/ryCqn08wA.png)
+![image](/assets/img/posts/ryCqn08wA.png)
 
 ### Promise
 
