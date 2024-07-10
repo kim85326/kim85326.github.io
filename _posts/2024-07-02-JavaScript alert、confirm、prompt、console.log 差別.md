@@ -115,7 +115,7 @@ console.log("hi elaine!");
 
 #### 使用 alert 時，出現 [object Object]
 
-![](/assets/img/posts/MpQqJdL.png?w=300)
+![](/assets/img/posts/MpQqJdL.png)
 
 `alert` 只能輸出字串，所以會自動呼叫 `toString()` 方法，遇到這種情況就是因為你使用 `alert` 印出物件
 
