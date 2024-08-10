@@ -8,7 +8,7 @@ mathjax: true
 description: ""
 ---
 
-這篇文章的背景是有在用公司自架的 private nuget 倉庫，而且有寫 gitlab CI 來自動 publish nuget package
+這篇文章的背景是有在用公司自架的 private nuget 倉庫，而且有寫 GitLab CI 來自動 publish nuget package
 
 ![](/assets/img/posts/nuget_server.png)
 
