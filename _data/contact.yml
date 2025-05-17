@@ -3,9 +3,9 @@
 - type: github
   icon: "fab fa-github"
 
-- type: instagram
-  icon: "fa-brands fa-instagram"
-  url: "https://www.instagram.com/elaine_company_animal"
+# - type: instagram
+#   icon: "fa-brands fa-instagram"
+#   url: "https://www.instagram.com/elaine_company_animal"
 
 - type: linkedin
   icon: "fab fa-linkedin" # icons powered by <https://fontawesome.com/>
