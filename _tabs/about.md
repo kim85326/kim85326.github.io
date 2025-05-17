@@ -17,4 +17,3 @@ order: 4
 #### 聯絡方式
 
 - 電子郵件: kim85326@gmail.com
-- Instagram: [@elaine_company_animal](https://www.instagram.com/elaine_company_animal)
