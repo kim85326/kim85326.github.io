@@ -29,7 +29,7 @@ SELECT * FROM Users WHERE age = 30;
 
 SELECT * FROM Orders WHERE created_at >= '2025-01-01';
 
-SELECT * FROM Products WHERE name LIKE 'cindy%';
+SELECT * FROM Products WHERE name LIKE 'junelson%';
 ```
 
 只要條件是「直接比對欄位值」，而非讓欄位經過運算或函數處理，資料庫就能用索引篩資料
@@ -46,7 +46,7 @@ SELECT * FROM Users WHERE YEAR(birthday) = 2000;
 SELECT * FROM Orders WHERE price * 1.05 > 1000;
 
 -- ❌ 模糊查詢開頭有萬用字元
-SELECT * FROM Products WHERE name LIKE '%cindy';
+SELECT * FROM Products WHERE name LIKE '%junelson';
 ```
 
 ### 改寫技巧：讓查詢變 SARGable
@@ -55,7 +55,7 @@ SELECT * FROM Products WHERE name LIKE '%cindy';
 |---------------------------|---------------------------------------------------------------|
 | `YEAR(birthday) = 2000`   | `birthday >= '2000-01-01' AND birthday < '2001-01-01'`        |
 | `price * 1.05 > 1000`     | `price > 1000 / 1.05`                                         |
-| `LIKE '%cindy'`           | 改用全文檢索（Full-Text Search, FTS），或設計為 `LIKE 'cindy%'`    |
+| `LIKE '%junelson'`           | 改用全文檢索（Full-Text Search, FTS），或設計為 `LIKE 'junelson%'`    |
 
 
 ### 那些 NOT、!=、<> 是 SARGable 嗎？
@@ -78,7 +78,7 @@ SELECT * FROM Users WHERE status != 'inactive';
 SELECT * FROM Users WHERE email NOT IN (SELECT email FROM Blacklist);
 
 -- 非常慢：NOT LIKE 開頭有萬用字元
-SELECT * FROM Products WHERE name NOT LIKE '%cindy';
+SELECT * FROM Products WHERE name NOT LIKE '%junelson';
 ```
 
 #### 小提示：能不能 SARGable，最終還是要看實際查詢計畫（Execution Plan）  
