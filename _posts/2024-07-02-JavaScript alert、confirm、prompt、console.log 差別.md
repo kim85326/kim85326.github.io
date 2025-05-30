@@ -2,7 +2,7 @@
 layout: post
 title: "JavaScript alert、confirm、prompt、console.log 差別"
 date: 2024-07-02 00:00:00 +0800
-categories: JavaScript
+categories: 前端開發
 tags: ["JavaScript"]
 mathjax: true
 description: ""

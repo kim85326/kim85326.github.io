@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "JavaScript 正規表達式"
-date: 2024-07-08 00:00:01 +0800
-categories: JavaScript
-tags: ["JavaScript"]
+date: 2024-07-08 00:00:00 +0800
+categories: 前端開發
+tags: ["JavaScript", "正規表達式"]
 mathjax: true
 description: ""
 ---

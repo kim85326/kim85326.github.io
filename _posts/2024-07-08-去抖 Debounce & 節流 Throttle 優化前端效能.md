@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "去抖 Debounce & 節流 Throttle 優化前端效能"
-date: 2024-07-08 00:00:02 +0800
-categories: JavaScript
-tags: ["JavaScript", "工程效率", "前端優化"]
+date: 2024-07-08 00:00:00 +0800
+categories: 前端開發
+tags: ["JavaScript", "效能優化"]
 mathjax: true
 description: ""
 ---

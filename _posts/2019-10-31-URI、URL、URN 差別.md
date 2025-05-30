@@ -2,7 +2,7 @@
 layout: post
 title: "URI、URL、URN 差別"
 date: 2019-10-31 00:00:00 +0800
-categories: 網路
+categories: 系統與網路
 tags: ["網路"]
 mathjax: true
 description: ""

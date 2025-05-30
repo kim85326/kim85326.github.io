@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "GitLab CI Publish Nuget Package 避免重複發佈相同版本"
-date: 2024-08-10 16:00:00 +0800
-categories: C#/.net
-tags: ["C#/.net", "DevOps"]
+date: 2024-08-10 10:00:00 +0800
+categories: 後端技術
+tags: ["C#", "GitLab", "CI/CD", "DevOps"]
 mathjax: true
 description: ""
 ---

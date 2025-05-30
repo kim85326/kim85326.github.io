@@ -2,7 +2,7 @@
 layout: post
 title: "jQuery plugin 3 template"
 date: 2018-04-17 10:00:00 +0800
-categories: jQuery
+categories: 前端開發
 tags: ["jQuery", "jQuery-plugin"]
 mathjax: true
 description: ""

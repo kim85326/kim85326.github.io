@@ -2,7 +2,7 @@
 layout: post
 title: "JavaScript var、let、const 差別 (上)"
 date: 2024-06-29 00:00:00 +0800
-categories: JavaScript
+categories: 前端開發
 tags: ["JavaScript"]
 mathjax: true
 description: ""

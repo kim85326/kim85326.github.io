@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "JavaScript var、let、const 差別 (下)"
-date: 2024-06-29 00:00:01 +0800
-categories: JavaScript
+date: 2024-06-29 00:00:00 +0800
+categories: 前端開發
 tags: ["JavaScript"]
 mathjax: true
 description: ""
+redirect_from: 
+  - "/posts/JavaScript-var-let-const-差別-(下)/"
 ---
 
 上一篇 [JavaScript var、let、const 差別 (上)](/posts/JavaScript-var-let-const-差別-(上)/) 介紹了差別，這篇介紹一下實際運用的話，怎麼做會比較好
