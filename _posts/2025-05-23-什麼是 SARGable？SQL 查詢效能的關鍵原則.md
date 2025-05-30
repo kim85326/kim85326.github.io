@@ -3,7 +3,7 @@ layout: post
 title: "什麼是 SARGable？SQL 查詢效能的關鍵原則"
 date: 2025-5-23 23:00:00 +0800
 categories: 資料庫
-tags: ["資料庫"]
+tags: ["資料庫", "SQL", "工程效率", "效能優化"]
 mathjax: true
 description: ""
 ---

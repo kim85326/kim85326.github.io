@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript null、undefined、undeclared 差別"
 date: 2024-07-01 00:00:00 +0800
 categories: JavaScript
-tags: JavaScript
+tags: ["JavaScript"]
 mathjax: true
 description: ""
 redirect_from: 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "CH6 行程排班 (Process Scheduling)"
-date: 2018-01-10 00:00:00 +0800
+date: 2018-01-10 09:00:00 +0800
 categories: 作業系統
-tags: 作業系統
+tags: ["作業系統"]
 mathjax: true
 description: ""
 redirect_from: 
@@ -119,7 +119,7 @@ entry section => critical Section => exit section
 - 不能滿足 progress 和 bounded waiting 的條件
   - 當 Pi 與 Pj 皆將 flag[i], flag[j] 皆設為 TRUE，則永遠跳不出 while 迴圈（互讓） => deadlock
 
-### Peterson’s Combined Solution
+### Peterson's Combined Solution
 
 - 解決 2 個 process
 - LOAD、STORE 這兩個 instructions 是 atomic （最小單位），代表不能被 interrupted

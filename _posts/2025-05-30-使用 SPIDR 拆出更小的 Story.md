@@ -3,7 +3,7 @@ layout: post
 title: "使用 SPIDR 拆出更小的 Story"
 date: 2025-5-30 22:00:00 +0800
 categories: 軟實力
-tags: ["軟實力", "鈦坦教會我的那些事"]
+tags: ["軟實力", "敏捷", "流程優化", "鈦坦教會我的那些事"]
 mathjax: true
 description: ""
 ---

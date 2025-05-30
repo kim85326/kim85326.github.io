@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "JavaScript XMLHttpRequest、Fetch 和 Axios 差別"
-date: 2024-07-07 01:00:00 +0800
+date: 2024-07-07 00:00:01 +0800
 categories: JavaScript
-tags: JavaScript
+tags: ["JavaScript"]
 mathjax: true
 description: ""
 ---

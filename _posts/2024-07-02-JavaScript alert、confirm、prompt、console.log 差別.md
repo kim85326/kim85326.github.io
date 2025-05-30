@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript alert、confirm、prompt、console.log 差別"
 date: 2024-07-02 00:00:00 +0800
 categories: JavaScript
-tags: JavaScript
+tags: ["JavaScript"]
 mathjax: true
 description: ""
 redirect_from: 

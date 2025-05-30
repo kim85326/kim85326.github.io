@@ -3,7 +3,7 @@ layout: post
 title: "User Story 是什麼？"
 date: 2025-5-29 20:00:00 +0800
 categories: 軟實力
-tags: ["軟實力", "鈦坦教會我的那些事"]
+tags: ["軟實力", "敏捷", "流程優化", "鈦坦教會我的那些事"]
 mathjax: true
 description: ""
 ---

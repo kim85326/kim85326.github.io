@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "jQuery Plugin 3 template"
-date: 2018-04-17 00:00:00 +0800
+title: "jQuery plugin 3 template"
+date: 2018-04-17 10:00:00 +0800
 categories: jQuery
-tags: [jQuery Plugin]
+tags: ["jQuery", "jQuery-plugin"]
 mathjax: true
 description: ""
 redirect_from: 

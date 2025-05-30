@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "CH5 行程排班 (Process Scheduling)"
-date: 2017-11-11 00:00:00 +0800
+date: 2017-11-11 15:00:00 +0800
 categories: 作業系統
-tags: 作業系統
+tags: ["作業系統"]
 mathjax: true
 description: ""
 redirect_from: 

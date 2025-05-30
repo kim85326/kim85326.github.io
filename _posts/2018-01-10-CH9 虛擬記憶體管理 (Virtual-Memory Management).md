@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "CH9 虛擬記憶體管理 (Virtual-Memory Management)"
-date: 2018-01-10 00:00:00 +0800
+date: 2018-01-10 12:00:00 +0800
 categories: 作業系統
-tags: 作業系統
+tags: ["作業系統"]
 mathjax: true
 description: ""
 redirect_from: 
@@ -146,7 +146,7 @@ fork 時並不複製資料分頁，直到寫入時才複製
 
 - 會發生 12 次 page faults
 - 比 FIFO 好，但比 optimal 差
-- LRU and OPT 都是 stack algorithms，不會出現 Belady’s Anomaly
+- LRU and OPT 都是 stack algorithms，不會出現 Belady's Anomaly
 
 ##### LRU 實現
 

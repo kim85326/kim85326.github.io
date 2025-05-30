@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "CH8 記憶體管理 (Memory Management Strategies)"
-date: 2018-01-10 00:00:00 +0800
+date: 2018-01-10 11:00:00 +0800
 categories: 作業系統
-tags: 作業系統
+tags: ["作業系統"]
 mathjax: true
 description: ""
 redirect_from: 

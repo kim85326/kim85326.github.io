@@ -3,7 +3,7 @@ layout: post
 title: "Ping Pong Programming"
 date: 2024-08-03 17:00:00 +0800
 categories: 軟實力
-tags: ["軟實力"]
+tags: ["軟實力", "工程效率", "敏捷"]
 mathjax: true
 description: ""
 ---

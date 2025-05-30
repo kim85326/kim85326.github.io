@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript parseInt 記得給我帶兩個參數"
 date: 2024-07-08 00:00:00 +0800
 categories: JavaScript
-tags: JavaScript
+tags: ["JavaScript"]
 mathjax: true
 description: ""
 ---

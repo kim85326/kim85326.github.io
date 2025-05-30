@@ -3,7 +3,7 @@ layout: post
 title: "URI、URL、URN 差別"
 date: 2019-10-31 00:00:00 +0800
 categories: 網路
-tags:
+tags: ["網路"]
 mathjax: true
 description: ""
 redirect_from: 

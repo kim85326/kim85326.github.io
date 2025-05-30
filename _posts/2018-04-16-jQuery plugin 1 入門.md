@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "jQuery Plugin 1 入門"
-date: 2018-04-16 00:00:00 +0800
+title: "jQuery plugin 1 入門"
+date: 2018-04-16 09:00:00 +0800
 categories: jQuery
-tags: [jQuery Plugin]
+tags: ["jQuery", "jQuery-plugin"]
 mathjax: true
 description: ""
 redirect_from: 

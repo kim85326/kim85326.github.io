@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript var、let、const 差別 (上)"
 date: 2024-06-29 00:00:00 +0800
 categories: JavaScript
-tags: JavaScript
+tags: ["JavaScript"]
 mathjax: true
 description: ""
 redirect_from: 
@@ -261,56 +261,4 @@ example();
 
 `var` 允許重複宣告
 
-```js
-var a = 123;
-var a = 456;
-console.log(a); // 456
 ```
-
-`let` 和 `const` 不允許重複宣告
-
-```js
-let a = 123;
-let a = 456; // SyntaxError: Identifier 'a' has already been declared
-console.log(a);
-```
-
-```js
-const a = 123;
-const a = 456; // SyntaxError: Identifier 'a' has already been declared
-console.log(a);
-```
-
-### const
-
-`const` 在宣告的時候一定要賦予值
-
-```js
-const a;  // SyntaxError: Missing initializer in const declaration
-```
-
-`const` 一旦被賦予值，就不可以再更改
-
-```js
-const a = 1;
-a = 2; // TypeError: Assignment to constant variable
-```
-
-但是物件和陣列，記憶體位置不改變，值可以變動
-
-```js
-const a = ["第一個 value"];
-a[0] = "啦啦啦";
-console.log(a); // ["啦啦啦"]
-a = 123; // TypeError: Assignment to constant variable
-```
-
-此篇介紹了差別，下一篇 [JavaScript var、let、const 差別 (下)](/posts/JavaScript-var-let-const-差別-(下)/) 會介紹一下在實際運用的情境，怎麼寫會比較好
-
-### 參考資料
-
-- [鐵人賽：ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
-- [ES2015 筆記(1) var, let, const, scope](https://dotblogs.com.tw/acelee/2017/03/31/134427)
-- [Day26 var 與 ES6 let const 差異](https://ithelp.ithome.com.tw/articles/10209121)
-- [我知道你懂 hoisting，可是你了解到多深？](https://blog.huli.tw/2018/11/10/javascript-hoisting-and-tdz/)
-- [所有的函式都是閉包：談 JS 中的作用域與 Closure](https://blog.huli.tw/2018/12/08/javascript-closure/)

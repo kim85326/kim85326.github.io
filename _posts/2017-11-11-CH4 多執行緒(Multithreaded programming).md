@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "CH4 多執行緒(Multithreaded programming"
-date: 2017-11-11 00:00:00 +0800
+title: "CH4 多執行緒(Multithreaded programming)"
+date: 2017-11-11 14:00:00 +0800
 categories: 作業系統
-tags: 作業系統
+tags: ["作業系統"]
 mathjax: true
 description: ""
 redirect_from: 
