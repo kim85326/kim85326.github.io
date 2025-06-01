@@ -3,7 +3,7 @@ layout: post
 title: "如何把 User Story 拆小？之實際常見拆法"
 date: 2025-5-31 01:00:00 +0800
 categories: 軟實力
-tags: ["鈦坦教會我的那些事"]
+tags: ["鈦坦教會我的那些事", "敏捷", "工程效率", "流程優化", "軟實力"]
 mathjax: true
 description: ""
 ---
@@ -208,7 +208,7 @@ Bill Wake 在《Twenty Ways to Split Stories》中提出 20 種從不同維度�
    - 原因：資料量小較易管理與驗證
    - 例子：先針對內部 10 人試用平台，日後才支援上千人規模
 
-7. **Less “ilities” vs More “ilities”**
+7. **Less "ilities" vs More "ilities"**
    - 比較：少考慮非功能性容易
    - 原因：非功能性需求可延後實作（如效能、擴充性、安全）
    - 例子：MVP 階段先不考慮資料加密，等正式版上線前再加密與稽核紀錄
